@@ -1,65 +1,173 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dikshan Gautam — Digital Marketing & SEO Strategist</title><meta name="description" content="Dikshan Gautam is a digital marketing and SEO professional focused on SEO strategy, content strategy, analytics and web development.">
-<meta name="theme-color" content="#f5f3ed">
-<link rel="stylesheet" href="assets/style.css">
-</head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dikshan Gautam — Digital Marketing & SEO Strategist</title>
+  <meta name="description" content="Dikshan Gautam is a digital marketing and SEO professional focused on SEO strategy, content strategy, analytics and web development.">
+  <meta name="theme-color" content="#faf9f6">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
 <header class="site-nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="index.html"><span class="logo-mark">D</span><span>Dikshan Gautam</span></a>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">D</span>
+      <span>Dikshan Gautam</span>
+    </a>
     <nav class="nav-links">
-      <a class="" href="about.html">About</a>
-      <a class="" href="services.html">Services</a>
-      <a class="" href="work.html">Work</a>
-      <a class="" href="insights.html">Insights</a>
-      <a class="" href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <a class="nav-contact" href="contact.html">Start a project ↗</a>
-    <button class="menu" aria-label="Open navigation">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
   </div>
 </header>
-<div class="mobile-nav">
-  <a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
-</div><main>
-<section class="hero"><div class="wrap hero-layout">
-  <div class="hero-copy reveal">
-    <div class="kicker">Digital marketing · SEO · Content · Web</div>
-    <h1 class="display">I build digital growth around <span class="serif">how people</span> <span class="accent">search.</span></h1>
-    <p>I’m Dikshan Gautam — a digital marketing and SEO professional combining search strategy, content, analytics and web development to make brands easier to find, understand and choose.</p>
-    <div class="hero-actions"><a class="btn primary" href="work.html">See selected work <span>↗</span></a><a class="btn light" href="contact.html">Let's talk <span>→</span></a></div>
-    <div class="availability"><span class="status-dot"></span> Open to freelance projects & meaningful collaborations</div>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Work</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap hero-layout">
+      <div class="hero-copy">
+        <span class="kicker">Digital Marketing · SEO · Content · Web</span>
+        <h1 class="display">I build digital growth around <span class="serif">how people</span> search.</h1>
+        <p>I’m Dikshan Gautam — a digital marketing and SEO professional combining search strategy, content, analytics, and web development to make brands easier to find, understand, and choose.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="work.html">See selected work ↗</a>
+          <a class="btn light" href="contact.html">Let's talk →</a>
+        </div>
+        <div class="availability">
+          <span class="status-dot"></span> Open to freelance projects & meaningful collaborations
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-card">
+          <div class="art-label">LIVE TRACKED PERFORMANCE</div>
+          <div class="art-title">Organic search growth for active client projects.</div>
+          <div class="art-stat-num">+60%</div>
+          <p style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem;">Organic Impression Increase · Avg Ranking 14 → 7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous Ticker -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">SEO Strategy</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Keyword Research</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Content Architecture</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">On-Page Optimization</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Analytics & Insights</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Web Development</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">SEO Strategy</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Keyword Research</span>
+      <span class="ticker-item">·</span>
+      <span class="ticker-item">Content Architecture</span>
+    </div>
   </div>
-  <div class="hero-art reveal d2">
-    <div class="art-card art-main"><div class="art-top"><span class="art-dot"></span><span class="art-dot"></span><span class="art-dot"></span></div><div class="art-body">
-      <div class="art-label">SEARCH PERFORMANCE / LIVE VIEW</div>
-      <div class="art-title">Make the right people <span>find you.</span></div>
-      <div class="chart"><svg viewBox="0 0 600 180" preserveAspectRatio="none"><path d="M0 160 C45 155 70 145 105 148 S155 126 190 132 S240 105 280 112 S325 90 360 98 S405 70 440 76 S490 48 530 55 S570 24 600 28" fill="none" stroke="#635bff" stroke-width="4"/><path d="M0 160 C45 155 70 145 105 148 S155 126 190 132 S240 105 280 112 S325 90 360 98 S405 70 440 76 S490 48 530 55 S570 24 600 28 L600 180 L0 180Z" fill="rgba(99,91,255,.09)"/></svg></div>
-      <div style="display:flex;justify-content:space-between;margin-top:17px"><span class="art-label">ORGANIC VISIBILITY</span><strong style="font-size:27px;letter-spacing:-.05em;color:#635bff">+60%</strong></div>
-    </div></div>
-    <div class="art-metric"><strong>14 → 7</strong><small>avg. ranking</small></div>
-    <div class="art-note"><strong>Strategy first.</strong><span>Then execution has somewhere to go.</span></div>
+
+  <!-- Intro Overview -->
+  <section class="section">
+    <div class="wrap intro-grid">
+      <div>
+        <span class="kicker">The short version</span>
+        <h2 style="font-size: 2.25rem; font-weight: 700;">Marketing mind.<br><span class="serif">Technical edge.</span></h2>
+      </div>
+      <div>
+        <p style="font-size: 1.0625rem; color: var(--text-muted); line-height: 1.7;">
+          I work at the intersection of <strong>search, content, and technology</strong>. I evaluate keywords, content systems, landing pages, and campaigns across the entire journey — not in isolation.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <strong>+60%</strong>
+            <span>Organic impressions</span>
+          </div>
+          <div class="stat">
+            <strong>14 → 7</strong>
+            <span>Average position</span>
+          </div>
+          <div class="stat">
+            <strong>SEO × Web</strong>
+            <span>Integrated skill set</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Capabilities</span>
+        <h2>One strategy. <span class="serif">Several disciplines.</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <div>
+            <h3>SEO Strategy</h3>
+            <p>Keyword research, search intent mapping, technical Audits, and organic growth execution.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <div>
+            <h3>Content Strategy</h3>
+            <p>Editorial planning, topic cluster architecture, and search-led content systems.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <div>
+            <h3>Digital Marketing</h3>
+            <p>Campaign architecture, email outreach, Meta Ads, and performance tracking.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <div>
+            <h3>Web Development</h3>
+            <p>Responsive, modern HTML/CSS/JS frontend built with technical SEO standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="year"></span> Dikshan Gautam · Digital Marketing & SEO</div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/dikshan-gautam-b3a900294/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:dikshangautam2003@gmail.com">Email</a>
+    </div>
   </div>
-</div></section>
-<div class="ticker"><div class="ticker-track">
-  <div class="ticker-item">SEO Strategy</div><div class="ticker-item">Keyword Research</div><div class="ticker-item">Content Strategy</div><div class="ticker-item">On-Page SEO</div><div class="ticker-item">Digital Marketing</div><div class="ticker-item">Analytics</div><div class="ticker-item">Web Development</div>
-  <div class="ticker-item">SEO Strategy</div><div class="ticker-item">Keyword Research</div><div class="ticker-item">Content Strategy</div><div class="ticker-item">On-Page SEO</div><div class="ticker-item">Digital Marketing</div><div class="ticker-item">Analytics</div><div class="ticker-item">Web Development</div>
-</div></div>
-<section class="section"><div class="wrap intro-grid">
-  <div class="reveal"><div class="kicker">The short version</div><h2 class="intro-title">Marketing mind.<br><span class="serif">Technical edge.</span></h2></div>
-  <div class="reveal d1"><div class="intro-copy"><p>I work at the intersection of <strong>search, content and technology</strong>. That means I can look at a keyword, a content problem, a landing page or a campaign and think about the whole journey — not just one task.</p><p>My strongest work is practical: research what matters, build something useful, measure what changed, then improve it.</p></div><div class="stats"><div class="stat"><strong>+60%</strong><span>Organic impressions</span></div><div class="stat"><strong>14 → 7</strong><span>Average ranking</span></div><div class="stat"><strong>SEO × Web</strong><span>Connected skill set</span></div></div></div>
-</div></section>
-<section class="section"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Capabilities</div><h2>One strategy.<br><span class="serif">Several disciplines.</span></h2></div><p>SEO, content and digital marketing work better when they are connected. Add a technical understanding of the web, and the handoffs get smaller.</p></div>
-<div class="services">
-<div class="service reveal"><span class="service-num">01</span><h3>SEO Strategy</h3><p>Keyword research, search intent, on-page optimization, content gaps and practical organic growth.</p><span class="service-arrow">↗</span></div>
-<div class="service reveal d1"><span class="service-num">02</span><h3>Content Strategy</h3><p>Search-led editorial planning, topic architecture and content systems built around audience questions.</p><span class="service-arrow">↗</span></div>
-<div class="service reveal d2"><span class="service-num">03</span><h3>Digital Marketing</h3><p>Campaign thinking, social content, email marketing and digital communication designed to move people.</p><span class="service-arrow">↗</span></div>
-<div class="service reveal d3"><span class="service-num">04</span><h3>Web Development</h3><p>Responsive HTML, CSS and JavaScript experiences that keep usability, structure and SEO in the room.</p><span class="service-arrow">↗</span></div>
-</div></div></section>
-<section class="section"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>Proof, not <span class="serif">promises.</span></h2></div><p>Results and representative projects, presented honestly. Confidential client details stay confidential.</p></div>
-<div class="case-list">
-<article class="case reveal"><div class="case-info"><div class="case-meta"><span>01 / SEO</span><span>Search visibility</span></div><div><h3>From search data to <em>better visibility.</em></h3><p>SEO and content work at KIEC Education, using keyword research, on-page optimization and performance analysis to strengthen organic visibility.</p><div class="tags"><span class="tag">Keyword research</span><span class="tag">On-page SEO</span><span class="tag">Search Console</span></div></div></div><div class="case-art blue"><div class="grid-bg"></div><div class="mock"><div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div><div class="mock-content"><div class="mock-kicker">ORGANIC SEARCH / 2026</div><div class="mock-title">More visibility.<br>Better intent.</div><div class="mock-line blue"></div><div class="mock-line"></div><div class="mock-line short"></div></div><div class="mock-stat"><strong>+60%</strong><small>impressions</small></div></div></div></article>
-<article class="case reveal d1"><div class="case-art coral"><div class="grid-bg"></div><div class="mock" style="transform:rotate(2deg)"><div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div><div class="mock-content"><div class="mock-kicker">CONTENT / SEARCH INTENT</div><div class="mock-title">Useful content starts with a <em>useful question.</em></div><div class="mock-line blue"></div><div class="mock-line"></div><div class="mock-line short"></div></div><div class="mock-stat" style="background:#ef6255"><strong>INTENT</strong><small>before volume</small></div></div></div><div class="case-info"><div class="case-meta"><span>02 / CONTENT</span><span>Editorial systems</span></div><div><h3>Content that answers the <em>real question.</em></h3><p>Search-led writing and content planning that balances keywords with intent, information structure, clarity and usefulness.</p><div class="tags"><span class="tag">Content strategy</span><span class="tag">SEO writing</span><span class="tag">Copywriting</span></div></div></div></article>
-</div><div style="margin-top:30px"><a class="link" href="work.html">View all selected work ↗</a></div>
-</div></section>
-<section class="cta"><div class="wrap cta-inner reveal"><div class="kicker" style="color:#e7e5ff">Next project</div><h2>Good work starts with a good <span class="serif">question.</span></h2><p>If you have an SEO problem, content challenge, digital project or website somewhere in between, tell me what you're trying to solve.</p><a class="btn" href="contact.html">Start a conversation <span>↗</span></a></div></section>
-</main><footer><div class="wrap footer-inner"><div class="footer-copy">© <span data-year></span> Dikshan Gautam · Digital Marketing · SEO · Web</div><div class="socials"><a href="https://www.linkedin.com/in/dikshan-gautam-b3a900294/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:dikshangautam2003@gmail.com">Email</a></div></div></footer><script src="assets/main.js"></script></body></html>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,31 +1,83 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Insights — Dikshan Gautam</title><meta name="description" content="Insights and notes from Dikshan Gautam on SEO, content strategy, digital marketing and the web.">
-<meta name="theme-color" content="#f5f3ed">
-<link rel="stylesheet" href="assets/style.css">
-</head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights — Dikshan Gautam</title>
+  <meta name="description" content="Notes on SEO strategy, content architecture, and the web.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
 <header class="site-nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="index.html"><span class="logo-mark">D</span><span>Dikshan Gautam</span></a>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">D</span>
+      <span>Dikshan Gautam</span>
+    </a>
     <nav class="nav-links">
-      <a class="" href="about.html">About</a>
-      <a class="" href="services.html">Services</a>
-      <a class="" href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
       <a class="active" href="insights.html">Insights</a>
-      <a class="" href="contact.html">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <a class="nav-contact" href="contact.html">Start a project ↗</a>
-    <button class="menu" aria-label="Open navigation">☰</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
 </header>
-<div class="mobile-nav">
-  <a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
-</div><main>
-<section class="article"><div class="wrap">
-<div class="article-head reveal"><div class="kicker">Insights</div><h1>Notes on search, content & <span class="serif">the web.</span></h1><p class="article-intro">A small editorial corner for ideas about SEO strategy, content systems, digital marketing and building better web experiences.</p></div>
-<div style="margin-top:80px" class="insight-grid">
-<a class="post reveal" href="insights/search-intent.html"><div class="post-meta"><span>SEO / Strategy</span><span>01</span></div><div><h3>Search intent is more useful than the keyword.</h3><p>A practical way to think about what someone is really asking when they type a query.</p></div><div class="post-arrow">↗</div></a>
-<a class="post reveal d1" href="insights/content-system.html"><div class="post-meta"><span>Content</span><span>02</span></div><div><h3>Stop publishing. Start building a content system.</h3><p>Why a list of blog topics is not the same thing as a strategy.</p></div><div class="post-arrow">↗</div></a>
-<a class="post reveal d2" href="insights/seo-page.html"><div class="post-meta"><span>SEO / Web</span><span>03</span></div><div><h3>The page is part of the marketing.</h3><p>Search gets the click. The page has to earn the next action.</p></div><div class="post-arrow">↗</div></a>
-</div></div></section>
-</main><footer><div class="wrap footer-inner"><div class="footer-copy">© <span data-year></span> Dikshan Gautam · Digital Marketing · SEO · Web</div><div class="socials"><a href="https://www.linkedin.com/in/dikshan-gautam-b3a900294/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:dikshangautam2003@gmail.com">Email</a></div></div></footer><script src="assets/main.js"></script></body></html>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Work</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Insights</span>
+      <h1 class="display">Notes on search, content & <span class="serif">the web.</span></h1>
+      <p style="font-size: 1.25rem; color: var(--text-muted);">Actionable observations on SEO, digital growth, and web experiences.</p>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <div class="service-card">
+        <span class="service-num">ARTICLE 01</span>
+        <h3>Search intent is more useful than the raw keyword.</h3>
+        <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">A practical breakdown of deciphering user queries to build landing pages that rank and convert.</p>
+        <span style="font-weight: 600; font-size: 0.875rem; color: var(--primary);">Read insight ↗</span>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">ARTICLE 02</span>
+        <h3>Stop publishing randomly. Build a content system.</h3>
+        <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Why publishing endless random blog posts fails to build long-term search domain authority.</p>
+        <span style="font-weight: 600; font-size: 0.875rem; color: var(--primary);">Read insight ↗</span>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">ARTICLE 03</span>
+        <h3>The page experience is part of the marketing.</h3>
+        <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">SEO earns the initial search click; page performance and UI clarity earn the actual business lead.</p>
+        <span style="font-weight: 600; font-size: 0.875rem; color: var(--primary);">Read insight ↗</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="year"></span> Dikshan Gautam · Digital Marketing & SEO</div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/dikshan-gautam-b3a900294/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:dikshangautam2003@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
