@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dikshan Gautam — Digital Marketing, SEO & Automation</title>
+<meta name="description" content="Dikshan Gautam — SEO strategist, digital marketing specialist and automation-minded developer based in Kathmandu, Nepal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  /* ============ TOKENS ============ */
+  :root{
+    --bg: #0f211a;
+    --bg-soft: #14281f;
+    --surface: #17332775;
+    --line: rgba(244,241,232,0.14);
+    --line-soft: rgba(244,241,232,0.07);
+    --ink: #f4f1e8;
+    --ink-dim: #b9c2b6;
+    --ink-faint: #8a9389;
+    --accent: #e8b34c;
+    --accent-dim: #c99a3f;
+    --accent-soft: rgba(232,179,76,0.14);
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --rail-w: 280px;
+    --gutter: clamp(24px, 5vw, 64px);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; }
+  img{ max-width:100%; display:block; }
+
+  ::selection{ background: var(--accent-soft); color: var(--ink); }
+
+  :focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  h1,h2,h3{
+    font-family: var(--serif);
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  p{ margin: 0; }
+
+  .container{
+    max-width: 900px;
+  }
+
+  /* ============ LAYOUT SHELL ============ */
+
+  .shell{
+    display:grid;
+    grid-template-columns: var(--rail-w) 1fr;
+    min-height: 100vh;
+  }
+
+  /* ---- Left rail (desktop) ---- */
+  .rail{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 48px 36px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid var(--line-soft);
+  }
+
+  .rail-top .mark{
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--ink);
+  }
+  .rail-top .role{
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    max-width: 20ch;
+  }
+
+  .rail-nav{
+    margin-top: 56px;
+    display:flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .rail-nav a{
+    position:relative;
+    text-decoration:none;
+    color: var(--ink-dim);
+    font-size: 0.93rem;
+    padding: 9px 0 9px 18px;
+    border-left: 1px solid var(--line);
+    transition: color .18s ease, border-color .18s ease;
+  }
+  .rail-nav a::before{
+    content:"";
+    position:absolute; left:-1px; top:0; bottom:0;
+    width:1px; background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .25s ease;
+  }
+  .rail-nav a:hover, .rail-nav a.active{ color: var(--ink); }
+  .rail-nav a:hover::before, .rail-nav a.active::before{ transform: scaleY(1); }
+
+  .rail-bottom{
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+  .rail-bottom a{ text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
+  .rail-bottom a:hover{ color: var(--accent); text-decoration-color: var(--accent); }
+
+  /* ---- Mobile top bar ---- */
+  .topbar{
+    display:none;
+    position: sticky; top:0; z-index: 40;
+    align-items:center; justify-content: space-between;
+    padding: 16px var(--gutter);
+    background: rgba(15,33,26,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .topbar .mark{ font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
+  .menu-btn{
+    background:none; border:1px solid var(--line); color: var(--ink);
+    width: 38px; height:38px; border-radius: 4px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .menu-btn span, .menu-btn span::before, .menu-btn span::after{
+    content:""; display:block; width:16px; height:1px; background: var(--ink); position:relative;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .menu-btn span::before{ position:absolute; top:-5px; }
+  .menu-btn span::after{ position:absolute; top:5px; }
+
+  .mobile-nav{
+    display:none;
+    position: fixed; inset:0; z-index: 50;
+    background: var(--bg);
+    padding: 90px var(--gutter) 40px;
+    flex-direction: column; gap: 2px;
+  }
+  .mobile-nav.open{ display:flex; }
+  .mobile-nav a{
+    text-decoration:none; color: var(--ink); font-family: var(--serif);
+    font-size: 1.6rem; padding: 12px 0; border-bottom: 1px solid var(--line-soft);
+  }
+  .mobile-nav-close{
+    position:absolute; top:20px; right: var(--gutter);
+    background:none; border:none; color: var(--ink); font-size: 1.6rem; cursor:pointer;
+  }
+
+  /* ============ MAIN CONTENT ============ */
+
+  main{ overflow-x: hidden; }
+
+  section{
+    padding: 96px var(--gutter);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  .section-head{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+  .section-head h2{ font-size: clamp(1.6rem, 2.4vw, 2.1rem); }
+  .section-head .count{ font-family: var(--mono); font-size: 0.8rem; color: var(--ink-faint); }
+
+  /* ---- Hero ---- */
+  #hero{
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+  .hero-kicker{
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    margin-bottom: 26px;
+  }
+  .hero-kicker .dot{ color: var(--accent); }
+
+  h1.hero-title{
+    font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+    line-height: 1.04;
+    max-width: 14ch;
+  }
+  h1.hero-title em{
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub{
+    margin-top: 26px;
+    max-width: 46ch;
+    color: var(--ink-dim);
+    font-size: 1.05rem;
+  }
+
+  .hero-actions{
+    margin-top: 36px;
+    display:flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 13px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    display:inline-block;
+    cursor:pointer;
+    border: 1px solid transparent;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn-solid{ background: var(--accent); color: #16281f; }
+  .btn-solid:hover{ transform: translateY(-2px); background: #f0bf62; }
+  .btn-outline{ border-color: var(--line); color: var(--ink); }
+  .btn-outline:hover{ border-color: var(--accent); color: var(--accent); }
+
+  /* hero chart */
+  .hero-chart{
+    align-self: end;
+    padding-bottom: 6px;
+  }
+  .hero-chart svg{ width: 100%; height: auto; overflow: visible; }
+  .hero-chart .chart-line{
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 340;
+    stroke-dashoffset: 340;
+    animation: draw 1.6s cubic-bezier(.4,.1,.2,1) 0.3s forwards;
+  }
+  .hero-chart .chart-dot{
+    opacity:0;
+    animation: fadein .4s ease 1.7s forwards;
+  }
+  .hero-chart .chart-label{
+    font-family: var(--mono);
+    font-size: 9px;
+    fill: var(--ink-faint);
+  }
+  @keyframes draw{ to{ stroke-dashoffset: 0; } }
+  @keyframes fadein{ to{ opacity: 1; } }
+
+  /* ---- Metric strip ---- */
+  #metrics{
+    padding: 0 var(--gutter);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .metric-row{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .metric{
+    padding: 34px 22px 34px 0;
+    border-left: 1px solid var(--line-soft);
+    padding-left: 22px;
+  }
+  .metric:first-child{ border-left:none; padding-left:0; }
+  .metric .num{
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    color: var(--accent);
+  }
+  .metric .label{
+    margin-top: 8px;
+    font-size: 0.84rem;
+    color: var(--ink-dim);
+    max-width: 22ch;
+  }
+
+  /* ---- About ---- */
+  #about .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  #about p{ color: var(--ink-dim); }
+  #about p + p{ margin-top: 18px; }
+  .lede{
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  /* ---- Timeline (experience) ---- */
+  .timeline{
+    display:flex;
+    flex-direction: column;
+  }
+  .tl-item{
+    display:grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    padding: 30px 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .tl-item:last-child{ border-bottom: 1px solid var(--line-soft); }
+  .tl-date{
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    padding-top: 4px;
+  }
+  .tl-role{ font-family: var(--serif); font-size: 1.25rem; }
+  .tl-org{ color: var(--accent); font-size: 0.92rem; margin-top: 4px; }
+  .tl-list{
+    margin: 16px 0 0;
+    padding-left: 18px;
+    color: var(--ink-dim);
+    font-size: 0.94rem;
+  }
+  .tl-list li{ margin-bottom: 6px; }
+
+  /* ---- Skills ---- */
+  .skill-block + .skill-block{ margin-top: 40px; }
+  .skill-block h3{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .tag-row{ display:flex; flex-wrap: wrap; gap: 10px; }
+  .tag{
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-dim);
+    border: 1px solid var(--line);
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  .skill-note{
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  /* ---- Projects / Certifications grid ---- */
+  .flex-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line-soft);
+    border: 1px solid var(--line-soft);
+  }
+  .flex-card{
+    background: var(--bg);
+    padding: 32px;
+  }
+  .flex-card h3{ font-size: 1.1rem; margin-bottom: 10px; }
+  .flex-card p{ color: var(--ink-dim); font-size: 0.92rem; }
+  .flex-card .tag-mini{
+    display:inline-block; margin-top: 14px;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--accent);
+  }
+
+  /* ---- Tools / languages ---- */
+  .plain-list{
+    display:flex; flex-wrap: wrap; gap: 10px 28px;
+    color: var(--ink-dim); font-size: 0.95rem;
+  }
+  .plain-list span{ white-space: nowrap; }
+  .plain-list .sep{ color: var(--line); }
+
+  /* ---- Contact ---- */
+  #contact .contact-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+  }
+  #contact .lede{ margin-bottom: 20px; }
+  .contact-detail{
+    margin-top: 32px;
+    display:flex; flex-direction: column; gap: 10px;
+    font-size: 0.92rem; color: var(--ink-dim);
+  }
+  .contact-detail a{ text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--line); }
+  .contact-detail a:hover{ color: var(--accent); border-color: var(--accent); }
+
+  form.contact-form{ display:flex; flex-direction: column; gap: 22px; }
+  .field{ position: relative; }
+  .field label{
+    display:block; font-size: 0.8rem; color: var(--ink-faint); margin-bottom: 8px;
+    font-family: var(--mono);
+  }
+  .field input, .field textarea{
+    width:100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 10px 2px;
+    resize: vertical;
+    transition: border-color .18s ease;
+  }
+  .field input:focus, .field textarea:focus{
+    outline: none;
+    border-color: var(--accent);
+  }
+  .field textarea{ min-height: 120px; }
+  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .form-foot{
+    display:flex; align-items:center; justify-content: space-between; gap: 20px; margin-top: 6px;
+    flex-wrap: wrap;
+  }
+  .form-note{ font-size: 0.76rem; color: var(--ink-faint); max-width: 32ch; }
+  /* honeypot */
+  .hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+  footer{
+    padding: 36px var(--gutter);
+    display:flex; justify-content: space-between; align-items:center;
+    flex-wrap: wrap; gap: 12px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 980px){
+    .shell{ grid-template-columns: 1fr; }
+    .rail{ display:none; }
+    .topbar{ display:flex; }
+    #hero{ grid-template-columns: 1fr; }
+    .hero-chart{ order: -1; max-width: 320px; }
+    #about .about-grid{ grid-template-columns: 1fr; gap: 28px; }
+    .metric-row{ grid-template-columns: repeat(2,1fr); row-gap: 24px; }
+    .metric:nth-child(3){ border-left:none; padding-left:0; }
+    .flex-grid{ grid-template-columns: 1fr; }
+    #contact .contact-grid{ grid-template-columns: 1fr; gap: 40px; }
+    .form-row{ grid-template-columns: 1fr; }
+    .tl-item{ grid-template-columns: 1fr; gap: 6px; }
+  }
+  @media (max-width: 560px){
+    section{ padding: 64px 20px; }
+    #hero{ padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="mark">Dikshan Gautam</span>
+  <button class="menu-btn" onclick="document.getElementById('mnav').classList.add('open')" aria-label="Open menu"><span></span></button>
+</div>
+
+<nav class="mobile-nav" id="mnav">
+  <button class="mobile-nav-close" onclick="document.getElementById('mnav').classList.remove('open')" aria-label="Close menu">×</button>
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#experience" onclick="closeNav()">Experience</a>
+  <a href="#skills" onclick="closeNav()">Skills</a>
+  <a href="#work" onclick="closeNav()">Highlights</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+</nav>
+
+<div class="shell">
+
+  <!-- LEFT RAIL -->
+  <aside class="rail">
+    <div class="rail-top">
+      <div class="mark">Dikshan Gautam</div>
+      <div class="role">Digital Marketing &amp; SEO Specialist — building the systems behind the strategy</div>
+    </div>
+    <nav class="rail-nav" id="railnav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Highlights</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="rail-bottom">
+      Kathmandu, Nepal<br>
+      <a href="mailto:dikshangautam2003@gmail.com">dikshangautam2003@gmail.com</a><br>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div>
+        <div class="hero-kicker">Kathmandu, Nepal <span class="dot">·</span> Available for freelance &amp; full-time roles</div>
+        <h1 class="hero-title">I move brands from page three to page one — <em>then build the tools</em> that keep them there.</h1>
+        <p class="hero-sub">Digital marketing and SEO specialist with a customer-success background and a growing set of automation and web skills. I write content that ranks, support that retains, and small tools that remove the repetitive work in between.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-solid">Start a conversation</a>
+          <a href="#experience" class="btn btn-outline">See the work</a>
+        </div>
+      </div>
+      <div class="hero-chart" aria-hidden="true">
+        <svg viewBox="0 0 320 180">
+          <text x="0" y="14" class="chart-label">SERP POSITION</text>
+          <text x="0" y="170" class="chart-label">JUN — DEC</text>
+          <path class="chart-line" d="M4,150 C60,150 70,130 100,120 C140,108 150,70 190,55 C230,40 250,30 300,18" />
+          <circle class="chart-dot" cx="4" cy="150" r="3.5" fill="#8a9389"/>
+          <circle class="chart-dot" cx="300" cy="18" r="3.5" fill="#e8b34c"/>
+          <text x="270" y="12" class="chart-label" fill="#e8b34c">#1</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section id="metrics">
+      <div class="metric-row">
+        <div class="metric">
+          <div class="num">P3 → P1</div>
+          <div class="label">Google ranking movement achieved for KIEC's core search terms</div>
+        </div>
+        <div class="metric">
+          <div class="num">&lt;60s</div>
+          <div class="label">Average customer reply time maintained across Zendesk queues</div>
+        </div>
+        <div class="metric">
+          <div class="num">+20%</div>
+          <div class="label">Organic traffic growth on key pages after an SEO overhaul</div>
+        </div>
+        <div class="metric">
+          <div class="num">3</div>
+          <div class="label">Automation systems built in Notion &amp; Sheets to cut repetitive work</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="eyebrow">About</div>
+      <div class="about-grid">
+        <p class="lede">I sit between marketing and operations — comfortable writing a keyword strategy in the morning and building the Notion tracker that runs it by the afternoon.</p>
+        <div>
+          <p>My work started in customer support, where I learned what it actually takes to keep people happy at scale — fast replies, clear systems, careful compliance. That operational instinct now shows up in how I approach SEO and content: less guesswork, more measurable structure.</p>
+          <p>I'm currently studying Computer Application (BCA) alongside my SEO work, which is where the developer side comes in — I like scripting away the parts of a workflow that shouldn't need a human, and I'm comfortable enough in code to build and maintain the tools I use day to day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <span class="count">2023 — Present</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Jun 2025 — Present</div>
+          <div>
+            <div class="tl-role">SEO Strategist</div>
+            <div class="tl-org">KIEC Education Consultancy · Kathmandu</div>
+            <ul class="tl-list">
+              <li>Ranked KIEC's website from Google page 3 to page 1 for key search terms</li>
+              <li>Ran keyword research, on-page optimization, and backlink management</li>
+              <li>Wrote blog posts and landing pages aligned with search intent</li>
+              <li>Tracked performance through Google Analytics and Search Console</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Oct 2023 — May 2025</div>
+          <div>
+            <div class="tl-role">Support Associate</div>
+            <div class="tl-org">KrispCall · Remote</div>
+            <ul class="tl-list">
+              <li>Handled customer queries via Zendesk with sub-60-second average reply time</li>
+              <li>Completed KYC verification and compliance checks using Stripe</li>
+              <li>Partnered with engineering on issue escalation and resolution</li>
+              <li>Onboarded new hires and built standard templates, macros, and Notion trackers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jul 2023 — Oct 2023</div>
+          <div>
+            <div class="tl-role">Documentation Support Intern</div>
+            <div class="tl-org">KIEC Education Consultancy · Kathmandu</div>
+            <ul class="tl-list">
+              <li>Guided students through study-abroad documentation and application checklists</li>
+              <li>Maintained accurate records and coordinated with counselors on workflow clarity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-head">
+        <h2>Skills &amp; toolkit</h2>
+      </div>
+
+      <div class="skill-block">
+        <h3>Marketing &amp; SEO</h3>
+        <div class="tag-row">
+          <span class="tag">SEO Strategy</span>
+          <span class="tag">Keyword Research</span>
+          <span class="tag">Content Writing</span>
+          <span class="tag">Copy Optimization</span>
+          <span class="tag">Analytics &amp; Reporting</span>
+          <span class="tag">Google Analytics</span>
+          <span class="tag">Search Console</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3>Customer Success &amp; Operations</h3>
+        <div class="tag-row">
+          <span class="tag">Zendesk</span>
+          <span class="tag">HubSpot CRM</span>
+          <span class="tag">Pipedrive CRM</span>
+          <span class="tag">KYC &amp; Compliance</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">Remote Collaboration</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3>Technical &amp; Automation</h3>
+        <div class="tag-row">
+          <span class="tag">Google Sheets Automation</span>
+          <span class="tag">Notion Systems</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">HTML &amp; CSS</span>
+          <span class="tag">Calendly / Slack Integrations</span>
+        </div>
+        <p class="skill-note">Developing this side further through my BCA — swap in specific languages or frameworks here as your technical skills grow.</p>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="work">
+      <div class="section-head">
+        <h2>Highlights</h2>
+      </div>
+      <div class="flex-grid">
+        <div class="flex-card">
+          <h3>SEO Growth Campaign</h3>
+          <p>Rebuilt on-page SEO and content structure for KIEC's core pages, lifting rankings from page 3 to page 1 and growing organic traffic by 20%.</p>
+          <span class="tag-mini">SEO / CONTENT</span>
+        </div>
+        <div class="flex-card">
+          <h3>Customer Support Optimization</h3>
+          <p>Maintained sub-60-second response times at KrispCall, earning recognition on Trustpilot for consistently strong support quality.</p>
+          <span class="tag-mini">SUPPORT / CX</span>
+        </div>
+        <div class="flex-card">
+          <h3>Process Automation</h3>
+          <p>Designed Notion and Google Sheets systems that removed repetitive manual tracking from day-to-day support and marketing work.</p>
+          <span class="tag-mini">AUTOMATION</span>
+        </div>
+        <div class="flex-card" id="certifications">
+          <h3>Certifications</h3>
+          <p>Google Digital Garage — Fundamentals of Digital Marketing (ongoing)<br>Coursera — SEO Fundamentals (Keyword Research, Search Intent, SERP Strategy)</p>
+          <span class="tag-mini">LEARNING</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS + LANGUAGES -->
+    <section id="tools">
+      <div class="section-head">
+        <h2>Tools &amp; platforms</h2>
+      </div>
+      <div class="plain-list">
+        <span>Google Analytics</span><span class="sep">/</span>
+        <span>Search Console</span><span class="sep">/</span>
+        <span>Notion</span><span class="sep">/</span>
+        <span>Zendesk</span><span class="sep">/</span>
+        <span>HubSpot</span><span class="sep">/</span>
+        <span>Pipedrive</span><span class="sep">/</span>
+        <span>Stripe</span><span class="sep">/</span>
+        <span>Google Workspace</span><span class="sep">/</span>
+        <span>Calendly</span><span class="sep">/</span>
+        <span>Slack</span><span class="sep">/</span>
+        <span>Sheets Automation</span>
+      </div>
+      <p style="margin-top:28px; color:var(--ink-faint); font-size:0.88rem;">Languages: English (Professional) · Nepali (Native) · Hindi (Fluent)</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-head">
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="lede">Have a brand that needs to rank, a support queue that needs order, or a workflow that needs automating? Tell me about it.</p>
+          <div class="contact-detail">
+            <span>Email</span>
+            <a href="mailto:dikshangautam2003@gmail.com">dikshangautam2003@gmail.com</a>
+            <span style="margin-top:10px;">Location</span>
+            <span style="color:var(--ink);">Kathmandu, Nepal</span>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/dikshangautam2003@gmail.com" method="POST">
+          <!-- FormSubmit configuration: sends straight to your inbox, no backend needed -->
+          <input type="hidden" name="_subject" value="New portfolio inquiry">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" required></textarea>
+          </div>
+          <div class="form-foot">
+            <button type="submit" class="btn btn-solid">Send message</button>
+            <span class="form-note">Submissions are delivered directly to my email — first-time setup requires one-click confirmation from FormSubmit.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Dikshan Gautam</span>
+      <span>Kathmandu, Nepal</span>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function closeNav(){ document.getElementById('mnav').classList.remove('open'); }
+
+  // active nav highlight on scroll
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.rail-nav a');
+  const setActive = () => {
+    let current = '';
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 120 && rect.bottom > 120) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  };
+  document.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+
+</body>
+</html>
