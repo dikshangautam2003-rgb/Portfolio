@@ -1,19 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Set copyright year automatically
-  const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 
-  // Mobile menu toggle handler
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileNav = document.getElementById('mobileNav');
-
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      menuToggle.textContent = isOpen ? '✕' : '☰';
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const mobile = document.getElementById("mobileNav");
+  if (toggle && mobile) {
+    toggle.addEventListener("click", () => {
+      const open = mobile.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
   }
+  document.querySelectorAll("[data-year], #year").forEach(el => el.textContent = new Date().getFullYear());
 });

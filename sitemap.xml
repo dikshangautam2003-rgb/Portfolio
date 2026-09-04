@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://dikshangautam.com.np/</loc></url>
-<url><loc>https://dikshangautam.com.np/about.html</loc></url>
-<url><loc>https://dikshangautam.com.np/services.html</loc></url>
-<url><loc>https://dikshangautam.com.np/work.html</loc></url>
-<url><loc>https://dikshangautam.com.np/insights.html</loc></url>
-<url><loc>https://dikshangautam.com.np/contact.html</loc></url>
-<url><loc>https://dikshangautam.com.np/privacy.html</loc></url>
-<url><loc>https://dikshangautam.com.np/terms.html</loc></url>
+<url><loc>https://dikshangautam.com.np/about/</loc></url>
+<url><loc>https://dikshangautam.com.np/services/</loc></url>
+<url><loc>https://dikshangautam.com.np/work/</loc></url>
+<url><loc>https://dikshangautam.com.np/insights/</loc></url>
+<url><loc>https://dikshangautam.com.np/contact/</loc></url>
+<url><loc>https://dikshangautam.com.np/insights/search-intent/</loc></url>
+<url><loc>https://dikshangautam.com.np/insights/content-system/</loc></url>
+<url><loc>https://dikshangautam.com.np/insights/seo-page/</loc></url>
 </urlset>
