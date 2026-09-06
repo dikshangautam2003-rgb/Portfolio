@@ -1,0 +1,15 @@
+{
+  "name": "Dikshan Gautam",
+  "short_name": "Dikshan Gautam",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#5B21B6",
+  "icons": [
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "440x440",
+      "type": "image/png"
+    }
+  ]
+}
