@@ -2,22 +2,22 @@
   "redirects": [
     {
       "source": "/services/",
-      "destination": "/about/",
+      "destination": "/contact/",
       "permanent": true
     },
     {
       "source": "/work/",
-      "destination": "/research/",
+      "destination": "/about/",
       "permanent": true
     },
     {
       "source": "/insights/",
-      "destination": "/research/",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/insights/seo-digital-growth/",
-      "destination": "/research/",
+      "destination": "/research/methodology/",
       "permanent": true
     },
     {
