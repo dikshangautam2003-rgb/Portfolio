@@ -13,4 +13,24 @@
   form.addEventListener('submit',e=>{e.preventDefault();render(input.value);history.replaceState(null,'','/search/?q='+encodeURIComponent(input.value))});
   const q=new URLSearchParams(location.search).get('q')||'';if(q){input.value=q;render(q)}
  }).catch(()=>results.innerHTML='<p class="note">Search is temporarily unavailable.</p>')}
+ const contactForms=document.querySelectorAll('#contactForm');
+ contactForms.forEach(form=>{
+  form.addEventListener('submit',async e=>{
+   e.preventDefault();
+   const button=form.querySelector('button[type="submit"]'),status=form.querySelector('.form-status');
+   const original=button.textContent;
+   button.disabled=true; button.textContent='Sending…'; status.textContent='';
+   try{
+    const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    const data=await response.json();
+    if(response.ok && data.success){
+      form.reset(); status.textContent='Thanks — your message has been sent.';
+      status.className='form-status success';
+    } else throw new Error(data.message||'Unable to send');
+   }catch(err){
+    status.textContent='We couldn’t send that message right now. Please try again.';
+    status.className='form-status error';
+   }finally{button.disabled=false;button.textContent=original}
+  });
+ });
 })();
