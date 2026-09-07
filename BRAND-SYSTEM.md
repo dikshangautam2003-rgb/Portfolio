@@ -10,6 +10,17 @@ Education · Products · Travel · Research · About · Search
 
 Services and Work are no longer primary navigation. Commercial work can remain secondary and contextual.
 
+## Logo system
+The primary mark is a compact **D** monogram built from the Dikshan wordmark geometry. It is designed to work independently as the favicon, social avatar and small UI mark.
+
+- Favicon / mark: `/assets/dikshan-mark.svg`
+- Full wordmark: `/assets/dikshan-logo.svg`
+- Primary mark background: Ink `#17202A`
+- Mark foreground: Paper `#FAF8F3`
+- Accent slash: Vermilion `#C74634`
+
+Keep the mark visually simple at small sizes. Do not add shadows, gradients or extra decorative elements. The favicon and full wordmark must always use the same geometry and color system.
+
 ## Visual character
 Editorial, intelligent, grounded, modern, distinctly Nepal-rooted without cliché tourism styling. The interface should feel calm and trustworthy, with strong typographic hierarchy and restrained use of color.
 
@@ -52,6 +63,8 @@ Keep reading columns around 60–75 characters per line. Do not use tiny body te
 
 ## Imagery
 Prefer original/local imagery, real products, real places, researchers/writers, and documentary-style photography. Avoid generic business stock imagery. Every meaningful image needs useful alt text; decorative imagery gets empty alt text.
+
+The article system now supports a 16:9 lead image, evidence-note imagery, and image-led related-content cards. Remote image URLs are used only in the internal template preview; published articles should replace them with owned/optimized local or properly licensed assets wherever possible.
 
 ## Editorial UX
 Important recommendations should surface their verdict quickly, followed by why, evidence confidence, limitations, and methodology. Trust information should be visible without overwhelming the page.
