@@ -1,0 +1,284 @@
+[
+  {
+    "url": "/education/",
+    "title": "Education — Colleges, Courses & Study Abroad",
+    "description": "Research and practical guidance for choosing colleges, courses, admissions, study-abroad options and education consultancies in Nepal.",
+    "keywords": [
+      "education",
+      "—",
+      "colleges,",
+      "courses",
+      "&",
+      "study",
+      "abroad"
+    ]
+  },
+  {
+    "url": "/products/",
+    "title": "Products — Buying Guides, Reviews & Comparisons",
+    "description": "Nepal-focused product research that helps shoppers compare options, understand trade-offs and decide what is worth buying.",
+    "keywords": [
+      "products",
+      "—",
+      "buying",
+      "guides,",
+      "reviews",
+      "&",
+      "comparisons"
+    ]
+  },
+  {
+    "url": "/travel/",
+    "title": "Travel — Places, Treks, Things to Do & Hotels",
+    "description": "Practical Nepal travel research for choosing destinations, activities, treks and places to stay.",
+    "keywords": [
+      "travel",
+      "—",
+      "places,",
+      "treks,",
+      "things",
+      "to",
+      "do",
+      "&",
+      "hotels"
+    ]
+  },
+  {
+    "url": "/education/colleges/",
+    "title": "Colleges in Nepal — Research & Discovery",
+    "description": "A structured college discovery area for comparing institutions, programs, affiliations, locations and decision-relevant evidence.",
+    "keywords": [
+      "colleges",
+      "in",
+      "nepal",
+      "—",
+      "research",
+      "&",
+      "discovery"
+    ]
+  },
+  {
+    "url": "/education/courses-admissions/",
+    "title": "Courses & Admissions — Nepal Education Guides",
+    "description": "Decision-focused education guides covering courses, eligibility, admissions and the information students need before applying.",
+    "keywords": [
+      "courses",
+      "&",
+      "admissions",
+      "—",
+      "nepal",
+      "education",
+      "guides"
+    ]
+  },
+  {
+    "url": "/education/study-abroad/",
+    "title": "Study Abroad — Country Research for Nepali Students",
+    "description": "Country-level research for Nepali students comparing study-abroad destinations, pathways and practical considerations.",
+    "keywords": [
+      "study",
+      "abroad",
+      "—",
+      "country",
+      "research",
+      "for",
+      "nepali",
+      "students"
+    ]
+  },
+  {
+    "url": "/education/consultancies/",
+    "title": "Education Consultancies — How to Evaluate Options",
+    "description": "A decision framework for researching education consultancies without turning paid visibility into an editorial verdict.",
+    "keywords": [
+      "education",
+      "consultancies",
+      "—",
+      "how",
+      "to",
+      "evaluate",
+      "options"
+    ]
+  },
+  {
+    "url": "/products/buying-guides/",
+    "title": "Product Buying Guides — Nepal",
+    "description": "Buying guides designed around the shopper's budget, use case, important specifications, availability and trade-offs.",
+    "keywords": [
+      "product",
+      "buying",
+      "guides",
+      "—",
+      "nepal"
+    ]
+  },
+  {
+    "url": "/products/reviews/",
+    "title": "Product Reviews — Research Before Verdicts",
+    "description": "Individual product pages should explain who a product is for, why it may make sense, what to watch out for and how strong the evidence is.",
+    "keywords": [
+      "product",
+      "reviews",
+      "—",
+      "research",
+      "before",
+      "verdicts"
+    ]
+  },
+  {
+    "url": "/products/comparisons/",
+    "title": "Product Comparisons — Side-by-Side Decisions",
+    "description": "Comparison pages that make differences visible without manufacturing certainty or false precision.",
+    "keywords": [
+      "product",
+      "comparisons",
+      "—",
+      "side-by-side",
+      "decisions"
+    ]
+  },
+  {
+    "url": "/travel/places/",
+    "title": "Places to Visit in Nepal — Destination Research",
+    "description": "Destination research built around what travelers need to know before deciding where to go.",
+    "keywords": [
+      "places",
+      "to",
+      "visit",
+      "in",
+      "nepal",
+      "—",
+      "destination",
+      "research"
+    ]
+  },
+  {
+    "url": "/travel/things-to-do/",
+    "title": "Things to Do in Nepal — Practical Guides",
+    "description": "Activity and day-trip research that helps people decide how to spend limited time and budget.",
+    "keywords": [
+      "things",
+      "to",
+      "do",
+      "in",
+      "nepal",
+      "—",
+      "practical",
+      "guides"
+    ]
+  },
+  {
+    "url": "/travel/treks/",
+    "title": "Treks in Nepal — Compare Before You Commit",
+    "description": "Trek research organized around duration, difficulty, scenery, fit and logistics rather than generic inspiration.",
+    "keywords": [
+      "treks",
+      "in",
+      "nepal",
+      "—",
+      "compare",
+      "before",
+      "you",
+      "commit"
+    ]
+  },
+  {
+    "url": "/travel/hotels/",
+    "title": "Hotels in Nepal — Stay Research",
+    "description": "Hotel research focused on location, use case, practical details and evidence rather than generic star ratings.",
+    "keywords": [
+      "hotels",
+      "in",
+      "nepal",
+      "—",
+      "stay",
+      "research"
+    ]
+  },
+  {
+    "url": "/",
+    "title": "Dikshan — Research &amp; Recommendations for Nepal",
+    "description": "Nepal-focused research, comparisons and practical recommendations for education, products and travel.",
+    "keywords": [
+      "dikshan",
+      "—",
+      "research",
+      "&amp;",
+      "recommendations",
+      "for",
+      "nepal"
+    ]
+  },
+  {
+    "url": "/research/",
+    "title": "Research — Dikshan",
+    "description": "Research standards, methodology and editorial principles behind Dikshan&#x27;s Nepal-focused recommendations.",
+    "keywords": [
+      "research",
+      "—",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/research/how-we-research/",
+    "title": "How We Research — Dikshan",
+    "description": "How Dikshan turns user decisions into source-backed research, useful comparisons and honest recommendations.",
+    "keywords": [
+      "how",
+      "we",
+      "research",
+      "—",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/research/methodology/",
+    "title": "Methodology — Dikshan",
+    "description": "Dikshan&#x27;s framework for evidence quality, recommendation confidence, freshness and editorial independence.",
+    "keywords": [
+      "methodology",
+      "—",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/about/",
+    "title": "About Dikshan",
+    "description": "Dikshan is a Nepal-focused research and recommendation platform built around a simple idea: do the homework behind everyday decisions and make the result easier to use.",
+    "keywords": [
+      "about",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/contact/",
+    "title": "Contact Dikshan",
+    "description": "Contact Dikshan for corrections, source updates, research feedback or other editorial matters.",
+    "keywords": [
+      "contact",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/editorial-policy/",
+    "title": "Editorial Policy — Dikshan",
+    "description": "Dikshan&#x27;s editorial principles for research quality, independence, corrections, transparency and first-hand claims.",
+    "keywords": [
+      "editorial",
+      "policy",
+      "—",
+      "dikshan"
+    ]
+  },
+  {
+    "url": "/affiliate-disclosure/",
+    "title": "Affiliate Disclosure — Dikshan",
+    "description": "How affiliate links and other commercial relationships can support Dikshan without determining editorial verdicts.",
+    "keywords": [
+      "affiliate",
+      "disclosure",
+      "—",
+      "dikshan"
+    ]
+  }
+]

@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/services/",
-      "destination": "/contact/",
+      "destination": "/about/",
       "permanent": true
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "source": "/insights/seo-digital-growth/",
-      "destination": "/research/methodology/",
+      "destination": "/research/",
       "permanent": true
     },
     {

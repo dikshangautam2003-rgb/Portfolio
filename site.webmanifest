@@ -1,14 +1,15 @@
 {
   "name": "Dikshan",
   "short_name": "Dikshan",
+  "description": "Research and recommendations for people making decisions in Nepal.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF8F3",
-  "theme_color": "#17202A",
+  "background_color": "#f7f4ed",
+  "theme_color": "#17202a",
   "icons": [
     {
       "src": "/assets/favicon.png",
-      "sizes": "512x512",
+      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
     }
