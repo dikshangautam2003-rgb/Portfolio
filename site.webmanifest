@@ -1,11 +1,16 @@
 {
-  "name":"Dikshan Gautam",
-  "short_name":"Dikshan Gautam",
-  "start_url":"/",
-  "display":"standalone",
-  "background_color":"#FBFAFD",
-  "theme_color":"#5B21B6",
-  "icons":[
-    {"src":"/assets/favicon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"}
+  "name": "Dikshan",
+  "short_name": "Dikshan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F3",
+  "theme_color": "#17202A",
+  "icons": [
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }

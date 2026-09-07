@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/services/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/work/",
+      "destination": "/research/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/",
+      "destination": "/research/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/seo-digital-growth/",
+      "destination": "/research/methodology/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/web-technology/",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/nepal-services-business/",
+      "destination": "/education/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/nepal-guides/",
+      "destination": "/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/search-intent/",
+      "destination": "/research/methodology/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/content-system/",
+      "destination": "/research/methodology/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/seo-page/",
+      "destination": "/research/methodology/",
+      "permanent": true
+    }
+  ]
+}
