@@ -1,23 +1,25 @@
 # Dikshan V3 — SEO intent map
 
-The site is organized around user decisions rather than the old personal SEO/web-development positioning.
+Homepage: Nepal decision support / guides / comparisons / recommendations.
 
-- `/` — Nepal decision support; Education, Products and Travel
-- `/education/` — education decisions in Nepal
-- `/education/colleges/` — college discovery and comparison
-- `/education/courses-admissions/` — course and admission intent
-- `/education/study-abroad/` — study-abroad destination research
-- `/education/consultancies/` — consultancy evaluation
-- `/products/` — product decision support
-- `/products/buying-guides/` — commercial buying intent
-- `/products/reviews/` — product research
-- `/products/comparisons/` — comparison intent
-- `/travel/` — Nepal travel planning
-- `/travel/places/` — destination intent
-- `/travel/things-to-do/` — activity intent
-- `/travel/treks/` — trek comparison/planning
-- `/travel/hotels/` — hotel/stay selection
-- `/about/` — Dikshan entity/brand
-- `/contact/` — corrections and partnerships
+Education:
+- /education/
+- /education/colleges/
+- /education/courses-admissions/
+- /education/study-abroad/
+- /education/consultancies/
 
-The individual guide pages target specific questions and should use natural language, relevant entities, useful internal links and current evidence.
+Products:
+- /products/
+- /products/buying-guides/
+- /products/reviews/
+- /products/comparisons/
+
+Travel:
+- /travel/
+- /travel/places/
+- /travel/things-to-do/
+- /travel/treks/
+- /travel/hotels/
+
+Use long-tail article pages for specific questions and internally link them to the relevant pillar and subcategory. Avoid keyword stuffing and do not publish unsupported rankings.

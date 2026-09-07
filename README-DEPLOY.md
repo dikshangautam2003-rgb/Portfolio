@@ -2,25 +2,21 @@
 
 Product-first static website for Dikshan.
 
-## V3 changes
-- Homepage follows the supplied decision-first content direction.
-- Brand voice uses “we” rather than founder-centered copy.
-- Education, Products and Travel share one visual system.
-- Every main pillar and subcategory landing page uses the same structure: featured content first, then five standalone topic pages.
-- Navigation no longer relies on a difficult hover-only interaction; desktop dropdowns are small and direct, while mobile uses expandable groups.
-- Removed public methodology, editorial-policy and affiliate-disclosure pages from the user experience.
-- Removed internal “how we rank”/research-instruction panels from public pages.
-- Added stock photography throughout the interface. These are generic stock images, not fake entity photographs.
-- Added SEO metadata, canonical URLs, structured data, sitemap, robots and internal linking.
-- Search is utility-only and noindex.
-- Legacy personal-site routes redirect to relevant surviving destinations.
+## V3 priorities
+- Red + blue visual identity across UI.
+- Explicit Home navigation.
+- Friendly desktop dropdowns with a generous hover bridge.
+- Mobile expandable navigation.
+- Visual-first pillar pages.
+- Consistent cards, sections, buttons and spacing.
+- Homepage follows a decision-first content hierarchy.
+- 15 editorial guide pages (5 per pillar) ready to edit.
+- Research/methodology/editorial material is not part of public navigation.
+- Future entity/recommendation pages should only be made indexable once their real research is complete.
+- No fabricated college, product, hotel, destination or testing claims.
 
-## Image rule
-Stock photography is used as visual editorial imagery. Replace a generic stock image with an authentic, properly licensed entity photograph when a page claims to depict a specific college, hotel, product or destination.
+## Deployment
+Deploy this folder as the root of the static site. Verify the domain, favicon, robots.txt and sitemap.xml after deployment. Submit the sitemap to Search Console/Bing Webmaster Tools.
 
-## Before launch
-1. Replace any generic “featured” entity text with the actual researched entity you want to feature.
-2. Add current, source-backed facts to the five topic pages.
-3. Replace generic stock images on entity pages with properly licensed relevant photography where available.
-4. Add the public contact email.
-5. Deploy and test mobile navigation, canonical URLs, sitemap, redirects and search.
+## Images
+Current editorial guide pages use clearly labeled stock photography. Replace/add authentic entity imagery where a page represents a specific college, product, hotel or destination.
