@@ -1,19 +1,107 @@
-<!DOCTYPE html>
+# Dikshan V8.1 — Page-by-page SEO audit
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Study in Canada from Nepal — Dikshan</title><meta content="The practical questions to answer before committing to Canada." name="description"/><meta content="index,follow" name="robots"/><link href="https://dikshangautam.com.np/education/study-abroad/canada/" rel="canonical"/>
-<link href="/favicon.ico" rel="icon"/><link href="/assets/favicon.png" rel="apple-touch-icon"/><link href="/site.webmanifest" rel="manifest"/><meta content="#102a66" name="theme-color"/>
-<meta content="Study in Canada from Nepal — Dikshan" property="og:title"/><meta content="The practical questions to answer before committing to Canada." property="og:description"/><meta content="https://dikshangautam.com.np/education/study-abroad/canada/" property="og:url"/><meta content="article" property="og:type"/><meta content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" property="og:image"/><meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Study in Canada from Nepal \u2014 Dikshan","description":"The practical questions to answer before committing to Canada.","url":"https://dikshangautam.com.np/education/study-abroad/canada/","isPartOf":{"@type":"WebSite","name":"Dikshan","url":"https://dikshangautam.com.np/"}}</script><link href="/assets/style.css" rel="stylesheet"/><link href="/assets/v7.css" rel="stylesheet"/><link href="/assets/v8-1.css" rel="stylesheet"/><link href="/assets/v10.css" rel="stylesheet"/><link href="/assets/v10-final.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dikshangautam.com.np/"}, {"@type": "ListItem", "position": 2, "name": "Education", "item": "https://dikshangautam.com.np/education/"}, {"@type": "ListItem", "position": 3, "name": "Study in Canada from Nepal", "item": "https://dikshangautam.com.np/education/study-abroad/canada/"}]}</script><link href="/assets/v10-lovable-refinement.css" rel="stylesheet"/></head><body class="v7-site v10-site v10-final v10-route-education-study-abroad-canada v10-education"><header class="site-header"><div class="wrap nav"><a class="brand" href="/"><img alt="" loading="lazy" src="/assets/favicon.png"/><span>dikshan</span></a><nav aria-label="Primary navigation" class="desktop-nav"><a class="nav-link" href="/">Home</a><div class="nav-item"><a aria-current="page" class="nav-link" href="/education/">Education <span class="chev">▾</span></a><div class="mega"><strong>Education</strong><p>Colleges, courses, admissions and study abroad.</p><div class="mega-grid"><a href="/education/colleges/">Colleges</a><a href="/education/courses-admissions/">Courses &amp; Admissions</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/consultancies/">Consultancies</a></div></div></div><div class="nav-item"><a class="nav-link" href="/products/">Products <span class="chev">▾</span></a><div class="mega"><strong>Products</strong><p>Buying guides, reviews and comparisons.</p><div class="mega-grid"><a href="/products/buying-guides/">Buying Guides</a><a href="/products/reviews/">Reviews</a><a href="/products/comparisons/">Comparisons</a></div></div></div><div class="nav-item"><a class="nav-link" href="/travel/">Travel <span class="chev">▾</span></a><div class="mega"><strong>Travel</strong><p>Places, things to do, treks and stays.</p><div class="mega-grid"><a href="/travel/places/">Places to Visit</a><a href="/travel/things-to-do/">Things to Do</a><a href="/travel/treks/">Treks</a><a href="/travel/hotels/">Hotels &amp; Stays</a></div></div></div><a class="nav-link" href="/about/">About</a><a class="nav-link" href="/contact/">Contact</a></nav><button aria-controls="mobileNav" aria-expanded="false" class="menu-toggle" id="menuToggle">Menu</button></div><div class="mobile-nav" id="mobileNav"><a href="/">Home</a><details class="mobile-group"><summary>Education</summary><a href="/education/">Overview</a><a href="/education/colleges/">Colleges</a><a href="/education/courses-admissions/">Courses &amp; Admissions</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/consultancies/">Consultancies</a></details><details class="mobile-group"><summary>Products</summary><a href="/products/">Overview</a><a href="/products/buying-guides/">Buying Guides</a><a href="/products/reviews/">Reviews</a><a href="/products/comparisons/">Comparisons</a></details><details class="mobile-group"><summary>Travel</summary><a href="/travel/">Overview</a><a href="/travel/places/">Places</a><a href="/travel/things-to-do/">Things to Do</a><a href="/travel/treks/">Treks</a><a href="/travel/hotels/">Hotels &amp; Stays</a></details><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/blog/">Blog</a><a href="/search/">Search</a></div></header><main><section class="article-page-head"><div class="wrap"><div class="breadcrumbs"><a href="/">Home</a> / <a href="/education/">Education</a> / Guide</div><p class="eyebrow">Guide</p><h1>Study in Canada from Nepal</h1><p class="article-dek">The practical questions to answer before committing to Canada.</p><div class="v8-article-meta"><span>GUIDE</span><span>PRACTICAL GUIDE</span><span>3 MIN READ</span></div></div></section><section class="article"><div class="wrap article-layout"><article class="article-copy">
-<img alt="University campus and students" class="article-hero" height="933" loading="eager" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" width="1400"/><nav aria-label="On this page" class="v8-toc"><strong>On this page</strong><a href="#section-1">The short answer</a><a href="#section-2">What to compare</a><a href="#section-3">Where the trade-offs appear</a><a href="#section-4">Questions worth answering before you decide</a><a href="#section-5">Make the shortlist smaller</a></nav>
-<div class="v8-keyline"><span>IN SHORT</span><p>The practical questions to answer before committing to Canada.</p></div>
-<h2 id="section-1">The short answer</h2><p>The useful starting point is to decide what matters most to you, then compare the options on those points. A long list is not automatically a better answer; a clear shortlist with meaningful differences is easier to use.</p>
-<h2 id="section-2">What to compare</h2><p>Look for the details that can actually change your decision. Depending on the question, that can include cost, location, eligibility, features, difficulty, timing, availability, service or the experience you want.</p>
-<h2 id="section-3">Where the trade-offs appear</h2><p>Most choices have a give-and-take. A cheaper option may reduce flexibility. A more feature-rich option may cost more. A convenient location may come with a higher price. Good decision-making makes those trade-offs visible instead of hiding them behind a single verdict.</p>
-<h2 id="section-4">Questions worth answering before you decide</h2><ul><li>Which option fits my main priority?</li><li>What will this choice cost me in money, time or effort?</li><li>What is the biggest limitation?</li><li>What would make another option better for me?</li><li>Which details need to be checked because they can change?</li></ul>
-<h2 id="section-5">Make the shortlist smaller</h2><p>Once the important differences are clear, remove the options that do not fit your needs. The goal is not to find the answer that works for everyone. It is to make your own final choice easier.</p>
-<div class="v10-next-decision"><p class="eyebrow">CONTINUE THE DECISION</p><h2>What do you need to decide next?</h2><div class="v10-next-links"><a href="/education/colleges/">Colleges →</a><a href="/education/courses-admissions/">Courses &amp; Admissions →</a><a href="/education/study-abroad/">Study Abroad →</a></div></div></article><aside class="sidebar"><div class="v8-related"><strong>Keep exploring</strong><a href="/">Back to Dikshan</a><a href="/blog/">Browse the blog</a><a href="/search/">Search all guides</a></div></aside></div></section></main><footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand"><img alt="" loading="lazy" src="/assets/favicon.png"/>Dikshan</div>
-<p>Practical guides, comparisons and context for decisions in Nepal.</p></div>
-<div><strong>Explore</strong><a href="/education/">Education</a><a href="/products/">Products</a><a href="/travel/">Travel</a><a href="/about/">About</a><a href="/search/">Search</a></div>
-<div><strong>Popular</strong><a href="/education/colleges/">Colleges</a><a href="/products/buying-guides/">Buying Guides</a><a href="/travel/treks/">Treks</a><a href="/travel/hotels/">Hotels &amp; Stays</a><a href="/blog/">Blog</a></div></div>
-<div class="footer-bottom"><span>© <span data-year=""></span> Dikshan</span><span>Useful first. Honest throughout.</span></div></div></footer><script defer="" src="/assets/main.js"></script></body></html>
+Audit of the 89 indexable pages in the 90-page site. The Education pillar follows the supplied SEO/content specification: `/education/` remains the hub, the primary topic is “education in Nepal”, and related terms are used naturally rather than mechanically.
+
+| URL | Title | H1 | Robots | Status |
+|---|---|---|---|---|
+| `/about/` | About \| Guides & Comparisons for Nepal \| Dikshan | Helping people make clearer decisions in Nepal. | index,follow | OK |
+| `/blog/` | Blog — Guides, Comparisons & Ideas for Nepal \| Dikshan | Useful things to read before you decide. | index,follow | OK |
+| `/contact/` | Contact \| Questions, Corrections & Suggestions \| Dikshan | Have a question or something we should cover? | index,follow | OK |
+| `/education/bca-vs-bsc-csit-vs-bit/` | BCA vs BSc CSIT vs BIT — Dikshan | BCA vs BSc CSIT vs BIT | index,follow | OK |
+| `/education/colleges/affiliation-explained/` | College affiliation explained — Dikshan | College affiliation explained | index,follow | OK |
+| `/education/colleges/best-bca-colleges-kathmandu/` | Best BCA Colleges in Kathmandu — Dikshan | Best BCA Colleges in Kathmandu | index,follow | OK |
+| `/education/colleges/best-bit-colleges-nepal/` | Best BIT Colleges in Nepal — Dikshan | Best BIT Colleges in Nepal | index,follow | OK |
+| `/education/colleges/best-bsc-csit-colleges-kathmandu/` | Best BSc CSIT Colleges in Kathmandu — Dikshan | Best BSc CSIT Colleges in Kathmandu | index,follow | OK |
+| `/education/colleges/how-to-compare-colleges/` | How to compare colleges — Dikshan | How to compare colleges | index,follow | OK |
+| `/education/colleges/` | Colleges in Nepal — +2 & Bachelor's Colleges \| Dikshan | Find a college that fits your next step. | index,follow | OK |
+| `/education/consultancies/fees-explained/` | How consultancy fees work — Dikshan | How consultancy fees work | index,follow | OK |
+| `/education/consultancies/how-to-choose/` | How to choose an education consultancy — Dikshan | How to choose an education consultancy | index,follow | OK |
+| `/education/consultancies/how-to-compare/` | How to compare consultancies — Dikshan | How to compare consultancies | index,follow | OK |
+| `/education/consultancies/` | Consultancies — Dikshan | Useful consultancies guidance for the decision in front of you. | index,follow | OK |
+| `/education/consultancies/questions-to-ask/` | Questions to ask a consultancy — Dikshan | Questions to ask a consultancy | index,follow | OK |
+| `/education/consultancies/red-flags/` | Red flags to watch for — Dikshan | Red flags to watch for | index,follow | OK |
+| `/education/courses-admissions/bca/` | BCA in Nepal — Dikshan | BCA in Nepal | index,follow | OK |
+| `/education/courses-admissions/bsc-csit/` | BSc CSIT in Nepal — Dikshan | BSc CSIT in Nepal | index,follow | OK |
+| `/education/courses-admissions/how-admissions-work/` | How college admissions work — Dikshan | How college admissions work | index,follow | OK |
+| `/education/courses-admissions/how-to-choose-a-course/` | How to choose a course — Dikshan | How to choose a course | index,follow | OK |
+| `/education/courses-admissions/` | Courses Admissions — Dikshan | Useful courses admissions guidance for the decision in front of you. | index,follow | OK |
+| `/education/courses-admissions/questions-before-enrolling/` | What to ask before enrolling — Dikshan | What to ask before enrolling | index,follow | OK |
+| `/education/how-to-choose-a-college-in-nepal/` | How to choose a college in Nepal — Dikshan | How to choose a college in Nepal | index,follow | OK |
+| `/education/how-to-compare-college-fees/` | How to compare college fees — Dikshan | How to compare college fees | index,follow | OK |
+| `/education/` | Education in Nepal: Colleges, Courses, Admissions & Study Abroad \| Dikshan | Education in Nepal: Colleges, Courses & Study Options | index,follow | title >65 chars (advisory) |
+| `/education/questions-to-ask-education-consultancy/` | Questions to ask an education consultancy — Dikshan | Questions to ask an education consultancy | index,follow | OK |
+| `/education/study-abroad/australia/` | Study in Australia from Nepal — Dikshan | Study in Australia from Nepal | index,follow | OK |
+| `/education/study-abroad/canada/` | Study in Canada from Nepal — Dikshan | Study in Canada from Nepal | index,follow | OK |
+| `/education/study-abroad/how-to-compare-destinations/` | How to compare study-abroad destinations — Dikshan | How to compare study-abroad destinations | index,follow | OK |
+| `/education/study-abroad/` | Study Abroad — Dikshan | Useful study abroad guidance for the decision in front of you. | index,follow | OK |
+| `/education/study-abroad/japan/` | Study in Japan from Nepal — Dikshan | Study in Japan from Nepal | index,follow | OK |
+| `/education/study-abroad/uk/` | Study in the UK from Nepal — Dikshan | Study in the UK from Nepal | index,follow | OK |
+| `/education/what-to-check-before-college-admission/` | What to check before college admission — Dikshan | What to check before college admission | index,follow | OK |
+| `/` | Dikshan — Practical Guides & Comparisons for Nepal \| Education, Products & Travel | Better decisions start with better questions. | index,follow | title >65 chars (advisory) |
+| `/products/buying-guides/best-earbuds-under-2000-nepal/` | Best Earbuds Under NPR 2,000 in Nepal — Dikshan | Best Earbuds Under NPR 2,000 in Nepal | index,follow | OK |
+| `/products/buying-guides/best-refrigerators-nepal/` | Best Refrigerators in Nepal — Dikshan | Best Refrigerators in Nepal | index,follow | OK |
+| `/products/buying-guides/best-washing-machines-nepal/` | Best Washing Machines in Nepal — Dikshan | Best Washing Machines in Nepal | index,follow | OK |
+| `/products/buying-guides/how-to-choose-a-phone/` | How to choose a phone — Dikshan | How to choose a phone | index,follow | OK |
+| `/products/buying-guides/how-to-choose-a-smartwatch/` | How to choose a smartwatch — Dikshan | How to choose a smartwatch | index,follow | OK |
+| `/products/buying-guides/` | Buying Guides — Dikshan | Useful buying guides guidance for the decision in front of you. | index,follow | OK |
+| `/products/check-before-buying-electronics/` | What to check before buying electronics — Dikshan | What to check before buying electronics | index,follow | OK |
+| `/products/comparisons/best-for-vs-best-overall/` | Best for vs best overall — Dikshan | Best for vs best overall | index,follow | OK |
+| `/products/comparisons/feature-tradeoffs/` | Feature trade-offs explained — Dikshan | Feature trade-offs explained | index,follow | OK |
+| `/products/comparisons/how-to-compare/` | How to compare two products — Dikshan | How to compare two products | index,follow | OK |
+| `/products/comparisons/how-to-shortlist/` | How to shortlist before buying — Dikshan | How to shortlist before buying | index,follow | OK |
+| `/products/comparisons/` | Comparisons — Dikshan | Useful comparisons guidance for the decision in front of you. | index,follow | OK |
+| `/products/comparisons/price-comparison/` | How to compare product prices — Dikshan | How to compare product prices | index,follow | OK |
+| `/products/how-to-choose-a-product/` | How to choose a product in Nepal — Dikshan | How to choose a product in Nepal | index,follow | OK |
+| `/products/how-to-compare-prices/` | How to compare prices — Dikshan | How to compare prices | index,follow | OK |
+| `/products/` | Products in Nepal: Buying Guides, Reviews & Comparisons \| Dikshan | Products in Nepal: Buying Guides, Reviews & Comparisons | index,follow | OK |
+| `/products/reviews/how-to-read-specs/` | How to read product specifications — Dikshan | How to read product specifications | index,follow | OK |
+| `/products/reviews/how-we-review/` | What makes a useful product review? — Dikshan | What makes a useful product review? | index,follow | OK |
+| `/products/reviews/` | Reviews — Dikshan | Useful reviews guidance for the decision in front of you. | index,follow | OK |
+| `/products/reviews/nepal-availability/` | Product availability in Nepal — Dikshan | Product availability in Nepal | index,follow | OK |
+| `/products/reviews/when-not-to-buy/` | When not to buy a product — Dikshan | When not to buy a product | index,follow | OK |
+| `/products/reviews/why-warranty-matters/` | Why warranty matters — Dikshan | Why warranty matters | index,follow | OK |
+| `/products/specs-that-matter/` | Specs that actually matter — Dikshan | Specs that actually matter | index,follow | OK |
+| `/products/when-the-cheapest-option-makes-sense/` | When the cheapest option makes sense — Dikshan | When the cheapest option makes sense | index,follow | OK |
+| `/search/` | Search — Dikshan | Find the guide you need. | noindex,follow | OK |
+| `/travel/hotels/best-hotels-chitwan/` | Best Hotels in Chitwan — Dikshan | Best Hotels in Chitwan | index,follow | OK |
+| `/travel/hotels/best-hotels-kathmandu/` | Best Hotels in Kathmandu — Dikshan | Best Hotels in Kathmandu | index,follow | OK |
+| `/travel/hotels/best-hotels-pokhara/` | Best Hotels in Pokhara — Dikshan | Best Hotels in Pokhara | index,follow | OK |
+| `/travel/hotels/how-to-choose/` | How to choose a hotel — Dikshan | How to choose a hotel | index,follow | OK |
+| `/travel/hotels/` | Hotels — Dikshan | Useful hotels guidance for the decision in front of you. | index,follow | OK |
+| `/travel/hotels/location-vs-price/` | Hotel location vs price — Dikshan | Hotel location vs price | index,follow | OK |
+| `/travel/how-much-to-plan-before-a-trip/` | How much should you plan before a trip? — Dikshan | How much should you plan before a trip? | index,follow | OK |
+| `/travel/how-to-choose-a-hotel/` | How to choose a hotel — Dikshan | How to choose a hotel | index,follow | OK |
+| `/travel/how-to-choose-a-nepal-destination/` | How to choose a Nepal destination — Dikshan | How to choose a Nepal destination | index,follow | OK |
+| `/travel/how-to-choose-a-trek/` | How to choose a trek — Dikshan | How to choose a trek | index,follow | OK |
+| `/travel/how-to-plan-a-short-nepal-trip/` | How to plan a short Nepal trip — Dikshan | How to plan a short Nepal trip | index,follow | OK |
+| `/travel/` | Travel in Nepal: Places, Treks, Things to Do & Stays \| Dikshan | Travel in Nepal: Places, Treks, Things to Do & Stays | index,follow | OK |
+| `/travel/places/chitwan/` | Chitwan — Dikshan | Chitwan | index,follow | OK |
+| `/travel/places/how-long-to-stay/` | How long should you stay? — Dikshan | How long should you stay? | index,follow | OK |
+| `/travel/places/how-to-choose/` | How to choose where to visit in Nepal — Dikshan | How to choose where to visit in Nepal | index,follow | OK |
+| `/travel/places/` | Places — Dikshan | Useful places guidance for the decision in front of you. | index,follow | OK |
+| `/travel/places/kathmandu/` | Kathmandu — Dikshan | Kathmandu | index,follow | OK |
+| `/travel/places/pokhara/` | Pokhara — Dikshan | Pokhara | index,follow | OK |
+| `/travel/things-to-do/day-trips-from-kathmandu/` | Day trips from Kathmandu — Dikshan | Day trips from Kathmandu | index,follow | OK |
+| `/travel/things-to-do/free-vs-paid/` | Free vs paid things to do — Dikshan | Free vs paid things to do | index,follow | OK |
+| `/travel/things-to-do/how-to-plan-a-day/` | How to plan a day of activities — Dikshan | How to plan a day of activities | index,follow | OK |
+| `/travel/things-to-do/` | Things To Do — Dikshan | Useful things to do guidance for the decision in front of you. | index,follow | OK |
+| `/travel/things-to-do/kathmandu/` | Things to do in Kathmandu — Dikshan | Things to do in Kathmandu | index,follow | OK |
+| `/travel/things-to-do/pokhara/` | Things to do in Pokhara — Dikshan | Things to do in Pokhara | index,follow | OK |
+| `/travel/treks/best-treks-in-nepal/` | Best Treks in Nepal — Dikshan | Best Treks in Nepal | index,follow | OK |
+| `/travel/treks/how-to-choose/` | How to choose a trek — Dikshan | How to choose a trek | index,follow | OK |
+| `/travel/treks/how-to-prepare/` | How to prepare for a trek — Dikshan | How to prepare for a trek | index,follow | OK |
+| `/travel/treks/` | Treks — Dikshan | Useful treks guidance for the decision in front of you. | index,follow | OK |
+| `/travel/treks/mountain-view-treks-nepal/` | Mountain-view treks in Nepal — Dikshan | Mountain-view treks in Nepal | index,follow | OK |
+| `/travel/treks/short-treks-nepal/` | Short treks in Nepal — Dikshan | Short treks in Nepal | index,follow | OK |
+
+## Review rules
+
+- One clear H1 per indexable page.
+- Titles describe the actual page rather than stuffing every related keyword.
+- Meta descriptions explain what the page covers.
+- Canonicals should match the public URL.
+- Search remains `noindex,follow`.
+- Article images use descriptive subject-based alt text.
+- No unsupported rankings, fees, testing claims, availability claims or “largest database” claims are introduced.
+- Internal links preserve the existing pillar → subcategory → article architecture.
+- Two titles exceed 65 characters: the Education pillar and homepage. These are marked advisory rather than treated as blockers because the supplied Education SEO title is intentionally descriptive.

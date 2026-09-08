@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/services/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/work/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/nepal-guides/",
+      "destination": "/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/web-technology/",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/nepal-services-business/",
+      "destination": "/education/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/seo-digital-growth/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/search-intent/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/content-system/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/seo-page/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
