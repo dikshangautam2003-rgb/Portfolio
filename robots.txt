@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /search/
-Sitemap: https://dikshangautam.com.np/sitemap.xml
