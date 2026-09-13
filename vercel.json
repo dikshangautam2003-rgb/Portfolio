@@ -1,8 +1,12 @@
 {
   "redirects": [
-    { "source": "/blog/", "destination": "/insights/", "permanent": true },
-    { "source": "/blog", "destination": "/insights/", "permanent": true },
-    { "source": "/search/", "destination": "/insights/", "permanent": true },
-    { "source": "/search", "destination": "/insights/", "permanent": true }
+    {"source":"/work","destination":"/","permanent":true},
+    {"source":"/work/","destination":"/","permanent":true},
+    {"source":"/insights","destination":"/blog/","permanent":true},
+    {"source":"/insights/","destination":"/blog/","permanent":true},
+    {"source":"/insights/:path*","destination":"/blog/:path*","permanent":true}
+  ],
+  "headers": [
+    {"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},{"key":"Permissions-Policy","value":"geolocation=(), microphone=(), camera=()"}]}
   ]
 }

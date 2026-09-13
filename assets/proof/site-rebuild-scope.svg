@@ -1,0 +1,29 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="900" fill="#faf7f1"/>
+<text x="110" y="110" font-family="Georgia, serif" font-size="68" fill="#1a1814">Rebuilding the site around the business</text>
+<text x="110" y="165" font-family="Arial, sans-serif" font-size="25" fill="#6f695e">Personal project · strategy, information architecture and SEO direction</text>
+<line x1="110" y1="205" x2="1490" y2="205" stroke="#e4dcc9" stroke-width="2"/>
+
+<rect x="110" y="275" width="520" height="330" rx="28" fill="#ffffff" stroke="#e4dcc9" stroke-width="2"/>
+<text x="150" y="335" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2" fill="#b23a1f">BEFORE</text>
+<text x="150" y="425" font-family="Georgia, serif" font-size="76" fill="#1a1814">89</text>
+<text x="150" y="465" font-family="Arial, sans-serif" font-size="24" fill="#4a453d">indexable pages</text>
+<text x="150" y="515" font-family="Arial, sans-serif" font-size="24" fill="#4a453d">3 unrelated editorial pillars</text>
+<text x="150" y="550" font-family="Arial, sans-serif" font-size="20" fill="#847c6d">Education · Products · Travel</text>
+
+<path d="M685 440 L870 440" stroke="#b23a1f" stroke-width="5"/>
+<path d="M845 420 L870 440 L845 460" fill="none" stroke="#b23a1f" stroke-width="5"/>
+
+<rect x="970" y="275" width="520" height="330" rx="28" fill="#1a1814"/>
+<text x="1010" y="335" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2" fill="#e9ad98">AFTER</text>
+<text x="1010" y="425" font-family="Georgia, serif" font-size="76" fill="#faf7f1">6</text>
+<text x="1010" y="465" font-family="Arial, sans-serif" font-size="24" fill="#d8d0c0">core pages</text>
+<text x="1010" y="515" font-family="Arial, sans-serif" font-size="24" fill="#d8d0c0">3 connected service systems</text>
+<text x="1010" y="550" font-family="Arial, sans-serif" font-size="20" fill="#a8a096">Search · Content · Web</text>
+
+<text x="110" y="690" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1a1814">Editorial focus</text>
+<text x="110" y="740" font-family="Georgia, serif" font-size="42" fill="#1a1814">Digital Growth in Nepal</text>
+<text x="110" y="792" font-family="Arial, sans-serif" font-size="21" fill="#4a453d">SEO · Local Search · Websites · Content</text>
+
+<text x="110" y="850" font-family="Arial, sans-serif" font-size="17" fill="#847c6d">This graphic documents project scope; it does not claim traffic, ranking or revenue results.</text>
+</svg>
