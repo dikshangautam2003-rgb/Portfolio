@@ -1,18 +1,19 @@
-# Dikshan V6 — Editorial Personal Website
+# Dikshan Gautam — V6 Editorial Portfolio
 
-A static HTML/CSS/JS personal-business website for Dikshan Gautam.
+Static personal portfolio for SEO, content and web work, with a separate education content identity for Nepali students.
 
-## Direction
-- Editorial, typography-led visual system
-- Warm ivory / ink / single oxblood accent
-- Inter + Instrument Serif (display accent only)
-- Minimal borders, little/no shadow, restrained radius
-- Work-first hierarchy
-- Education and Blog remain first-class sections
-- Accessible focus, semantic headings and reduced-motion support
+## V6 direction
+- Editorial, typographic and evidence-led rather than SaaS/card-heavy.
+- Warm ivory + ink + restrained oxblood accent.
+- Inter for UI/body and Instrument Serif as a controlled display accent.
+- Homepage leads with positioning, real search evidence, services, education, writing and contact.
+- No fabricated client logos, testimonials, metrics or results.
+- Search Console screenshot supplied for the portfolio is used as a concrete proof asset.
+- Education landing pages are written as useful decision frameworks rather than placeholder “coming soon” cards.
+- Responsive layout, keyboard focus states and `prefers-reduced-motion` support.
 
-## Important
-The portrait areas are intentional replacement slots. Add a real, high-quality portrait before production.
+## Proof asset
+`/assets/proof/search-performance-6-months.png` is the supplied Google Search Console screenshot showing the six-month comparison.
 
-## Deploy
-This is a static site. Use the folder containing `index.html` as the Vercel project root. No build command is required.
+## Deployment
+This is a static site. Use the `dikshan_v5` directory as the Vercel project root if importing the ZIP directly.
