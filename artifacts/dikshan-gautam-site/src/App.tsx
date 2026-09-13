@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowRight, ArrowUpRight, BarChart3, Code2, FileText, Globe2, Layers3, MapPin, Menu, Search, Send, ScanSearch, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, Search, Send, X } from 'lucide-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Link, Route, Switch, Router as WouterRouter, useLocation, useParams } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -21,18 +21,18 @@ type Article = {
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/education', label: 'Education' },
-  { href: '/blog', label: 'Writing' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const categories = [
-  { slug: 'plus-two-neb', label: '+2 / NEB', count: '12 guides' },
-  { slug: 'bachelors', label: "Bachelor's", count: '09 guides' },
-  { slug: 'courses', label: 'Courses', count: '08 guides' },
-  { slug: 'study-abroad', label: 'Study Abroad', count: '11 guides' },
-  { slug: 'admissions', label: 'Admissions', count: '14 guides' },
-  { slug: 'scholarships', label: 'Scholarships', count: '07 guides' },
+  { slug: 'plus-two-neb', label: '+2 / NEB' },
+  { slug: 'bachelors', label: "Bachelor's" },
+  { slug: 'courses', label: 'Courses' },
+  { slug: 'study-abroad', label: 'Study Abroad' },
+  { slug: 'admissions', label: 'Admissions' },
+  { slug: 'scholarships', label: 'Scholarships' },
 ];
 
 const serviceAreas = [
@@ -256,29 +256,39 @@ function usePageMeta(title: string, description: string) {
 function SiteHeader() {
   const [location] = useLocation();
   const [open, setOpen] = useState(false);
-  useEffect(() => setOpen(false), [location]);
+  const [educationOpen, setEducationOpen] = useState(false);
+  useEffect(() => { setOpen(false); setEducationOpen(false); }, [location]);
   return (
     <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="brand-mark" data-testid="link-brand">
-          <span className="brand-symbol">D</span>
-          <span>Dikshan Gautam</span>
+          <img className="brand-logo" src="/dikshan-mark.png" alt="" aria-hidden="true" />
+          <span><strong>Dikshan</strong> Gautam</span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} aria-current={location === item.href ? 'page' : undefined} data-testid={`link-nav-${item.label.toLowerCase().replaceAll(' ', '-')}`}>
-              {item.label}
-            </Link>
-          ))}
+          <Link href="/services" aria-current={location === '/services' ? 'page' : undefined}>Services</Link>
+          <div className="nav-dropdown" onMouseEnter={() => setEducationOpen(true)} onMouseLeave={() => setEducationOpen(false)}>
+            <button type="button" className="nav-dropdown-trigger" aria-expanded={educationOpen} onClick={() => setEducationOpen(v => !v)}>Education <ChevronDown size={13} /></button>
+            <div className={`nav-dropdown-menu ${educationOpen ? 'is-open' : ''}`}>
+              <div className="nav-dropdown-label">Education desk</div>
+              {categories.map((category) => <Link key={category.slug} href={`/education/${category.slug}`}>{category.label}<ArrowUpRight size={13} /></Link>)}
+              <Link className="nav-dropdown-all" href="/education">Browse all education <ArrowRight size={13} /></Link>
+            </div>
+          </div>
+          <Link href="/blog" aria-current={location === '/blog' ? 'page' : undefined}>Blog</Link>
+          <Link href="/about" aria-current={location === '/about' ? 'page' : undefined}>About</Link>
+          <Link href="/contact" aria-current={location === '/contact' ? 'page' : undefined}>Contact</Link>
         </nav>
-        <Link href="/contact" className="header-cta" data-testid="link-header-contact">Start a conversation <ArrowUpRight size={14} /></Link>
-        <button className="menu-button" type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen((current) => !current)} data-testid="button-mobile-menu">
-          {open ? <X size={23} /> : <Menu size={23} />}
-        </button>
+        <Link href="/contact" className="header-cta" data-testid="link-header-contact">Let's talk <ArrowUpRight size={14} /></Link>
+        <button className="menu-button" type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(v => !v)}>{open ? <X size={23} /> : <Menu size={23} />}</button>
       </div>
       <nav className={`mobile-nav ${open ? 'is-open' : ''}`} aria-label="Mobile navigation">
-        {navItems.map((item) => <Link key={item.href} href={item.href} data-testid={`link-mobile-${item.label.toLowerCase().replaceAll(' ', '-')}`}>{item.label}</Link>)}
-        <Link href="/contact" className="button-dark" data-testid="link-mobile-contact">Start a conversation <ArrowUpRight size={14} /></Link>
+        {navItems.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        <details className="mobile-education">
+          <summary>Education <ChevronDown size={15} /></summary>
+          {categories.map(category => <Link key={category.slug} href={`/education/${category.slug}`}>{category.label}</Link>)}
+        </details>
+        <Link href="/contact" className="button-dark">Let's talk <ArrowUpRight size={14} /></Link>
       </nav>
     </header>
   );
@@ -287,14 +297,17 @@ function SiteHeader() {
 function Footer() {
   return (
     <footer className="site-footer">
-      <div className="page-width footer-inner">
-        <span>© {new Date().getFullYear()} Dikshan Gautam</span>
-        <span>SEO · Content · Websites</span>
+      <div className="page-width footer-main">
+        <div className="footer-brand-block">
+          <img src="/dikshan-mark.png" alt="Dikshan monogram" className="footer-logo" />
+          <div><strong>Dikshan Gautam</strong><span>SEO · Content · Web</span></div>
+        </div>
+        <p>Helping businesses get found, understood and chosen online.</p>
         <div className="footer-links">
-          <Link href="/about" data-testid="link-footer-about">About</Link>
-          <Link href="/contact" data-testid="link-footer-contact">Contact</Link>
+          <Link href="/services">Services</Link><Link href="/blog">Blog</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link>
         </div>
       </div>
+      <div className="page-width footer-bottom"><span>© {new Date().getFullYear()} Dikshan Gautam</span><span>Based in Nepal · working remotely</span></div>
     </footer>
   );
 }
@@ -308,101 +321,51 @@ function IntroMark() {
 }
 
 function Home() {
-  usePageMeta('SEO, content and websites', 'Dikshan Gautam helps businesses become easier to find, understand and choose.');
+  usePageMeta('SEO, Content & Web — Dikshan Gautam', 'Dikshan Gautam helps businesses get found on Google, communicate clearly through content and build websites that make the next step easier.');
   return (
     <>
       <section className="hero">
         <div className="page-width hero-grid">
-          <div className="reveal">
-            <span className="eyebrow">Independent SEO · content · web</span>
-            <h1 className="display">Make your digital work easier to <em>find and choose.</em></h1>
-            <p className="lede">I bring search, words and structure together so the right people can find you, understand you and take the next step.</p>
-            <div className="hero-actions">
-              <Link href="/services" className="button-dark" data-testid="link-hero-services">View services <ArrowRight size={16} /></Link>
-              <Link href="/contact" className="button-light" data-testid="link-hero-contact">Talk about a project</Link>
-            </div>
-            <div className="hero-note"><span className="status-dot" /> Focused projects · based in Nepal · working remotely</div>
+          <div className="hero-copy reveal">
+            <span className="eyebrow">Dikshan Gautam · SEO · Content · Web</span>
+            <h1 className="display">I help businesses become <em>easier to find, understand and choose.</em></h1>
+            <p className="lede">SEO strategy, content writing, websites and digital content — practical work for businesses that need their online presence to make more sense.</p>
+            <div className="hero-actions"><Link href="/services" className="button-dark">See what I can do <ArrowRight size={16} /></Link><Link href="/contact" className="button-light">Let's talk</Link></div>
+            <div className="hero-note"><span className="status-dot" /> Based in Nepal · available for selected projects</div>
           </div>
-          <div className="hero-map reveal" aria-label="A visual map of the work" role="img">
-            <div className="hero-map-word" aria-hidden="true">clear</div>
-            <div className="map-kicker">One clear path</div>
-            <div className="map-orbit orbit-one" />
-            <div className="map-orbit orbit-two" />
-            <div className="map-line map-line-one" />
-            <div className="map-line map-line-two" />
-            <div className="map-line map-line-three" />
-            <div className="map-node node-search"><Search size={17} /><span>Find</span><small>SEO · Search · Local</small></div>
-            <div className="map-node node-content"><FileText size={17} /><span>Understand</span><small>Content · Copy · Answers</small></div>
-            <div className="map-node node-web"><Globe2 size={17} /><span>Choose</span><small>Website · UX · Next step</small></div>
-            <div className="map-foot">Search question → useful page → clear action</div>
+          <div className="hero-visual reveal">
+            <div className="hero-photo"><img src="https://images.unsplash.com/photo-1772442198907-765685249ea4?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=78&w=1400" alt="A creative professional working on a detailed project at a desk" /><span className="photo-caption">The work is in the details.</span></div>
+            <div className="hero-visual-card hero-visual-card-top"><span>SEARCH</span><strong>Find the right people.</strong><small>SEO · Local · Google</small></div>
+            <div className="hero-visual-card hero-visual-card-bottom"><span>CONTENT + WEB</span><strong>Make the next step obvious.</strong><small>Copy · Structure · UX</small></div>
           </div>
         </div>
       </section>
 
-      <div className="marquee" aria-hidden="true">
-        <div className="marquee-track">
-          {['Findable', 'Understandable', 'Useful', 'Considered', 'Findable', 'Understandable', 'Useful', 'Considered'].map((item, index) => <span className="marquee-item" key={`${item}-${index}`}>{item}</span>)}
-        </div>
-      </div>
+      <div className="marquee" aria-hidden="true"><div className="marquee-track">{['SEO strategy','Google Business Profile','Content writing','SEO websites','Video editing','SEO strategy','Google Business Profile','Content writing','SEO websites','Video editing'].map((item, index) => <span className="marquee-item" key={`${item}-${index}`}>{item}</span>)}</div></div>
 
-      <section className="section evidence">
-        <div className="page-width evidence-grid">
-          <div>
-            <IntroMark />
-            <h2 className="display">The work should hold up in a dashboard <em>and in a conversation.</em></h2>
-            <p className="evidence-copy">A recent Search Console snapshot gives a useful view of reach. It is evidence of visibility, not a claim about causation — a starting point for asking better questions.</p>
-            <p className="evidence-note">Search Console · last 6 months compared with previous period</p>
-          </div>
-          <div className="metric-grid" aria-label="Search Console evidence">
-            <div className="metric" data-testid="metric-clicks"><span className="metric-value">264K</span><span className="metric-label">Clicks</span><span className="metric-change">↑ from 82.7K</span><div className="mini-chart" aria-hidden="true">{[24, 29, 20, 31, 33, 28, 35].map((height, i) => <span key={i} style={{ height: `${height}px` }} />)}</div></div>
-            <div className="metric" data-testid="metric-impressions"><span className="metric-value">12.8M</span><span className="metric-label">Impressions</span><span className="metric-change">↑ from 3.63M</span><div className="mini-chart" aria-hidden="true">{[17, 22, 27, 20, 28, 31, 34].map((height, i) => <span key={i} style={{ height: `${height}px` }} />)}</div></div>
-            <div className="metric" data-testid="metric-ctr"><span className="metric-value">2.1%</span><span className="metric-label">Average CTR</span><span className="metric-change">previous: 2.3%</span></div>
-            <div className="metric" data-testid="metric-position"><span className="metric-value">5.9</span><span className="metric-label">Average position</span><span className="metric-change">previous: 6.9</span></div>
-          </div>
+      <section className="section proof-section">
+        <div className="page-width proof-grid">
+          <div className="proof-copy"><span className="eyebrow">A useful signal</span><h2 className="display">Good digital work should make the numbers <em>easier to explain.</em></h2><p>Search Console can show reach and visibility. It cannot, by itself, explain every business outcome. I use evidence as a starting point for better decisions — not as a reason to invent a story.</p><span className="proof-note">Search Console · last 6 months compared with previous 6 months</span></div>
+          <div className="metric-grid" aria-label="Search Console performance evidence"><div className="metric"><span className="metric-value">264K</span><span className="metric-label">Clicks</span><span className="metric-change">previous: 82.7K</span></div><div className="metric metric-accent"><span className="metric-value">12.8M</span><span className="metric-label">Impressions</span><span className="metric-change">previous: 3.63M</span></div><div className="metric"><span className="metric-value">2.1%</span><span className="metric-label">Average CTR</span><span className="metric-change">previous: 2.3%</span></div><div className="metric"><span className="metric-value">5.9</span><span className="metric-label">Average position</span><span className="metric-change">previous: 6.9</span></div></div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section services-home-section">
         <div className="page-width">
-          <div className="section-head">
-            <div><span className="eyebrow">What I can help with</span><h2 className="display">Different jobs, <em>connected by the reader.</em></h2></div>
-            <p>Search gets someone to the door. Content helps them make sense of what they see. The website gives them somewhere useful to go next.</p>
+          <div className="section-head"><div><span className="eyebrow">What I actually do</span><h2 className="display">Clear services. <em>No mystery language.</em></h2></div><p>Pick one area or combine them. The point is to make the work easier to understand before you start.</p></div>
+          <div className="service-showcase">
+            {serviceAreas.map((area, index) => <article className={`service-showcase-item service-showcase-${area.id}`} key={area.id}><div className="service-showcase-top"><span className="service-index">0{index+1}</span><div><span className="section-label">{area.label}</span><h3>{area.title}</h3></div></div><div className="service-chip-list">{area.services.map(([title]) => <span key={title}>{title}</span>)}</div><Link href={`/services#${area.id}`} className="service-more">Explore {area.label.toLowerCase()} <ArrowUpRight size={14} /></Link></article>)}
           </div>
-          <div className="service-grid home-service-grid">
-            <ServiceCard number="01" title="SEO and search" text="SEO strategy, technical SEO, local search, Google Business Profile and Search Console." icon={<ScanSearch size={22} />} featured />
-            <ServiceCard number="02" title="Content and copy" text="Content strategy, SEO articles and website copy that answer the next question." icon={<FileText size={22} />} />
-            <ServiceCard number="03" title="Web and structure" text="SEO-ready websites, information architecture, UX and on-page optimization." icon={<Layers3 size={22} />} />
-          </div>
-          <Link href="/services" className="view-all service-grid-link" data-testid="link-home-all-services">See the full service list <ArrowRight size={15} /></Link>
         </div>
       </section>
 
-      <section className="section education-band">
-        <div className="page-width education-layout">
-          <div className="education-intro">
-            <span className="eyebrow">For Nepali students</span>
-            <h2 className="display">A calmer way to <em>choose what is next.</em></h2>
-            <p>The education desk is a growing resource for students and families navigating study options, applications and the details in between.</p>
-            <Link href="/education" className="view-all" data-testid="link-education-hub">Browse the education desk <ArrowRight size={15} /></Link>
-          </div>
-          <div className="category-grid">
-            {categories.map((category) => <Link key={category.slug} href={`/education/${category.slug}`} className="category-link" data-testid={`link-category-${category.slug}`}><span>{category.label}</span><span>{category.count} ↗</span></Link>)}
-          </div>
-        </div>
+      <section className="section visual-break-section">
+        <div className="page-width visual-break-grid"><div className="visual-break-image"><img src="https://images.unsplash.com/photo-1662358983398-ae035781fa20?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=78&w=1600" alt="Street and architecture in Kathmandu, Nepal" /><span>NEPAL / INFORMATION / PEOPLE</span></div><div className="visual-break-copy"><span className="eyebrow">Another side of the work</span><h2 className="display">Useful information for <em>Nepali students.</em></h2><p>The Education desk is a separate content identity within the site — practical guides for students comparing study options, courses, admissions and scholarships.</p><Link href="/education" className="view-all">Browse the education desk <ArrowRight size={15} /></Link></div></div>
       </section>
 
       <WritingPreview />
 
-      <section className="section-tight">
-        <div className="page-width contact-panel">
-          <div>
-            <span className="eyebrow">Have a useful problem?</span>
-            <h2 className="display">Let’s make the next step <em>clearer.</em></h2>
-            <p className="lede">Tell me what you are trying to make easier to find, understand or choose.</p>
-          </div>
-          <div className="contact-aside"><p>Good fit for</p><span>Websites in progress · content that needs a shape · search visibility questions</span><br /><Link href="/contact" className="button-dark" style={{ marginTop: '28px' }} data-testid="link-home-contact">Get in touch <ArrowUpRight size={15} /></Link></div>
-        </div>
-      </section>
+      <section className="section-tight"><div className="page-width contact-panel"><div><span className="eyebrow">Have a useful problem?</span><h2 className="display">Let's make the next step <em>clearer.</em></h2><p className="lede">Tell me what you are trying to make easier to find, understand or choose.</p></div><div className="contact-aside"><p>SEO · Content · Web · Video</p><Link href="/contact" className="button-dark">Get in touch <ArrowUpRight size={15} /></Link></div></div></section>
     </>
   );
 }
@@ -426,23 +389,23 @@ function WritingPreview() {
 }
 
 function Services() {
-  usePageMeta('Services', 'SEO, content strategy and websites by Dikshan Gautam.');
-  return <><PageHero eyebrow="Services" title={<>Specific work for <em>search, content and websites.</em></>} description="Choose the part that needs attention, or bring the whole path. I can help with search visibility, useful writing, website structure and content that needs a second life." /><section className="service-intro-strip"><div className="page-width"><span>How the pieces relate</span><p>Search brings a question. Content answers it. Structure makes the answer easy to use. Video and repurposing help it travel further.</p></div></section><section className="section services-section"><div className="page-width service-area-list">{serviceAreas.map((area, index) => <ServiceArea area={area} index={index} key={area.id} />)}</div></section><section className="section-tight"><div className="page-width contact-panel"><div><span className="eyebrow">Start with a question</span><h2 className="display">Tell me which part is <em>getting in the way.</em></h2></div><div className="contact-aside"><p>One project can be one service, not a retainer</p><Link href="/contact" className="button-dark" data-testid="link-services-contact">Write to me <ArrowUpRight size={15} /></Link></div></div></section></>;
+  usePageMeta('SEO, Content & Web Services — Dikshan Gautam', 'SEO strategy, Google Business Profile optimization, content writing, SEO websites, website optimization and video editing by Dikshan Gautam.');
+  return <><PageHero eyebrow="Services" title={<>The actual work, <em>clearly named.</em></>} description="SEO, content, websites and video work — with the specific services listed so you can quickly see what I can help with." /><section className="service-intro-strip"><div className="page-width"><span>How the pieces connect</span><p>Search helps people discover you. Content helps them understand you. Web work gives them a clearer place to land. Video and repurposing help useful ideas travel further.</p></div></section><section className="section services-section"><div className="page-width service-area-list">{serviceAreas.map((area, index) => <ServiceArea area={area} index={index} key={area.id} />)}</div></section><section className="section-tight"><div className="page-width contact-panel"><div><span className="eyebrow">Not sure what you need?</span><h2 className="display">Bring me the <em>problem.</em></h2></div><div className="contact-aside"><p>You don't need to know which service to choose before you write.</p><Link href="/contact" className="button-dark">Let's talk <ArrowUpRight size={15} /></Link></div></div></section></>;
 }
 
 function ServiceArea({ area, index }: { area: (typeof serviceAreas)[number]; index: number }) {
   const visuals = [
-    <div className="service-visual search-visual" aria-hidden="true"><div className="query-bar"><Search size={15} /><span>how do people find this?</span></div><div className="result-line result-highlight"><b>1</b><span><i /> useful page / answer</span></div><div className="result-line"><b>2</b><span><i /> local information / proof</span></div><div className="result-line"><b>3</b><span><i /> next relevant question</span></div><div className="console-caption"><BarChart3 size={14} /> Search Console is a signal, not a conclusion</div></div>,
-    <div className="service-visual content-visual" aria-hidden="true"><div className="editor-top"><span>CONTENT NOTE</span><span>02 / 04</span></div><div className="editor-title">What does the reader need next?</div><div className="editor-rule" /><div className="editor-lines"><i /><i /><i /><i /></div><div className="editor-tag">brief → draft → useful page</div></div>,
-    <div className="service-visual web-visual" aria-hidden="true"><div className="browser-bar"><i /><i /><i /><span>your-site / service</span></div><div className="web-layout"><div className="web-nav"><i /><i /><i /><i /></div><div className="web-main"><b>Clear page<br />structure</b><span /><span /></div></div><div className="web-caption"><Code2 size={14} /> words + hierarchy + responsive build</div></div>,
-    <div className="service-visual video-visual" aria-hidden="true"><div className="timeline-ruler"><span>00:00</span><span>00:15</span><span>00:30</span></div><div className="video-frame"><div className="frame-corner" /><span>one idea<br />at a time</span></div><div className="timeline"><i /><i /><i /></div><div className="video-caption"><Layers3 size={14} /> cut · caption · reuse</div></div>,
+    <div className="service-visual search-visual" aria-hidden="true"><div className="visual-label">GOOGLE SEARCH</div><div className="query-bar"><Search size={15} /><span>best answer for a real question</span></div><div className="serp-row active"><b>01</b><span><strong>Useful page</strong><small>relevant · clear · findable</small></span><ArrowUpRight size={14} /></div><div className="serp-row"><b>02</b><span><strong>Local information</strong><small>accurate · useful · trusted</small></span><ArrowUpRight size={14} /></div><div className="serp-row"><b>03</b><span><strong>Next question</strong><small>intent · context · action</small></span><ArrowUpRight size={14} /></div></div>,
+    <div className="service-visual content-visual" aria-hidden="true"><div className="visual-label">CONTENT DESK</div><div className="content-paper"><span className="paper-kicker">THE NEXT QUESTION</span><strong>What does the reader need to understand before choosing?</strong><div className="paper-lines"><i/><i/><i/><i/></div><span className="paper-foot">brief → draft → useful page</span></div></div>,
+    <div className="service-visual web-visual" aria-hidden="true"><div className="visual-label">WEBSITE / SERVICE PAGE</div><div className="browser-window"><div className="browser-top"><i/><i/><i/><span>business.com/service</span></div><div className="browser-body"><div className="browser-nav"><i/><i/><i/><i/></div><div className="browser-copy"><span>01 / SERVICE</span><strong>Make the next step obvious.</strong><i/><i/></div><div className="browser-side"><b>SEO</b><b>UX</b><b>IA</b></div></div></div></div>,
+    <div className="service-visual video-visual" aria-hidden="true"><div className="visual-label">SHORT-FORM EDIT</div><div className="video-stage"><div className="play-ring">▶</div><span>ONE IDEA<br/>AT A TIME</span></div><div className="video-timeline"><i/><i/><i/><i/></div><div className="video-meta"><span>00:00</span><span>00:30</span><span>cut · caption · reuse</span></div></div>,
   ];
-  return <article className={`service-area service-area-${area.id}`} id={area.id}><div className="service-area-heading"><span className="service-detail-index">0{index + 1}</span><div><span className="eyebrow">{area.label}</span><h2>{area.title}</h2><p>{area.intro}</p></div></div>{visuals[index]}<div className="service-items" aria-label={`${area.title} services`}>{area.services.map(([title]) => <div className="service-item" key={title}><span className="service-item-dot" /><h3>{title}</h3><ArrowUpRight className="service-item-arrow" size={14} /></div>)}</div></article>;
+  return <article className={`service-area service-area-${area.id}`} id={area.id}><div className="service-area-heading"><span className="service-detail-index">0{index + 1}</span><div><span className="eyebrow">{area.label}</span><h2>{area.title}</h2><p>{area.intro}</p></div></div>{visuals[index]}<div className="service-items" aria-label={`${area.title} services`}>{area.services.map(([title, description]) => <details className="service-item" key={title}><summary><span className="service-item-dot"/><h3>{title}</h3><ChevronDown size={15}/></summary><p>{description}</p></details>)}</div></article>;
 }
 
 function Education() {
   usePageMeta('Education desk', 'A practical education resource for Nepali students, from +2 and NEB to admissions and scholarships.');
-  return <><PageHero eyebrow="Education desk" title={<>Information for the <em>next decision.</em></>} description="A growing, browseable resource for Nepali students. Start with a category, then follow the questions that matter to your situation." /><section className="section"><div className="page-width"><div className="category-grid">{categories.map((category) => <Link key={category.slug} href={`/education/${category.slug}`} className="category-link" data-testid={`link-education-category-${category.slug}`}><span>{category.label}</span><span>{category.count} <ArrowUpRight size={13} /></span></Link>)}</div></div></section></>;
+  return <><PageHero eyebrow="Education desk" title={<>Information for the <em>next decision.</em></>} description="A growing, browseable resource for Nepali students. Start with a category, then follow the questions that matter to your situation." /><section className="section"><div className="page-width"><div className="category-grid">{categories.map((category) => <Link key={category.slug} href={`/education/${category.slug}`} className="category-link" data-testid={`link-education-category-${category.slug}`}><span>{category.label}</span><span>Explore <ArrowUpRight size={13} /></span></Link>)}</div></div></section></>;
 }
 
 function EducationCategory() {
@@ -473,18 +436,26 @@ function ArticlePage() {
 }
 
 function About() {
-  usePageMeta('About', 'About Dikshan Gautam, an independent practitioner working across SEO, content and websites.');
-  return <><PageHero eyebrow="About" title={<>A person behind the <em>practice.</em></>} description="I like the part of digital work where a fuzzy question becomes a clear page, a better choice or a more useful next step." /><section className="section"><div className="page-width about-grid"><aside className="about-statement"><p>Make it useful. Make it legible. Leave the reader with somewhere to go.</p></aside><div className="about-copy"><h2>I work across search, words and the web.</h2><p>That means looking at the whole path: what a person is trying to understand, how they find the answer, whether the page keeps its promise, and what happens after they arrive.</p><p>I work independently, which keeps the process close to the actual problem. There is room to ask the unglamorous questions, change direction when the evidence says to, and make something that sounds like the people behind it.</p><div className="principles"><div className="principle"><strong>Specific over loud</strong><span>Clarity is more persuasive than a bigger claim.</span></div><div className="principle"><strong>Evidence over theatre</strong><span>Signals are useful when we are honest about their limits.</span></div><div className="principle"><strong>People before funnels</strong><span>Good journeys start with a real question, not a diagram.</span></div><div className="principle"><strong>Useful stays longer</strong><span>The best content earns its return visit.</span></div></div></div></div></section></>;
+  usePageMeta('About Dikshan Gautam', 'Learn about Dikshan Gautam and his work across SEO, content, websites and practical education publishing.');
+  return <><PageHero eyebrow="About" title={<>The person behind the <em>practice.</em></>} description="I work across search, words and the web — usually where a business has something useful to say, but the path to finding or understanding it is not clear enough yet."/><section className="section"><div className="page-width about-grid"><div className="about-image"><img src="https://images.unsplash.com/photo-1772442198907-765685249ea4?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=72&w=1200" alt="Creative professional working carefully at a desk"/><span>WORK / PROCESS / DETAIL</span></div><div className="about-copy"><span className="eyebrow">How I think about the work</span><h2>I care about the part between being found and being chosen.</h2><p>That means looking at the whole path: what someone is trying to understand, how they find the answer, whether the page keeps its promise, and what happens after they arrive.</p><p>I work independently, which keeps the process close to the actual problem. The goal is not to make the website sound impressive. It is to make the useful thing easier to discover, understand and act on.</p><div className="principles"><div className="principle"><strong>Specific over loud</strong><span>Clear services and useful information beat bigger claims.</span></div><div className="principle"><strong>Evidence over theatre</strong><span>Use data honestly and explain what it can and cannot prove.</span></div><div className="principle"><strong>People before funnels</strong><span>Good digital journeys start with a real question.</span></div><div className="principle"><strong>Useful stays longer</strong><span>Good content earns attention by helping someone.</span></div></div></div></div></section></>;
 }
 
 function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  usePageMeta('Contact', 'Get in touch with Dikshan Gautam about SEO, content and website work.');
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState('');
+  usePageMeta('Contact — Dikshan Gautam', 'Contact Dikshan Gautam about SEO, content writing, websites, Google Business Profile optimization or video editing.');
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setStatus('Sending…');
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const result = await response.json();
+      setStatus(result.success ? 'Thanks — your message has been sent.' : 'Something went wrong. Please email hello@dikshangautam.com.np instead.');
+      if (result.success) form.reset();
+    } catch { setStatus('Something went wrong. Please email hello@dikshangautam.com.np instead.'); }
   }
-  return <><PageHero eyebrow="Contact" title={<>Tell me what needs to be <em>clearer.</em></>} description="A short note is enough. What are you working on, who is it for, and where does it feel stuck?" /><section className="section"><div className="page-width contact-layout"><div className="contact-info"><span className="eyebrow">Say hello</span><h2 className="display">Good work starts with <em>context.</em></h2><p>I’ll read the note and reply with a useful next step, even if that step is a better question.</p><div className="contact-links"><a href="mailto:hello@dikshangautam.com" data-testid="link-email">hello@dikshangautam.com <ArrowUpRight size={15} /></a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer" data-testid="link-linkedin">LinkedIn <ArrowUpRight size={15} /></a></div></div><div className="contact-form">{submitted ? <div className="form-success" data-testid="status-contact-success"><strong>Thank you — the note is on its way.</strong><br />I’ll come back to you with a considered reply.</div> : <form onSubmit={handleSubmit}><div className="field"><label htmlFor="name">Your name</label><input id="name" name="name" required placeholder="How should I address you?" data-testid="input-name" /></div><div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com" data-testid="input-email" /></div><div className="field"><label htmlFor="message">A little context</label><textarea id="message" name="message" required placeholder="What are you trying to make easier?" data-testid="input-message" /></div><button type="submit" className="button-dark" data-testid="button-submit-contact">Send the note <Send size={14} /></button></form>}</div></div></section></>;
+  return <><PageHero eyebrow="Contact" title={<>Let's talk about what needs to <em>work better.</em></>} description="Tell me what your business does, what you're trying to improve, and where things currently feel stuck. A short note is enough." /><section className="section"><div className="page-width contact-layout"><div className="contact-info"><span className="eyebrow">Start with context</span><h2 className="display">You don't need to know the <em>right service.</em></h2><p>Tell me the problem first. I'll help work out whether SEO, content, web, video — or something else — makes sense.</p><div className="contact-links"><a href="mailto:hello@dikshangautam.com.np">hello@dikshangautam.com.np <ArrowUpRight size={15}/></a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={15}/></a></div><div className="contact-checklist"><span><Check size={14}/> SEO / search</span><span><Check size={14}/> Content / copy</span><span><Check size={14}/> Website / UX</span><span><Check size={14}/> Video / repurposing</span></div></div><div className="contact-form"><form onSubmit={handleSubmit}><input type="hidden" name="access_key" value="3673ff96-e9b5-4168-9fad-ff2f9ab63bb9"/><input type="hidden" name="subject" value="New project enquiry from dikshangautam.com.np"/><input type="hidden" name="from_name" value="Dikshan website"/><div className="field-row"><div className="field"><label htmlFor="name">Name</label><input id="name" name="name" required placeholder="Your name" autoComplete="name"/></div><div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com" autoComplete="email"/></div></div><div className="field"><label htmlFor="business">Business / website</label><input id="business" name="business" placeholder="Business name or URL"/></div><div className="field"><label htmlFor="service">What do you need help with?</label><select id="service" name="service" defaultValue=""><option value="" disabled>Select one</option><option>SEO strategy</option><option>Google Business Profile optimization</option><option>SEO content writing</option><option>Website / SEO website</option><option>Video editing</option><option>Not sure yet</option></select></div><div className="field"><label htmlFor="message">Tell me what is going on</label><textarea id="message" name="message" required placeholder="What are you trying to improve?" rows={7}/></div><button type="submit" className="button-dark" disabled={status === 'Sending…'}>{status === 'Sending…' ? 'Sending…' : 'Send message'} <Send size={14}/></button>{status && <p className="form-status" role="status">{status}</p>}</form></div></div></section></>;
 }
 
 function PageHero({ eyebrow, title, description }: { eyebrow: string; title: ReactNode; description: string }) {
