@@ -1,0 +1,9 @@
+(function(){
+  const menuBtn=document.querySelector('.menu-button'), mobile=document.querySelector('.mobile-nav');
+  if(menuBtn&&mobile) menuBtn.addEventListener('click',()=>{const open=mobile.classList.toggle('is-open');menuBtn.setAttribute('aria-expanded',String(open));});
+  const navDrop=document.querySelector('.nav-dropdown'), navTrigger=document.querySelector('.nav-dropdown-trigger'), navMenu=document.querySelector('.nav-dropdown-menu');
+  if(navTrigger&&navMenu){navTrigger.addEventListener('click',e=>{e.preventDefault();const open=navMenu.classList.toggle('is-open');navTrigger.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(navDrop&&!navDrop.contains(e.target)){navMenu.classList.remove('is-open');navTrigger.setAttribute('aria-expanded','false');}});}
+  document.querySelectorAll('.filter-button').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter;document.querySelectorAll('.filter-button').forEach(b=>b.classList.toggle('is-active',b===btn));document.querySelectorAll('.article-card').forEach(card=>card.hidden=f!=='All notes'&&card.dataset.type!==f);}));
+  const form=document.querySelector('[data-contact-form]');
+  if(form){const status=form.querySelector('.form-status');form.addEventListener('submit',async e=>{e.preventDefault();if(status)status.textContent='Sending…';try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});const result=await r.json();if(result.success){form.reset();if(status)status.textContent='Thanks — your message has been sent.';}else if(status)status.textContent='Something went wrong. Please email hello@dikshangautam.com.np instead.';}catch(err){if(status)status.textContent='Something went wrong. Please email hello@dikshangautam.com.np instead.';}});}
+})();
