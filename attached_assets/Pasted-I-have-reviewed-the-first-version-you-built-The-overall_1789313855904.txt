@@ -1,0 +1,869 @@
+I have reviewed the first version you built.
+
+The overall direction is closer, but it still has major problems that need to be fixed across the ENTIRE website.
+
+Do not treat this as a small copy-editing task.
+
+This is a full content + UX + visual refinement pass.
+
+The biggest issue is:
+
+THE WEBSITE STILL DOES NOT MAKE IT IMMEDIATELY CLEAR WHAT DIKSHAN GAUTAM ACTUALLY DOES.
+
+A visitor should understand within seconds:
+
+Dikshan works in SEO, content, websites and digital content.
+
+He helps businesses improve their visibility, content and online presence.
+
+His actual services include things such as:
+
+- SEO strategy
+- Keyword research
+- Technical SEO
+- On-page SEO
+- Local SEO
+- Google Business Profile optimization
+- Google Search Console
+- Content strategy
+- SEO content writing
+- Website content/copywriting
+- SEO website development
+- Website structure / information architecture
+- Website on-page optimization
+- Video editing
+- Short-form video/content
+
+The website currently talks around these things instead of clearly saying them.
+
+FIX THAT.
+
+==================================================
+1. CONTENT MUST SOUND HUMAN
+==================================================
+
+The current language feels too AI-generated.
+
+Remove generic marketing language.
+
+Do NOT use phrases like:
+
+"unlock your potential"
+"transform your digital presence"
+"elevate your brand"
+"drive meaningful growth"
+"navigate the digital landscape"
+"data-driven solutions"
+"holistic digital strategy"
+"innovative digital experiences"
+"powerful digital ecosystem"
+"next-generation"
+"cutting-edge"
+"results-driven"
+"where strategy meets creativity"
+
+unless there is an extremely specific reason.
+
+These phrases make the website sound like an AI-generated agency website.
+
+Use normal professional language.
+
+Imagine Dikshan is sitting across from a business owner explaining what he does.
+
+Write like that.
+
+Clear.
+Specific.
+Direct.
+Human.
+
+For example:
+
+BAD:
+
+"I help businesses unlock their digital potential through integrated search, content and web solutions."
+
+BETTER:
+
+"I work on the parts of a website people actually discover and use — search, content and the website itself."
+
+Or:
+
+"I help businesses get found on Google, explain what they offer clearly, and build websites that make it easy for people to take the next step."
+
+Use this type of language throughout the website.
+
+==================================================
+2. MAKE DIKSHAN'S ROLE OBVIOUS
+==================================================
+
+The homepage needs to establish the professional identity much more clearly.
+
+A visitor should not have to scroll through several sections to understand what Dikshan does.
+
+The opening experience should clearly communicate:
+
+DIKSHAN GAUTAM
+
+SEO
+CONTENT
+WEB
+
+Then explain the relationship between them in natural language.
+
+Do not overcomplicate the positioning.
+
+The core idea remains:
+
+"I help businesses become easier to find, understand and choose."
+
+But make the surrounding copy explain WHAT THAT ACTUALLY MEANS.
+
+For example, concepts like:
+
+Get found:
+SEO, Google Search, local search, Google Business Profile.
+
+Be understood:
+content writing, SEO articles, website copy, content strategy.
+
+Make the next step easier:
+SEO websites, website structure, UX, on-page optimization.
+
+These are examples of content direction, NOT mandatory exact wording.
+
+Use your own judgement to make the final copy better.
+
+==================================================
+3. SERVICES MUST BE MUCH CLEARER
+==================================================
+
+The current Services section is one of the weakest parts of the website.
+
+Fix it completely.
+
+I DO NOT WANT VAGUE SERVICE CATEGORIES.
+
+I want actual services clearly named.
+
+Visitors should be able to scan the website and immediately see things like:
+
+SEO STRATEGY
+KEYWORD RESEARCH
+TECHNICAL SEO
+ON-PAGE SEO
+LOCAL SEO
+GOOGLE BUSINESS PROFILE OPTIMIZATION
+GOOGLE SEARCH CONSOLE
+CONTENT STRATEGY
+SEO CONTENT WRITING
+WEBSITE COPYWRITING
+SEO WEBSITE DEVELOPMENT
+WEBSITE STRUCTURE
+INFORMATION ARCHITECTURE
+ON-PAGE WEBSITE OPTIMIZATION
+VIDEO EDITING
+SHORT-FORM CONTENT
+
+Do not hide these behind vague headings such as:
+
+"Search"
+"Content"
+"Web"
+
+Those can still be used as broader disciplines, but the actual services need to be visible.
+
+==================================================
+4. SERVICES MUST BE VISUAL
+==================================================
+
+The services section currently feels too much like text sitting in boxes.
+
+Fix the visual presentation.
+
+I specifically want the Services experience to have:
+
+- visual storytelling
+- meaningful imagery
+- interaction
+- animation
+- strong typography
+- movement
+- hover states
+- visual transitions
+- changing compositions
+- visual relationships between services
+
+However:
+
+DO NOT turn it into a flashy animation demo.
+
+Animation should communicate structure and make browsing enjoyable.
+
+You have creative freedom to decide how.
+
+For example, you could explore ideas such as:
+
+service names changing/revealing
+interactive service lists
+animated typography
+image transitions
+scroll-based reveals
+service categories expanding
+visual diagrams
+search-result imagery
+website imagery
+content/editorial imagery
+subtle cursor/hover interactions
+
+These are possibilities, NOT instructions.
+
+Find the strongest solution yourself.
+
+==================================================
+5. DO NOT MAKE ALL SERVICES LOOK THE SAME
+==================================================
+
+This is extremely important.
+
+Do not create:
+
+[card]
+[card]
+[card]
+
+and then repeat that pattern throughout the site.
+
+The service presentation should feel designed.
+
+Different services can have different visual treatments.
+
+For example, SEO could visually reference search.
+
+Content could visually reference reading/editing/publishing.
+
+Web could visually reference interfaces/websites.
+
+Video editing could visually reference frames/timelines.
+
+Again, do not literally copy those examples.
+
+Use your own creative judgement.
+
+The important thing is that the visual itself helps the visitor understand the service.
+
+==================================================
+6. SERVICE CONTENT
+==================================================
+
+Write concise, useful descriptions for every service.
+
+For example, instead of:
+
+"Strategic SEO solutions designed to improve your online visibility."
+
+Explain what the work actually involves.
+
+SEO STRATEGY:
+
+Planning what a business should target in search, which pages should exist, what content should be created, and how search visibility should improve over time.
+
+GOOGLE BUSINESS PROFILE OPTIMIZATION:
+
+Improving a business's Google Business Profile so customers can find accurate information, understand the business and take actions such as calling, visiting the website or requesting directions.
+
+SEO CONTENT WRITING:
+
+Writing useful articles and website content around real search intent, while keeping the content readable and genuinely helpful.
+
+SEO WEBSITE:
+
+Building or improving website pages with search visibility, information structure, usability and conversion in mind.
+
+These are examples of the level of specificity required.
+
+Rewrite them naturally.
+
+Do not copy these sentences verbatim.
+
+==================================================
+7. VIDEO EDITING MUST NOT BE HIDDEN
+==================================================
+
+Video editing is currently not communicated clearly enough.
+
+If video editing is part of Dikshan's actual offering, give it a visible place.
+
+Include:
+
+Video editing
+Short-form video
+Content repurposing
+
+Explain what this means in practical terms.
+
+Do not suddenly turn the website into a video production agency.
+
+It should remain part of the broader content offering.
+
+==================================================
+8. VISUALS THROUGHOUT THE WEBSITE
+==================================================
+
+The entire website needs more visual material.
+
+Not decorative random images.
+
+Use visuals that communicate something.
+
+Possible visual material includes:
+
+- website screenshots
+- search results
+- Google Search Console evidence
+- article screenshots
+- content/editorial imagery
+- photography
+- video editing frames
+- website/interface imagery
+- relevant Nepal/urban imagery
+- professional portrait when provided
+- subtle diagrams or visual explanations
+
+Use high-quality stock/editorial imagery where real assets aren't available.
+
+Do NOT repeatedly use the same type of stock photo.
+
+Do NOT use generic:
+- handshake photos
+- fake business meetings
+- people smiling at laptops
+- corporate office clichés.
+
+Art-direct the imagery.
+
+The visual language should change appropriately between sections.
+
+==================================================
+9. HOMEPAGE MUST HAVE VISUAL RHYTHM
+==================================================
+
+The homepage currently feels too much like a sequence of information blocks.
+
+Fix the pacing.
+
+Some sections should be:
+
+image-led
+
+Some:
+
+typography-led
+
+Some:
+
+content-led
+
+Some:
+
+evidence-led
+
+Some:
+
+interactive
+
+Some:
+
+quiet and spacious
+
+Some:
+
+dense
+
+Do not make every section equally tall.
+
+Do not make every section use the same background.
+
+Do not make every section use the same card component.
+
+The page should feel like someone deliberately composed it.
+
+==================================================
+10. WORK / PROOF
+==================================================
+
+The Work section should show what Dikshan can actually do.
+
+Use real assets.
+
+Where actual website screenshots are available, use them.
+
+Where Search Console evidence is available, use it.
+
+Do not invent:
+
+clients
+results
+testimonials
+traffic
+rankings
+conversion rates
+revenue
+logos
+
+If there isn't enough verified information to create a full case study, make it a curated project presentation rather than inventing details.
+
+The GSC evidence available shows:
+
+264K clicks
+12.8M impressions
+2.1% CTR
+5.9 average position
+
+previous period:
+
+82.7K clicks
+3.63M impressions
+2.3% CTR
+6.9 average position
+
+Present this as genuine Search Console evidence.
+
+Do not claim Dikshan personally generated all of these numbers unless attribution is established.
+
+==================================================
+11. HOMEPAGE HERO
+==================================================
+
+The hero needs substantially more visual interest.
+
+Do NOT simply place:
+
+big text + random stock image.
+
+Think about the hero as the visual identity of the entire site.
+
+It should immediately communicate:
+
+Dikshan Gautam
+SEO / Content / Web
+what he helps businesses with
+
+AND provide a compelling visual.
+
+You have creative freedom to determine how.
+
+Possible visual ingredients include:
+
+- photography
+- project screenshots
+- search evidence
+- editorial imagery
+- subtle motion
+- typography
+- layered visual material
+
+But make it feel intentional.
+
+Do NOT make the heading enormous.
+
+The typography should be confident and readable.
+
+The visual composition should do some of the communication rather than forcing all information into the heading.
+
+==================================================
+12. HOMEPAGE COPY
+==================================================
+
+Rewrite the homepage copy wherever it sounds generic.
+
+Every section should answer a real question.
+
+For example:
+
+What does Dikshan do?
+
+Who is it for?
+
+What services are actually available?
+
+What kind of work has he done?
+
+What does he know?
+
+What can someone hire him for?
+
+What does he write about?
+
+What is the education content?
+
+How can someone contact him?
+
+Do not fill sections simply because a portfolio normally has them.
+
+Every section needs a reason to exist.
+
+==================================================
+13. SERVICES PAGE
+==================================================
+
+Completely redesign the Services page too.
+
+It should be one of the strongest pages on the website.
+
+The page should clearly communicate the actual service offering.
+
+It should be possible for a business owner to scan the page and say:
+
+"Okay, he does SEO."
+
+"I see that he does Google Business Profile optimization."
+
+"He writes SEO content."
+
+"He builds SEO-ready websites."
+
+"He does video editing."
+
+Good.
+
+Do not make the visitor interpret vague marketing language.
+
+Use clear service names.
+
+==================================================
+14. EDUCATION
+==================================================
+
+Education must remain secondary to the business identity.
+
+But it should still feel polished.
+
+Make it feel like a useful information publication for Nepali students.
+
+Categories:
+
++2 / NEB
+Bachelor's
+Courses
+Study Abroad
+Admissions
+Scholarships
+
+Use SEO-friendly, useful content.
+
+Do not turn this into generic consultancy marketing.
+
+Avoid phrases like:
+
+"Your journey starts here."
+
+"Shape your bright future."
+
+"Unlock endless opportunities."
+
+Instead, focus on actual student questions and decisions.
+
+==================================================
+15. BLOG
+==================================================
+
+The Blog should also be clear.
+
+A visitor should immediately understand:
+
+This is where Dikshan publishes useful information.
+
+Use real article titles.
+
+Make categories clear.
+
+Make article pages highly readable.
+
+Use SEO-friendly titles, headings and internal links.
+
+Do not stuff keywords unnaturally.
+
+Do not generate meaningless filler articles simply to make the site look populated.
+
+==================================================
+16. ABOUT
+==================================================
+
+The About page should answer:
+
+Who is Dikshan?
+
+What does he work on?
+
+Why SEO + content + web?
+
+What kind of work does he enjoy?
+
+Why does he also publish education information?
+
+Keep it human.
+
+Do not write a motivational biography.
+
+Do not invent achievements.
+
+==================================================
+17. VISUAL DESIGN SYSTEM
+==================================================
+
+Review the entire visual system again.
+
+The current version still feels too much like a collection of UI components.
+
+Make it feel like a designed website.
+
+You have creative control over:
+
+- typography
+- colors
+- grid
+- image treatment
+- spacing
+- borders
+- shapes
+- animation
+- interactions
+- section compositions
+
+But maintain one coherent visual identity.
+
+Use fewer UI components and more composition.
+
+==================================================
+18. BRAND COLOR
+==================================================
+
+The color palette should feel appropriate for a professional personal brand.
+
+Do not use lots of unrelated colors.
+
+Choose a restrained primary palette and one recognizable accent.
+
+Use the accent strategically.
+
+Do not make every heading or button the accent color.
+
+==================================================
+19. TYPOGRAPHY
+==================================================
+
+The current headings are still too dominant in places.
+
+Reduce oversized typography where necessary.
+
+Typography should help people understand the page.
+
+Do not use enormous text simply to make the website "look modern."
+
+Use hierarchy intelligently.
+
+Body text must remain highly readable.
+
+==================================================
+20. SEO CONTENT
+==================================================
+
+Review EVERY page from an SEO perspective.
+
+For each page, determine:
+
+What is the search intent?
+
+What should this page rank for?
+
+What would a human expect to find?
+
+What information is actually useful?
+
+Then make the content satisfy that intent.
+
+Do not keyword stuff.
+
+Use natural topical language.
+
+Create useful internal links between:
+
+Services
+Work
+Blog
+Education
+Articles
+
+Use descriptive anchor text.
+
+Every important page should have a unique:
+
+title
+meta description
+H1
+introductory content
+
+==================================================
+21. TECHNICAL SEO
+==================================================
+
+Audit and improve:
+
+- page titles
+- meta descriptions
+- canonical URLs
+- heading hierarchy
+- image alt text
+- internal links
+- sitemap
+- robots.txt
+- structured data
+- Open Graph
+- semantic HTML
+- clean URLs
+
+Use appropriate schema where justified.
+
+Do not create fake schema information.
+
+==================================================
+22. ACCESSIBILITY
+==================================================
+
+Audit the entire interface.
+
+Ensure:
+
+- readable contrast
+- keyboard navigation
+- visible focus states
+- proper buttons
+- proper links
+- accessible forms
+- meaningful alt text
+- mobile navigation
+- reduced-motion support
+
+==================================================
+23. RESPONSIVE DESIGN
+==================================================
+
+Do a proper mobile design pass.
+
+Do not simply stack desktop elements.
+
+The mobile version should have its own visual rhythm.
+
+Ensure:
+
+- services remain understandable
+- images remain useful
+- typography remains controlled
+- navigation works
+- animations don't become annoying
+- content hierarchy remains obvious
+
+==================================================
+24. IMPORTANT CREATIVE FREEDOM
+==================================================
+
+I am intentionally NOT prescribing exact layouts.
+
+Do not ask me whether something should be:
+
+60/40
+50/50
+3 cards
+4 cards
+left aligned
+right aligned
+etc.
+
+YOU ARE THE DESIGNER.
+
+Use your judgement.
+
+Experiment.
+
+Create visual compositions.
+
+If one section needs an unusual layout, use one.
+
+If another section should be extremely simple, keep it simple.
+
+If a service should use animation, animate it.
+
+If another service should be represented by photography, use photography.
+
+If a project needs a large screenshot, give it room.
+
+The site should not feel like a collection of instructions.
+
+It should feel authored.
+
+==================================================
+25. FINAL TEST
+==================================================
+
+Before presenting the revised website, review it as a stranger who has never heard of Dikshan.
+
+Spend five seconds on the homepage.
+
+Can you answer:
+
+WHO IS DIKSHAN?
+
+WHAT DOES HE DO?
+
+WHAT CAN I HIRE HIM FOR?
+
+If not, fix the homepage.
+
+Then spend 15 seconds on Services.
+
+Can you identify actual services such as:
+
+SEO strategy
+Google Business Profile optimization
+keyword research
+technical SEO
+content writing
+SEO articles
+website copy
+SEO websites
+website optimization
+video editing
+short-form content
+
+If not, fix Services.
+
+Then ask:
+
+Does this sound like a real person or AI?
+
+If AI, rewrite it.
+
+Does this look like a generic template?
+
+If yes, redesign it.
+
+Does it use visuals meaningfully?
+
+If not, improve it.
+
+Does every section look the same?
+
+If yes, create more visual variety.
+
+Are the headings unnecessarily huge?
+
+If yes, reduce them.
+
+Does the site demonstrate the quality of the work it claims to provide?
+
+If not, improve the visual execution.
+
+Do not stop merely because the website technically works.
+
+Keep refining until the website feels like a real, carefully art-directed professional website.

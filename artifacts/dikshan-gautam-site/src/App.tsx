@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowRight, ArrowUpRight, Menu, Send, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BarChart3, Code2, FileText, Globe2, Layers3, MapPin, Menu, Search, Send, ScanSearch, X } from 'lucide-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Link, Route, Switch, Router as WouterRouter, useLocation, useParams } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -33,6 +33,59 @@ const categories = [
   { slug: 'study-abroad', label: 'Study Abroad', count: '11 guides' },
   { slug: 'admissions', label: 'Admissions', count: '14 guides' },
   { slug: 'scholarships', label: 'Scholarships', count: '07 guides' },
+];
+
+const serviceAreas = [
+  {
+    id: 'search',
+    label: 'Search visibility',
+    title: 'SEO strategy and search work',
+    intro: 'Help the right people find the right page, then use search evidence to decide what to improve next.',
+    services: [
+      ['SEO strategy', 'A practical search plan tied to the questions your business can answer.'],
+      ['Keyword research', 'Find the language, intent and gaps worth building around.'],
+      ['Technical SEO', 'Resolve crawl, indexation, performance and site-foundation issues.'],
+      ['On-page SEO', 'Improve titles, headings, links and page signals without flattening the writing.'],
+      ['Local SEO', 'Make location, service and opening information easier to trust and find.'],
+      ['Google Business Profile optimization', 'Keep the profile useful, complete and aligned with the business.'],
+      ['Google Search Console', 'Read queries, pages, clicks and impressions without claiming more than the data shows.'],
+    ],
+  },
+  {
+    id: 'content',
+    label: 'Useful information',
+    title: 'Content strategy and writing',
+    intro: 'Give every piece of content a reader, a question and a useful next step.',
+    services: [
+      ['Content strategy', 'Plan the pages and publishing work around real audience questions.'],
+      ['SEO content writing', 'Clear, search-aware writing that sounds like a person and earns attention.'],
+      ['SEO articles', 'In-depth articles built to explain a subject and support a wider site.'],
+      ['Website copywriting', 'Page copy that makes the offer, proof and next action easy to understand.'],
+    ],
+  },
+  {
+    id: 'web',
+    label: 'A clearer place to land',
+    title: 'Websites and structure',
+    intro: 'Turn search and content thinking into a website that is easier to use, maintain and act on.',
+    services: [
+      ['SEO website development', 'Responsive websites with the technical basics and content structure in place.'],
+      ['Website structure', 'A sensible page system so visitors and search engines can find their way around.'],
+      ['Information architecture', 'Organize navigation, hierarchy and relationships around user intent.'],
+      ['Website on-page optimization', 'Refine page templates, internal links, headings and calls to action.'],
+    ],
+  },
+  {
+    id: 'video',
+    label: 'Content in motion',
+    title: 'Video and content repurposing',
+    intro: 'Extend a useful idea into short, focused formats without turning the work into a production machine.',
+    services: [
+      ['Video editing', 'Shape existing footage into a clean, watchable story with good pacing.'],
+      ['Short-form video/content', 'Adapt an idea for concise, platform-aware clips and posts.'],
+      ['Content repurposing', 'Find the article, talk or recording already worth turning into more useful formats.'],
+    ],
+  },
 ];
 
 const articles: Article[] = [
@@ -261,20 +314,24 @@ function Home() {
       <section className="hero">
         <div className="page-width hero-grid">
           <div className="reveal">
-            <IntroMark />
-            <h1 className="display">Make the good work <em>easier to find.</em></h1>
-            <p className="lede">I help businesses become easier to find, understand and choose — through considered SEO, useful content and websites with a point of view.</p>
+            <span className="eyebrow">SEO · Content · Websites</span>
+            <h1 className="display">I help businesses become easier to <em>find, understand and choose.</em></h1>
+            <p className="lede">I work on the parts that make digital content useful: getting found through SEO and Google Search, being understood through clear content, and making the next step easier on the website.</p>
             <div className="hero-actions">
-              <Link href="/services" className="button-dark" data-testid="link-hero-services">See how I work <ArrowRight size={16} /></Link>
-              <Link href="/about" className="button-light" data-testid="link-hero-about">A little more about me</Link>
+              <Link href="/services" className="button-dark" data-testid="link-hero-services">View services <ArrowRight size={16} /></Link>
+              <Link href="/contact" className="button-light" data-testid="link-hero-contact">Talk about a project</Link>
             </div>
-            <div className="hero-note"><span className="status-dot" /> Based in Nepal · working independently</div>
+            <div className="hero-note"><span className="status-dot" /> Independent practice · based in Nepal · available for specific work</div>
           </div>
-          <div className="abstract-portrait reveal" aria-label="Abstract typographic portrait placeholder" role="img">
-            <div className="portrait-grid" />
-            <div className="portrait-initial">DG</div>
-            <div className="portrait-badge">NO<br />STOCK<br />PORTRAIT</div>
-            <div className="portrait-caption">A thoughtful practice · 2025</div>
+          <div className="hero-map reveal" aria-label="A visual map of the work" role="img">
+            <div className="map-kicker">One clear path</div>
+            <div className="map-line map-line-one" />
+            <div className="map-line map-line-two" />
+            <div className="map-line map-line-three" />
+            <div className="map-node node-search"><Search size={17} /><span>Find</span><small>SEO · Search · Local</small></div>
+            <div className="map-node node-content"><FileText size={17} /><span>Understand</span><small>Content · Copy · Answers</small></div>
+            <div className="map-node node-web"><Globe2 size={17} /><span>Choose</span><small>Website · UX · Next step</small></div>
+            <div className="map-foot">Search question → useful page → clear action</div>
           </div>
         </div>
       </section>
@@ -305,14 +362,15 @@ function Home() {
       <section className="section">
         <div className="page-width">
           <div className="section-head">
-            <div><span className="eyebrow">The intersection</span><h2 className="display">Three practices, <em>one clearer path.</em></h2></div>
-            <p>Search is the beginning. Content creates understanding. The website gives that understanding somewhere useful to land.</p>
+            <div><span className="eyebrow">What I can help with</span><h2 className="display">Different jobs, <em>connected by the reader.</em></h2></div>
+            <p>Search gets someone to the door. Content helps them make sense of what they see. The website gives them somewhere useful to go next.</p>
           </div>
-          <div className="service-grid">
-            <ServiceCard number="01" title="SEO with context" text="Technical foundations and search strategy built around the questions your audience is already asking." featured />
-            <ServiceCard number="02" title="Content with a job" text="Editorial direction and writing that makes complex ideas easier to grasp, trust and act on." />
-            <ServiceCard number="03" title="Websites with a point of view" text="Clear, responsive web experiences that turn attention into the next right action." />
+          <div className="service-grid home-service-grid">
+            <ServiceCard number="01" title="SEO and search" text="SEO strategy, technical SEO, local search, Google Business Profile and Search Console." icon={<ScanSearch size={22} />} featured />
+            <ServiceCard number="02" title="Content and copy" text="Content strategy, SEO articles and website copy that answer the next question." icon={<FileText size={22} />} />
+            <ServiceCard number="03" title="Web and structure" text="SEO-ready websites, information architecture, UX and on-page optimization." icon={<Layers3 size={22} />} />
           </div>
+          <Link href="/services" className="view-all service-grid-link" data-testid="link-home-all-services">See the full service list <ArrowRight size={15} /></Link>
         </div>
       </section>
 
@@ -346,8 +404,8 @@ function Home() {
   );
 }
 
-function ServiceCard({ number, title, text, featured = false }: { number: string; title: string; text: string; featured?: boolean }) {
-  return <article className={`service-card ${featured ? 'featured' : ''}`}><div className="service-number"><span>{number}</span><ArrowUpRight size={16} /></div><h3>{title}</h3><p>{text}</p></article>;
+function ServiceCard({ number, title, text, icon, featured = false }: { number: string; title: string; text: string; icon: ReactNode; featured?: boolean }) {
+  return <article className={`service-card ${featured ? 'featured' : ''}`}><div className="service-number"><span>{number}</span>{icon}</div><h3>{title}</h3><p>{text}</p></article>;
 }
 
 function WritingPreview() {
@@ -366,13 +424,17 @@ function WritingPreview() {
 
 function Services() {
   usePageMeta('Services', 'SEO, content strategy and websites by Dikshan Gautam.');
-  const services = [
-    { title: 'Search strategy', text: 'A clear view of how people search, what they need to understand, and where the site can earn useful visibility.', tags: ['Search Console', 'Technical audit', 'Content opportunities'] },
-    { title: 'Content direction', text: 'A considered system for deciding what to say, who it is for and how each page helps a person move forward.', tags: ['Editorial systems', 'Information architecture', 'Writing'] },
-    { title: 'Website thinking', text: 'Web experiences shaped around the real decision a visitor is trying to make — with language and structure doing equal work.', tags: ['UX writing', 'Page structure', 'Responsive web'] },
-    { title: 'A joined-up review', text: 'A practical outside perspective when search, content and the website have drifted apart.', tags: ['Content audit', 'Clarity review', 'Prioritisation'] },
+  return <><PageHero eyebrow="Services" title={<>Specific work for <em>search, content and websites.</em></>} description="Choose the part that needs attention, or bring the whole path. I can help with search visibility, useful writing, website structure and content that needs a second life." /><section className="service-intro-strip"><div className="page-width"><span>How the pieces relate</span><p>Search brings a question. Content answers it. Structure makes the answer easy to use. Video and repurposing help it travel further.</p></div></section><section className="section services-section"><div className="page-width service-area-list">{serviceAreas.map((area, index) => <ServiceArea area={area} index={index} key={area.id} />)}</div></section><section className="section-tight"><div className="page-width contact-panel"><div><span className="eyebrow">Start with a question</span><h2 className="display">Tell me which part is <em>getting in the way.</em></h2></div><div className="contact-aside"><p>One project can be one service, not a retainer</p><Link href="/contact" className="button-dark" data-testid="link-services-contact">Write to me <ArrowUpRight size={15} /></Link></div></div></section></>;
+}
+
+function ServiceArea({ area, index }: { area: (typeof serviceAreas)[number]; index: number }) {
+  const visuals = [
+    <div className="service-visual search-visual" aria-hidden="true"><div className="query-bar"><Search size={15} /><span>how do people find this?</span></div><div className="result-line result-highlight"><b>1</b><span><i /> useful page / answer</span></div><div className="result-line"><b>2</b><span><i /> local information / proof</span></div><div className="result-line"><b>3</b><span><i /> next relevant question</span></div><div className="console-caption"><BarChart3 size={14} /> Search Console is a signal, not a conclusion</div></div>,
+    <div className="service-visual content-visual" aria-hidden="true"><div className="editor-top"><span>CONTENT NOTE</span><span>02 / 04</span></div><div className="editor-title">What does the reader need next?</div><div className="editor-rule" /><div className="editor-lines"><i /><i /><i /><i /></div><div className="editor-tag">brief → draft → useful page</div></div>,
+    <div className="service-visual web-visual" aria-hidden="true"><div className="browser-bar"><i /><i /><i /><span>your-site / service</span></div><div className="web-layout"><div className="web-nav"><i /><i /><i /><i /></div><div className="web-main"><b>Clear page<br />structure</b><span /><span /></div></div><div className="web-caption"><Code2 size={14} /> words + hierarchy + responsive build</div></div>,
+    <div className="service-visual video-visual" aria-hidden="true"><div className="timeline-ruler"><span>00:00</span><span>00:15</span><span>00:30</span></div><div className="video-frame"><div className="frame-corner" /><span>one idea<br />at a time</span></div><div className="timeline"><i /><i /><i /></div><div className="video-caption"><Layers3 size={14} /> cut · caption · reuse</div></div>,
   ];
-  return <><PageHero eyebrow="Services" title={<>The parts work better <em>together.</em></>} description="I work across the seams: where a search question becomes a content brief, where a brief becomes a page, and where a page earns the right next action." /><section className="section"><div className="page-width services-page-grid">{services.map((service, index) => <article className="service-detail" key={service.title}><span className="service-detail-index">0{index + 1}</span><div><h2>{service.title}</h2><p>{service.text}</p><ul>{service.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div></section><section className="section-tight"><div className="page-width contact-panel"><div><span className="eyebrow">Start with a question</span><h2 className="display">No big pitch. <em>Just context.</em></h2></div><div className="contact-aside"><p>Share the current shape of the problem</p><Link href="/contact" className="button-dark" data-testid="link-services-contact">Write to me <ArrowUpRight size={15} /></Link></div></div></section></>;
+  return <article className={`service-area service-area-${area.id}`} id={area.id}><div className="service-area-heading"><span className="service-detail-index">0{index + 1}</span><div><span className="eyebrow">{area.label}</span><h2>{area.title}</h2><p>{area.intro}</p></div></div>{visuals[index]}<div className="service-items">{area.services.map(([title, text]) => <div className="service-item" key={title}><h3>{title}</h3><p>{text}</p></div>)}</div></article>;
 }
 
 function Education() {
