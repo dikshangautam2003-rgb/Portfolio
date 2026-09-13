@@ -40,7 +40,7 @@ const serviceAreas = [
     id: 'search',
     label: 'Search visibility',
     title: 'SEO strategy and search work',
-    intro: 'Help the right people find the right page, then use search evidence to decide what to improve next.',
+    intro: 'Make the right page easier to find, then use search evidence to improve it.',
     services: [
       ['SEO strategy', 'A practical search plan tied to the questions your business can answer.'],
       ['Keyword research', 'Find the language, intent and gaps worth building around.'],
@@ -55,7 +55,7 @@ const serviceAreas = [
     id: 'content',
     label: 'Useful information',
     title: 'Content strategy and writing',
-    intro: 'Give every piece of content a reader, a question and a useful next step.',
+    intro: 'Give every piece of content a reader, a question and a next step.',
     services: [
       ['Content strategy', 'Plan the pages and publishing work around real audience questions.'],
       ['SEO content writing', 'Clear, search-aware writing that sounds like a person and earns attention.'],
@@ -67,7 +67,7 @@ const serviceAreas = [
     id: 'web',
     label: 'A clearer place to land',
     title: 'Websites and structure',
-    intro: 'Turn search and content thinking into a website that is easier to use, maintain and act on.',
+    intro: 'Turn search and content thinking into a website that is easier to use.',
     services: [
       ['SEO website development', 'Responsive websites with the technical basics and content structure in place.'],
       ['Website structure', 'A sensible page system so visitors and search engines can find their way around.'],
@@ -79,7 +79,7 @@ const serviceAreas = [
     id: 'video',
     label: 'Content in motion',
     title: 'Video and content repurposing',
-    intro: 'Extend a useful idea into short, focused formats without turning the work into a production machine.',
+    intro: 'Extend a useful idea into short, focused formats.',
     services: [
       ['Video editing', 'Shape existing footage into a clean, watchable story with good pacing.'],
       ['Short-form video/content', 'Adapt an idea for concise, platform-aware clips and posts.'],
@@ -314,17 +314,20 @@ function Home() {
       <section className="hero">
         <div className="page-width hero-grid">
           <div className="reveal">
-            <span className="eyebrow">SEO · Content · Websites</span>
-            <h1 className="display">I help businesses become easier to <em>find, understand and choose.</em></h1>
-            <p className="lede">I work on the parts that make digital content useful: getting found through SEO and Google Search, being understood through clear content, and making the next step easier on the website.</p>
+            <span className="eyebrow">Independent SEO · content · web</span>
+            <h1 className="display">Make your digital work easier to <em>find and choose.</em></h1>
+            <p className="lede">I bring search, words and structure together so the right people can find you, understand you and take the next step.</p>
             <div className="hero-actions">
               <Link href="/services" className="button-dark" data-testid="link-hero-services">View services <ArrowRight size={16} /></Link>
               <Link href="/contact" className="button-light" data-testid="link-hero-contact">Talk about a project</Link>
             </div>
-            <div className="hero-note"><span className="status-dot" /> Independent practice · based in Nepal · available for specific work</div>
+            <div className="hero-note"><span className="status-dot" /> Focused projects · based in Nepal · working remotely</div>
           </div>
           <div className="hero-map reveal" aria-label="A visual map of the work" role="img">
+            <div className="hero-map-word" aria-hidden="true">clear</div>
             <div className="map-kicker">One clear path</div>
+            <div className="map-orbit orbit-one" />
+            <div className="map-orbit orbit-two" />
             <div className="map-line map-line-one" />
             <div className="map-line map-line-two" />
             <div className="map-line map-line-three" />
@@ -434,7 +437,7 @@ function ServiceArea({ area, index }: { area: (typeof serviceAreas)[number]; ind
     <div className="service-visual web-visual" aria-hidden="true"><div className="browser-bar"><i /><i /><i /><span>your-site / service</span></div><div className="web-layout"><div className="web-nav"><i /><i /><i /><i /></div><div className="web-main"><b>Clear page<br />structure</b><span /><span /></div></div><div className="web-caption"><Code2 size={14} /> words + hierarchy + responsive build</div></div>,
     <div className="service-visual video-visual" aria-hidden="true"><div className="timeline-ruler"><span>00:00</span><span>00:15</span><span>00:30</span></div><div className="video-frame"><div className="frame-corner" /><span>one idea<br />at a time</span></div><div className="timeline"><i /><i /><i /></div><div className="video-caption"><Layers3 size={14} /> cut · caption · reuse</div></div>,
   ];
-  return <article className={`service-area service-area-${area.id}`} id={area.id}><div className="service-area-heading"><span className="service-detail-index">0{index + 1}</span><div><span className="eyebrow">{area.label}</span><h2>{area.title}</h2><p>{area.intro}</p></div></div>{visuals[index]}<div className="service-items">{area.services.map(([title, text]) => <div className="service-item" key={title}><h3>{title}</h3><p>{text}</p></div>)}</div></article>;
+  return <article className={`service-area service-area-${area.id}`} id={area.id}><div className="service-area-heading"><span className="service-detail-index">0{index + 1}</span><div><span className="eyebrow">{area.label}</span><h2>{area.title}</h2><p>{area.intro}</p></div></div>{visuals[index]}<div className="service-items" aria-label={`${area.title} services`}>{area.services.map(([title]) => <div className="service-item" key={title}><span className="service-item-dot" /><h3>{title}</h3><ArrowUpRight className="service-item-arrow" size={14} /></div>)}</div></article>;
 }
 
 function Education() {
