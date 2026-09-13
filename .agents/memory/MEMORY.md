@@ -1,1 +1,0 @@
-- [Vite metadata links](vite-static-metadata-links.md) — root-absolute links in index HTML can be treated as build assets; keep runtime canonical metadata dynamic and verify production builds.

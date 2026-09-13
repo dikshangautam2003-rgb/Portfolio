@@ -3,8 +3,8 @@
   "short_name": "Dikshan",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#faf7f1",
-  "theme_color": "#1a1814",
+  "background_color": "#F5F2EB",
+  "theme_color": "#171717",
   "icons": [
     {
       "src": "/assets/favicon.png",
