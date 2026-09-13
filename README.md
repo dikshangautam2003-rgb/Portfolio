@@ -1,35 +1,18 @@
-# Dikshan V5 — Education + Blog + Digital Growth
+# Dikshan V6 — Editorial Personal Website
 
-This build replaces the previous Work/Insights navigation with:
+A static HTML/CSS/JS personal-business website for Dikshan Gautam.
 
-- Home
-- Services
-- Education (hover mega-menu)
-- Blog
-- About
-- Contact
+## Direction
+- Editorial, typography-led visual system
+- Warm ivory / ink / single oxblood accent
+- Inter + Instrument Serif (display accent only)
+- Minimal borders, little/no shadow, restrained radius
+- Work-first hierarchy
+- Education and Blog remain first-class sections
+- Accessible focus, semantic headings and reduced-motion support
 
-## Design direction
-Editorial personal brand + education resource. The interface uses large typography, asymmetric compositions, animated visual elements, hover states, education pathway cards, article covers and subtle scroll reveals.
-
-## Education navigation
-- +2 / NEB
-- Bachelor's
-- Courses
-- Study Abroad
-- Admissions
-- Scholarships
-
-## Blog
-The blog currently includes three starter articles migrated to `/blog/`. Add future articles using the same structure.
-
-## Legacy redirects
-- `/work/` → `/`
-- `/insights/` → `/blog/`
-- `/insights/*` → `/blog/*`
-
-## Contact form
-The existing Web3Forms access key from the prior build has been retained. Test the form on the production domain before launch.
+## Important
+The portrait areas are intentional replacement slots. Add a real, high-quality portrait before production.
 
 ## Deploy
-Static site. Push the folder contents to GitHub and connect the repository to Vercel. No build command is required.
+This is a static site. Use the folder containing `index.html` as the Vercel project root. No build command is required.
