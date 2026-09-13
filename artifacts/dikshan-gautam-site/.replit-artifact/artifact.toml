@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Dikshan Gautam"
+description = "A publication-quality personal brand website for Dikshan Gautam, connecting SEO, content, websites, and practical education resources for Nepali students."
+version = "1.0.0"
+id = "artifacts/dikshan-gautam-site"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22133
+
+[services.development]
+run = "pnpm --filter @workspace/dikshan-gautam-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dikshan-gautam-site", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dikshan-gautam-site/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22133"
+BASE_PATH = "/"

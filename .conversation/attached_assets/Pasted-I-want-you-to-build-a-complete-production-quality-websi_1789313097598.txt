@@ -1,0 +1,685 @@
+I want you to build a complete, production-quality website for my personal brand:
+
+DIKSHAN GAUTAM
+
+Before writing code, understand the person, the business, the audience, and the purpose of the website.
+
+Do not treat this as a generic "portfolio website" project.
+
+I want you to think like a senior web designer, art director, UX designer, content strategist, SEO specialist, and frontend engineer working together.
+
+You have creative freedom over the visual design.
+
+DO NOT simply follow a predefined template from this prompt.
+
+Instead, understand the direction and create the best possible interpretation of it.
+
+==================================================
+WHO I AM
+==================================================
+
+My name is Dikshan Gautam.
+
+My professional focus is:
+
+SEO
+Content
+Web
+
+My core positioning is:
+
+"I help businesses become easier to find, understand and choose."
+
+The work connects search visibility, useful content, and good websites.
+
+I want the website to communicate that I understand how these things work together rather than presenting myself as someone who simply sells isolated marketing services.
+
+I am building a personal professional brand, not a large agency.
+
+The website should therefore feel personal, credible, thoughtful and human.
+
+==================================================
+WHAT THE WEBSITE IS FOR
+==================================================
+
+The primary purpose is to introduce me professionally and generate genuine business enquiries.
+
+The website should help a visitor quickly understand:
+
+- who I am
+- what I do
+- who I help
+- what kind of work I do
+- what I know
+- why they should trust my work
+- how they can contact me
+
+The website should demonstrate my capabilities through the quality of the website itself.
+
+In other words:
+
+The website IS part of my portfolio.
+
+If the website looks generic, over-designed, AI-generated, or poorly composed, it undermines the entire brand.
+
+==================================================
+SERVICES
+==================================================
+
+My main areas of work are:
+
+SEARCH / SEO
+
+Including things such as:
+
+- SEO strategy
+- keyword research
+- technical SEO
+- on-page SEO
+- local SEO
+- Google Business Profile
+- Google Search Console
+- search-focused content planning
+
+CONTENT
+
+Including:
+
+- content strategy
+- SEO articles
+- website copy
+- content planning
+- content repurposing
+- short-form video/content
+
+WEB
+
+Including:
+
+- SEO-ready websites
+- information architecture
+- website content structure
+- UX
+- on-page optimization
+- conversion-focused page structure
+
+These should NOT necessarily appear as three boring service cards.
+
+Find a visually intelligent way to communicate them.
+
+You have freedom to determine the best presentation.
+
+==================================================
+SECONDARY EDUCATION CONTENT
+==================================================
+
+There is another important part of the website:
+
+EDUCATION
+
+This is a content resource for Nepali students.
+
+It covers:
+
+- +2 / NEB
+- Bachelor's
+- Courses
+- Study Abroad
+- Admissions
+- Scholarships
+
+This is NOT the primary professional identity.
+
+It should feel like a useful editorial information resource that sits naturally within the wider brand.
+
+It should not make the website look like an education consultancy.
+
+The business identity remains primary.
+
+==================================================
+BLOG
+==================================================
+
+The website also has a substantial blog/content section.
+
+The blog should feel like a genuine publication rather than a collection of SEO cards.
+
+The content is intended to answer real questions people have, particularly around:
+
+- SEO
+- digital work
+- websites
+- education
+- studying abroad
+- Nepali student decisions
+- practical guides
+
+Existing useful content should be preserved and improved rather than replaced with generic placeholder content.
+
+==================================================
+IMPORTANT CONTENT PRINCIPLE
+==================================================
+
+SEO matters enormously for this website.
+
+But do NOT write content for search engines at the expense of humans.
+
+Follow people-first SEO principles.
+
+Every page should have:
+
+- a clear purpose
+- useful information
+- descriptive headings
+- natural keyword usage
+- strong internal linking
+- clear authorship
+- useful metadata
+- descriptive page titles
+- appropriate structured data
+
+Do not keyword stuff.
+
+Do not create meaningless SEO paragraphs.
+
+Do not use generic marketing filler.
+
+Do not write things like:
+
+"unlock your digital potential"
+
+"transform your online presence"
+
+"take your business to the next level"
+
+"innovative digital solutions"
+
+"cutting-edge strategies"
+
+or other generic AI/agency language.
+
+Write like a real person who understands the work.
+
+==================================================
+VISUAL DIRECTION
+==================================================
+
+This is the most important part.
+
+I want a website that feels:
+
+- premium
+- contemporary
+- editorial
+- intelligent
+- creative
+- personal
+- confident
+- calm
+- visually interesting
+- professionally designed
+
+I DO NOT want:
+
+- generic SaaS design
+- startup landing-page aesthetic
+- dashboard aesthetic
+- AI-generated portfolio aesthetic
+- excessive cards
+- repetitive grids
+- excessive rounded rectangles
+- glassmorphism
+- random gradients
+- excessive animations
+- giant meaningless typography
+- excessive icons
+- fake statistics
+- fake testimonials
+- fake client logos
+- fake case studies
+- fake achievements
+- generic stock-photo overload
+
+Do not make every section look like the same component repeated vertically.
+
+I want genuine visual hierarchy and variety.
+
+Think like an editorial art director.
+
+Use your own judgement to determine:
+
+- layout
+- typography
+- grid
+- imagery
+- spacing
+- composition
+- color
+- interaction
+- animation
+- visual storytelling
+
+Do NOT copy another website.
+
+You may take inspiration from the quality and principles of excellent contemporary editorial websites, personal portfolios, creative studios and digital publications, but create an original design.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Typography should feel sophisticated and intentional.
+
+Use an excellent modern web typeface system.
+
+A restrained serif can be used if it genuinely improves the visual identity.
+
+Do not use typography merely because it is trendy.
+
+Most importantly:
+
+DO NOT MAKE THE HEADINGS RIDICULOUSLY LARGE.
+
+The typography should establish hierarchy without screaming.
+
+The website should feel confident rather than desperate for attention.
+
+Typography should also be excellent on mobile.
+
+==================================================
+IMAGERY
+==================================================
+
+The website needs strong visual material.
+
+Do not leave large empty boxes or create a text-only portfolio.
+
+Use high-quality stock/editorial imagery where appropriate.
+
+But stock imagery should feel art-directed and relevant.
+
+Avoid cliché corporate stock photography.
+
+Where actual project screenshots, website screenshots, Search Console evidence, photographs or other real assets are available, prefer those over generic stock imagery.
+
+If a personal portrait is required but not available, create an elegant placeholder for the real portrait rather than inventing a person.
+
+Do not create a fake representation of me.
+
+==================================================
+REAL WORK / PROOF
+==================================================
+
+Use real evidence wherever available.
+
+I have provided Google Search Console evidence showing:
+
+Last 6 months:
+264K clicks
+12.8M impressions
+2.1% CTR
+5.9 average position
+
+Previous period:
+82.7K clicks
+3.63M impressions
+2.3% CTR
+6.9 average position
+
+These are real figures from the provided Search Console screenshot.
+
+Present them credibly.
+
+Do not imply that I personally caused all of these results unless the evidence establishes that.
+
+Do not invent additional metrics.
+
+Do not invent testimonials.
+
+Do not invent clients.
+
+Do not invent rankings.
+
+Do not invent case studies.
+
+The website should become stronger as I provide more real project material later.
+
+==================================================
+HOMEPAGE
+==================================================
+
+The homepage should tell a coherent story.
+
+It should introduce me, communicate what I do, establish credibility, show evidence/work, explain my services, introduce the education/content side of the site, show writing, and make it easy to contact me.
+
+However, YOU decide the best order and composition.
+
+Do not blindly follow a standard:
+
+Hero → 3 cards → testimonials → CTA
+
+landing-page formula.
+
+Think about what would actually make the website memorable and useful.
+
+The hero should contain both strong positioning AND meaningful visual material.
+
+It should not simply be a giant heading with a random photograph beside it.
+
+==================================================
+WORK / PORTFOLIO
+==================================================
+
+The work section should demonstrate capability.
+
+Prioritize actual work and visual evidence.
+
+Use project screenshots, website captures, content examples and other genuine material where available.
+
+Do not create fake device mockups simply because portfolios traditionally use them.
+
+Let the actual work speak.
+
+The presentation should feel like a curated selection rather than a catalogue.
+
+==================================================
+SERVICES PAGE
+==================================================
+
+Create a proper Services experience.
+
+The visitor should be able to understand:
+
+- what I offer
+- what each area involves
+- what problems it solves
+- what kind of work I actually perform
+- whether I might be useful to them
+
+The visual treatment should be sophisticated and original.
+
+Do not default to three equal cards.
+
+==================================================
+EDUCATION
+==================================================
+
+Create a proper Education content ecosystem.
+
+The category structure is:
+
++2 / NEB
+Bachelor's
+Courses
+Study Abroad
+Admissions
+Scholarships
+
+Make navigation between these categories intuitive.
+
+The Education experience should feel editorial and information-focused.
+
+It should be easy for a Nepali student to browse.
+
+==================================================
+BLOG
+==================================================
+
+Create a publication-quality blog experience.
+
+It should be easy to:
+
+- discover articles
+- browse categories
+- identify useful guides
+- understand what an article is about
+- read articles comfortably
+
+Article pages should prioritize readability.
+
+Do not make the blog look like an ecommerce product grid.
+
+==================================================
+ABOUT
+==================================================
+
+The About page should feel personal.
+
+Explain who I am, what I work on, how I think about the intersection of SEO/content/web, and why I also create educational information.
+
+Do not write a fake inspirational biography.
+
+Do not make me sound like a multinational agency.
+
+Keep it human.
+
+==================================================
+CONTACT
+==================================================
+
+The Contact page should make it easy to start a conversation.
+
+Keep it confident and simple.
+
+Avoid huge generic CTA banners.
+
+==================================================
+NAVIGATION
+==================================================
+
+Main navigation:
+
+Home
+Services
+Education
+Blog
+About
+Contact
+
+Education should provide access to:
+
++2 / NEB
+Bachelor's
+Courses
+Study Abroad
+Admissions
+Scholarships
+
+Navigation should be simple and intuitive.
+
+Do not add unnecessary pages simply to make the navigation look bigger.
+
+==================================================
+BRAND
+==================================================
+
+The visual identity should work as a coherent brand.
+
+You have creative freedom to determine the exact palette, but it should feel mature and contemporary.
+
+Avoid rainbow palettes.
+
+Avoid trendy gradients.
+
+Avoid excessive accent colors.
+
+Color should support hierarchy and brand recognition rather than decorate every section.
+
+==================================================
+INTERACTION
+==================================================
+
+Use interaction where it improves the experience.
+
+Examples may include:
+
+- subtle hover states
+- image transitions
+- navigation movement
+- content reveals
+- editorial transitions
+- thoughtful scrolling behavior
+
+But do not add animation simply to demonstrate that the site uses animation.
+
+It should feel polished, not like a frontend experiment.
+
+Support reduced-motion preferences.
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+The site must be genuinely responsive.
+
+Do not treat mobile as an afterthought.
+
+The desktop composition may change substantially on mobile where necessary.
+
+Typography, images, navigation, spacing and content order should all remain intentional.
+
+==================================================
+TECHNICAL QUALITY
+==================================================
+
+Build production-quality code.
+
+Use a modern, maintainable frontend architecture.
+
+Prioritize:
+
+- semantic HTML
+- accessibility
+- performance
+- responsive images
+- clean components
+- reusable design tokens
+- maintainable CSS
+- minimal unnecessary JavaScript
+- SEO
+- clean URLs
+- proper metadata
+- Open Graph
+- canonical URLs
+- sitemap
+- robots.txt
+- structured data where appropriate
+
+The final code should be clean enough for another developer to take over.
+
+==================================================
+IMPORTANT: USE YOUR CREATIVITY
+==================================================
+
+I am deliberately NOT giving you exact layouts.
+
+Do not ask:
+
+"Should I use a 60/40 split?"
+
+"Should this section have three cards?"
+
+"Should the hero have an image on the right?"
+
+Make those decisions yourself.
+
+You are being asked to act as the designer.
+
+Study the purpose of the website and create an original visual language around it.
+
+If you think a section needs:
+
+- photography
+- typography
+- a large visual
+- an unusual layout
+- an editorial index
+- a project composition
+- a timeline
+- a visual data element
+- a split layout
+- a full-width moment
+- a quiet whitespace section
+
+use your judgement.
+
+The goal is not to satisfy a checklist of components.
+
+The goal is to create a website that looks like someone with excellent taste deliberately designed it.
+
+==================================================
+FINAL QUALITY BAR
+==================================================
+
+Before considering the site finished, critically review it as if you were the client.
+
+Ask yourself:
+
+"Would this website look obviously AI-generated?"
+
+If yes, redesign it.
+
+"Does this look like a generic freelancer template?"
+
+If yes, redesign it.
+
+"Are there too many cards?"
+
+If yes, redesign it.
+
+"Are the headings too large?"
+
+If yes, reduce them.
+
+"Are images being used meaningfully?"
+
+If no, rethink the imagery.
+
+"Does every section feel like the same layout?"
+
+If yes, introduce better visual composition.
+
+"Does the website communicate what Dikshan actually does?"
+
+If no, improve the content hierarchy.
+
+"Does the website demonstrate SEO/content/web expertise through its own UX and content?"
+
+If no, improve it.
+
+"Would a serious business owner trust this website?"
+
+If no, improve it.
+
+"Would a Nepali student find the Education content easy to use?"
+
+If no, improve it.
+
+"Does the site feel personal rather than corporate?"
+
+If no, improve it.
+
+Do not stop at "technically complete."
+
+Keep refining the visual system until it feels intentionally designed.
+
+==================================================
+MOST IMPORTANT
+==================================================
+
+Do not build what you think an AI-generated portfolio should look like.
+
+Build what you think an excellent modern personal digital strategist's website SHOULD look like.
+
+You have creative freedom.
+
+Make strong design decisions.
+
+Take risks where appropriate.
+
+But maintain restraint, clarity, credibility and usability.
+
+The final website should make me proud to put:
+
+DIKSHAN GAUTAM
+
+on it.
