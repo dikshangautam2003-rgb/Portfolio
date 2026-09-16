@@ -5,6 +5,9 @@ description: A temporary article used to test the new CMS publishing workflow.
 category: SEO & Search
 date: 2026-09-16
 featured_image: /media/frame-visit-gea.jpg
+seo:
+  title: This is a temporary CMS publishing test,
+  description: Test one
 ---
 This is a temporary CMS publishing test.
 
