@@ -1,6 +1,6 @@
 ---
 title: Test Article — CMS Publishing Check
-slug: cms-publishing-check
+slug: cms-check-2026
 description: A temporary article used to test the new CMS publishing workflow.
 category: SEO & Search
 date: 2026-09-16
