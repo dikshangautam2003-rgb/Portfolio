@@ -430,3 +430,171 @@ ul,ol{margin:0 0 var(--sp-6)}
 }
 
 .article-cta-space{margin-top:var(--sp-12)}
+
+/* ============================================================
+   V6 SYSTEM POLISH — consistent hierarchy, cards, CTAs, motion
+   ============================================================ */
+:root{
+  --type-body:1rem;
+  --type-lead:1.125rem;
+  --type-h3:1.5625rem;
+  --type-h2:2.4414rem;
+  --type-h1:3.0518rem;
+  --section-pad:clamp(72px,8vw,104px);
+  --card-pad:clamp(24px,3vw,36px);
+  --surface-elev:0 16px 42px rgba(44,30,19,.08);
+  --surface-float:0 22px 58px rgba(44,30,19,.12);
+}
+
+/* Typography: one modular system, no one-off drift. */
+body{font-size:var(--type-body);line-height:1.68}
+h1{font-size:clamp(2.55rem,4.8vw,var(--type-h1));line-height:1.04;letter-spacing:-.045em}
+h2{font-size:clamp(2rem,3.7vw,var(--type-h2));line-height:1.08;letter-spacing:-.04em}
+h3{font-size:clamp(1.35rem,2vw,var(--type-h3));line-height:1.13;letter-spacing:-.025em}
+h4{font-size:1.25rem;line-height:1.2}
+p{font-size:var(--type-body);line-height:1.72}
+.lead{font-size:var(--type-lead);line-height:1.6}
+.kicker,.eyebrow{font-size:12px;line-height:1.25;letter-spacing:.16em}
+
+/* Every section starts and ends on the same rhythm. */
+.section{padding:var(--section-pad) 0}
+.section-head{margin-bottom:48px}
+
+/* Eyebrow rule: contextual only; redundant labels are removed in markup. */
+.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--orange-deep);margin-bottom:18px}
+.kicker:before{content:"";width:22px;height:1px;background:currentColor;display:block}
+
+/* One card language across services, education, blog, process and detail grids. */
+.service-card,.detail-card,.process-card,.edu-card,.guide-tile,.article-card,.contact-form,.cta-panel{
+  border-radius:var(--radius-md);
+}
+.service-card,.detail-card,.process-card,.edu-card,.guide-tile,.article-card{
+  box-shadow:0 1px 0 rgba(255,255,255,.55) inset;
+}
+.service-card:hover,.detail-card:hover,.process-card:hover,.edu-card:hover,.guide-tile:hover,.article-card:hover{
+  box-shadow:var(--surface-elev);
+}
+
+/* CTA hierarchy: exactly 3 styles. */
+.btn{min-height:46px;padding:12px 16px;border-radius:var(--radius-sm);font-size:var(--fs-sm);font-weight:700}
+.cta-primary{background:var(--orange);color:#fff;border:1px solid var(--orange);box-shadow:0 8px 24px rgba(228,93,47,.18)}
+.cta-primary:hover,.cta-primary:focus-visible{background:var(--orange-deep);color:#fff;border-color:var(--orange-deep);transform:translateY(-2px);box-shadow:0 12px 28px rgba(191,70,33,.22)}
+.cta-secondary{background:transparent;color:var(--ink);border:1px solid var(--line-strong)}
+.cta-secondary:hover,.cta-secondary:focus-visible{background:var(--bg-2);border-color:var(--orange);color:var(--orange-deep);transform:translateY(-2px)}
+.cta-tertiary{position:relative;display:inline-flex;align-items:center;gap:8px;margin-top:auto;text-decoration:none;color:var(--ink);font-size:var(--fs-sm);font-weight:700;transition:color .2s var(--ease),transform .2s var(--ease)}
+.cta-tertiary:after{content:"";position:absolute;left:0;right:20px;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s var(--ease)}
+.cta-tertiary:hover,.cta-tertiary:focus-visible{color:var(--orange-deep);transform:translateX(2px)}
+.cta-tertiary:hover:after,.cta-tertiary:focus-visible:after{transform:scaleX(1)}
+.nav .header-cta{background:var(--orange);color:#fff;border:1px solid var(--orange);padding:12px 16px}
+.nav .header-cta:hover{background:var(--orange-deep);color:#fff}
+
+/* Homepage services: all four cards are equally weighted. */
+.service-stack{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.service-card,.service-card:nth-child(1),.service-card:nth-child(2),.service-card:nth-child(3),.service-card:nth-child(4){
+  grid-column:auto;
+  min-height:430px;
+  grid-template-columns:1fr 1fr;
+}
+.service-copy{padding:var(--card-pad)}
+.service-index{margin-bottom:22px}
+.service-icon{margin-bottom:18px}
+.service-card h3{font-size:var(--type-h3)}
+.service-card p{font-size:var(--type-body);line-height:1.68;max-width:38ch;margin:14px 0 20px}
+.service-tags{margin-bottom:26px}
+.service-tags span,.detail-tags span{padding:7px 9px}
+.service-visual{min-height:100%;background:var(--dark)}
+.service-card:hover .service-visual:before{transform:scale(1.04);transition:transform .35s var(--ease)}
+
+/* Give secondary service visuals the same finish as the primary one. */
+.service-card .service-visual{border-left:1px solid rgba(255,255,255,.08)}
+
+/* Distinct landing-page section: use a light process visual, not a second dark mockup. */
+.browser-section{background:var(--bg-2)}
+.browser-layout{grid-template-columns:.85fr 1.15fr}
+.landing-flow{
+  padding:28px;
+  border:1px solid var(--line);
+  background:var(--paper);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--surface-elev);
+  display:grid;
+  gap:0;
+}
+.flow-node{display:grid;grid-template-columns:40px 1fr;column-gap:16px;align-items:start;padding:18px 0}
+.flow-index{grid-row:1 / span 2;width:34px;height:34px;border:1px solid var(--line-strong);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--orange-deep);background:var(--bg)}
+.flow-node strong{font-size:var(--fs-lg);line-height:1.2;letter-spacing:-.02em}
+.flow-node small{margin-top:4px;font-size:var(--fs-sm);line-height:1.55;color:var(--muted)}
+.flow-node.is-focus{margin-inline:-10px;padding-inline:10px;background:linear-gradient(90deg,rgba(228,93,47,.07),transparent);border-radius:12px}
+.flow-connector{width:1px;height:24px;margin-left:16px;background:var(--line-strong)}
+
+/* Text sections get an explicit visual break without altering copy. */
+.intro-copy{border-left:1px solid var(--line-strong);padding:4px 0 4px 28px}
+.intro-copy .lead{position:relative}
+.intro-copy .lead:before{content:"“";position:absolute;left:-22px;top:-9px;font-size:2.8rem;line-height:1;color:var(--orange-soft);font-weight:700}
+.note-panel{background:var(--paper);padding:32px;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.note-panel p{max-width:58ch}
+
+/* Process cards are the visual break between explanatory text blocks. */
+.process-cards{gap:18px}
+.process-card{padding:28px;background:var(--paper)}
+.process-card span,.system-step>span{color:var(--orange-deep);font-size:12px;font-weight:700;letter-spacing:.12em}
+
+/* Consistent card rhythm elsewhere. */
+.guide-tile,.article-card{padding:28px}
+.guide-tile:hover,.article-card:hover{transform:translateY(-4px)}
+.edu-card{padding:28px}
+.detail-card{padding:28px;min-height:300px}
+.detail-card .detail-copy p{max-width:56ch}
+
+/* System section: dark but restrained, one accent only. */
+.system-section{background:var(--dark)}
+.system-step{padding:28px 0}
+.system-step:hover{padding-left:8px}
+.system-step h3{color:#fff}
+.system-step p{color:rgba(255,255,255,.7)}
+.system-step>span{color:var(--orange-soft)}
+
+/* Contact/details are grouped as compact info cards. */
+.contact-details{display:grid;gap:0}
+.contact-details>div{padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-details small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--orange-deep);margin-bottom:5px}
+
+/* Article rhythm: shorter readable measure and visual breaks. */
+.article{max-width:760px}
+.article p{max-width:68ch}
+.article h2{margin-top:48px;margin-bottom:16px}
+.article h3{margin-top:36px;margin-bottom:12px}
+.callout{border-left:3px solid var(--orange);background:var(--bg);box-shadow:var(--shadow-sm)}
+
+/* Global interactive texture. */
+a,button{transition:color .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease)}
+.service-card,.detail-card,.process-card,.edu-card,.guide-tile,.article-card{will-change:transform}
+
+/* Better keyboard/focus trust. */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* Mobile equal-card system. */
+@media(max-width:980px){
+  .service-stack{grid-template-columns:1fr}
+  .service-card,.service-card:nth-child(1),.service-card:nth-child(2),.service-card:nth-child(3),.service-card:nth-child(4){grid-template-columns:1fr;min-height:0}
+  .service-visual{min-height:260px;border-left:0;border-top:1px solid rgba(255,255,255,.08)}
+  .browser-layout{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:680px){
+  h1{font-size:clamp(2.1rem,10vw,2.8rem)}
+  h2{font-size:clamp(1.85rem,8vw,2.35rem)}
+  .section{padding:64px 0}
+  .container{width:min(calc(100% - 32px),var(--max))}
+  .intro-copy{padding-left:22px}
+  .service-copy{padding:24px}
+  .service-visual{min-height:220px}
+  .guide-grid,.process-cards,.edu-grid,.service-detail-list{grid-template-columns:1fr}
+  .landing-flow{padding:20px}
+  .cta-panel{grid-template-columns:1fr;padding:28px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .service-card,.detail-card,.process-card,.guide-tile,.article-card,.cta-primary,.cta-secondary,.cta-tertiary{transition-duration:0ms!important}
+}
