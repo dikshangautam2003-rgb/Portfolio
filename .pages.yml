@@ -1,0 +1,169 @@
+media:
+  input: media
+  output: /media
+
+components:
+  seo:
+    type: object
+    label: SEO
+    fields:
+      - name: title
+        label: SEO title
+        type: string
+      - name: description
+        label: SEO description
+        type: text
+
+content:
+
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/blog
+    filename: "{slug}.md"
+    fields:
+
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+
+      - name: description
+        label: Short description
+        type: text
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - SEO & Search
+            - Website
+            - Content
+            - Digital Marketing
+            - Education
+
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+
+      - name: featured_image
+        label: Featured image
+        type: image
+        options:
+          media: default
+          path: blog
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+      - name: seo
+        component: seo
+        label: Search appearance
+
+      - name: body
+        label: Article
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          media: default
+          path: blog
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+    view:
+      primary: title
+      fields: [title, category, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+
+    operations:
+      delete: false
+
+
+  - name: education
+    label: Education Guides
+    type: collection
+    path: content/education
+    filename: "{slug}.md"
+    fields:
+
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+
+      - name: description
+        label: Short description
+        type: text
+        required: true
+
+      - name: section
+        label: Education section
+        type: select
+        options:
+          values:
+            - +2 / NEB
+            - Bachelor's
+            - Courses
+            - Study Abroad
+            - Admissions
+            - Scholarships
+
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+
+      - name: featured_image
+        label: Featured image
+        type: image
+        options:
+          media: default
+          path: education
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+      - name: seo
+        component: seo
+        label: Search appearance
+
+      - name: body
+        label: Guide content
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          media: default
+          path: education
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+    view:
+      primary: title
+      fields: [title, section, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+
+    operations:
+      delete: false
