@@ -598,3 +598,146 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media(prefers-reduced-motion:reduce){
   .service-card,.detail-card,.process-card,.guide-tile,.article-card,.cta-primary,.cta-secondary,.cta-tertiary{transition-duration:0ms!important}
 }
+
+/* === V7 service presentation === */
+.service-home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.service-home-card{display:flex;flex-direction:column;min-height:360px;padding:28px;background:#fffdf9;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 22px rgba(36,28,20,.055);transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.service-home-card:hover,.service-home-card:focus-within{transform:translateY(-5px);box-shadow:0 18px 38px rgba(36,28,20,.10);border-color:#d6c9bb}
+.service-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:24px}
+.service-home-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:14px;background:rgba(228,93,47,.10);color:var(--orange);border:1px solid rgba(228,93,47,.20);font-size:26px;font-weight:600;transition:transform .22s var(--ease),background .22s var(--ease),color .22s var(--ease)}
+.service-home-card:hover .service-home-icon{transform:translateY(-2px) scale(1.03);background:var(--orange);color:#fff}
+.service-home-index{font-size:var(--fs-xs);letter-spacing:.14em;color:var(--muted);font-weight:700;padding-top:4px}
+.service-home-card h3{font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.18;letter-spacing:-.02em;margin-bottom:14px}
+.service-home-card p{color:var(--muted-2);font-size:var(--fs-body);line-height:1.68;margin:0 0 24px}
+.service-home-card .cta-tertiary{margin-top:auto}
+
+.service-detail-four{padding-top:20px}
+.service-feature-list{display:flex;flex-direction:column;gap:20px}
+.service-feature{display:grid;grid-template-columns:1fr 1.15fr;min-height:540px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fffdf9;box-shadow:0 10px 28px rgba(36,28,20,.06)}
+.service-feature-reverse{grid-template-columns:1.15fr 1fr}
+.service-feature-reverse .service-feature-visual{order:2}
+.service-feature-visual{position:relative;min-height:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--dark);color:#fff}
+.service-feature-visual:before{content:"";position:absolute;inset:-15%;background:radial-gradient(circle at 72% 20%,rgba(228,93,47,.42),transparent 32%),linear-gradient(140deg,rgba(255,255,255,.04),transparent 55%)}
+.service-feature-number{position:absolute;left:28px;top:24px;font-size:var(--fs-xs);font-weight:800;letter-spacing:.14em;color:rgba(255,255,255,.68)}
+.service-feature-icon{position:relative;z-index:2;width:88px;height:88px;display:grid;place-items:center;border-radius:22px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);font-size:42px;color:var(--orange-soft);box-shadow:0 18px 40px rgba(0,0,0,.18);transition:transform .28s var(--ease)}
+.service-feature:hover .service-feature-icon{transform:translateY(-6px) rotate(-2deg)}
+.service-feature-content{padding:52px 54px;display:flex;flex-direction:column;align-items:flex-start}
+.service-feature-content .kicker{margin-bottom:18px}
+.service-feature-content h2{margin-bottom:18px;max-width:12ch}
+.service-feature-content>.lead{max-width:58ch;margin-bottom:28px}
+.service-subgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px;width:100%;margin-bottom:30px}
+.service-subgrid>div{padding-top:18px;border-top:1px solid var(--line)}
+.service-subgrid h3,.feature-points h3{font-size:18px;line-height:1.25;margin-bottom:8px}
+.service-subgrid p,.feature-points p{font-size:15px;line-height:1.65;color:var(--muted-2);margin-bottom:12px}
+.detail-tags{margin-bottom:0}
+.feature-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;width:100%;margin:2px 0 24px}
+.feature-points>div{padding-top:18px;border-top:1px solid var(--line)}
+.visual-browser-mini{position:relative;z-index:2;width:64%;padding:16px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:#f8f4ea;box-shadow:0 24px 60px rgba(0,0,0,.25);transform:rotate(-4deg);transition:transform .3s var(--ease)}
+.service-feature:hover .visual-browser-mini{transform:rotate(-2deg) translateY(-6px)}
+.visual-browser-mini div{height:18px;background:#ddd1c4;border-radius:6px;margin-bottom:10px}.visual-browser-mini div:first-child{height:72px;background:linear-gradient(90deg,#e8dfd3 50%,#d0c3b5 50%)}.visual-browser-mini div:last-child{width:62%;margin-bottom:0}
+.visual-paper-lines{position:relative;z-index:2;width:58%;padding:42px 34px;border-radius:16px;background:#fff7ec;color:#342f2a;box-shadow:0 24px 60px rgba(0,0,0,.22);transform:rotate(3deg);transition:transform .3s var(--ease)}
+.service-feature:hover .visual-paper-lines{transform:rotate(1deg) translateY(-6px)}
+.visual-paper-lines:before{content:"SEARCH INTENT";display:block;color:var(--orange-deep);font-size:10px;font-weight:800;letter-spacing:.14em;margin-bottom:24px}.visual-paper-lines i{display:block;height:9px;background:#ddd1c4;border-radius:99px;margin:12px 0}.visual-paper-lines i:nth-child(2){width:82%}.visual-paper-lines i:nth-child(3){width:68%}.visual-paper-lines i:nth-child(4){width:58%}
+.visual-video-timeline{position:relative;z-index:2;width:68%;height:180px;padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,.17);background:rgba(255,255,255,.05);display:flex;align-items:flex-end;gap:9px;box-shadow:0 24px 60px rgba(0,0,0,.22);transform:skewY(-2deg);transition:transform .3s var(--ease)}
+.service-feature:hover .visual-video-timeline{transform:skewY(0) translateY(-6px)}
+.visual-video-timeline i{flex:1;background:linear-gradient(to top,var(--orange),rgba(244,177,151,.82));border-radius:6px 6px 2px 2px}.visual-video-timeline i:nth-child(1){height:38%}.visual-video-timeline i:nth-child(2){height:72%}.visual-video-timeline i:nth-child(3){height:54%}.visual-video-timeline i:nth-child(4){height:84%}.visual-video-timeline i:nth-child(5){height:62%}
+@media (max-width:1100px){.service-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service-feature,.service-feature-reverse{grid-template-columns:1fr}.service-feature-reverse .service-feature-visual{order:0}.service-feature-visual{min-height:300px}.service-feature-content{padding:42px}.service-feature-content h2{max-width:none}}
+@media (max-width:760px){.service-home-grid{grid-template-columns:1fr}.service-home-card{min-height:auto;padding:24px}.service-feature-content{padding:30px 24px}.service-subgrid,.feature-points{grid-template-columns:1fr}.service-feature-visual{min-height:250px}.service-feature-icon{width:76px;height:76px;font-size:34px}.service-detail-four{padding-top:8px}}
+
+
+/* ===== V8 SITE-WIDE QA + RHYTHM SYSTEM ===== */
+:root{
+  --rhythm-1:4px;--rhythm-2:8px;--rhythm-3:12px;--rhythm-4:16px;--rhythm-5:20px;
+  --rhythm-6:24px;--rhythm-8:32px;--rhythm-10:40px;--rhythm-12:48px;--rhythm-16:64px;
+  --rhythm-20:80px;--rhythm-24:96px;
+}
+/* Redundant labels: reserved for context, not repetition. */
+.hero .eyebrow{margin-bottom:0}
+/* Comma-chain hero copy becomes a readable stack where needed. */
+.hero-services .hero-lede{max-width:62ch}
+.hero-services .hero-lede::after{content:""}
+/* Equal homepage service cards. */
+.service-home-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.service-home-card{min-height:350px;padding:28px 28px 30px}
+.service-home-icon svg,.service-grid-icon svg{width:28px;height:28px;display:block}
+.service-home-icon{color:var(--orange);background:rgba(228,93,47,.09)}
+.service-home-card h3{font-size:1.25rem}
+/* Six-card services page. */
+.services-grid-section{padding-top:64px}
+.services-grid-six{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.service-grid-card{display:flex;flex-direction:column;min-height:360px;padding:30px;background:var(--bg);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 0 rgba(255,255,255,.55) inset;transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.service-grid-card:hover,.service-grid-card:focus-within{transform:translateY(-5px);box-shadow:var(--surface-elev);border-color:var(--line-strong)}
+.service-grid-top{display:flex;justify-content:space-between;align-items:start;margin-bottom:24px}
+.service-grid-index{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--muted)}
+.service-grid-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:14px;border:1px solid rgba(228,93,47,.18);background:rgba(228,93,47,.07);color:var(--orange);transition:transform .22s var(--ease),background .22s var(--ease),color .22s var(--ease)}
+.service-grid-card:nth-child(2) .service-grid-icon{color:var(--ink);border-color:rgba(33,48,45,.15);background:rgba(33,48,45,.06)}
+.service-grid-card:nth-child(3) .service-grid-icon{color:var(--orange-deep);background:rgba(191,70,33,.08)}
+.service-grid-card:nth-child(4) .service-grid-icon{color:var(--ink);background:rgba(33,48,45,.06)}
+.service-grid-card:nth-child(5) .service-grid-icon{color:var(--orange);background:rgba(228,93,47,.07)}
+.service-grid-card:nth-child(6) .service-grid-icon{color:var(--orange-deep);background:rgba(191,70,33,.08)}
+.service-grid-card:hover .service-grid-icon{transform:translateY(-2px) scale(1.03)}
+.service-grid-card h3{font-size:var(--type-h3);line-height:1.16;margin-bottom:12px}
+.service-grid-card p{font-size:var(--type-body);line-height:1.68;color:var(--muted-2);margin:0 0 20px}
+.service-grid-card .detail-tags{margin-bottom:24px}
+.service-grid-card .cta-tertiary{margin-top:auto}
+/* Make hero list-like content scannable without changing meaning. */
+.hero-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-tag-row span{display:inline-flex;align-items:center;padding:7px 10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);border-radius:999px;color:#fff;font-size:12px}
+/* Process is a flow, not four disconnected cards. */
+.process-flow{display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr 46px 1fr;align-items:stretch}
+.process-step{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 1px 0 rgba(255,255,255,.55) inset;transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.process-step:hover{transform:translateY(-4px);box-shadow:var(--surface-elev);border-color:var(--line-strong)}
+.process-step-marker{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--orange);color:var(--orange-deep);font-size:14px;font-weight:800;letter-spacing:.08em;margin-bottom:22px;background:var(--bg)}
+.process-step h3{font-size:18px;line-height:1.25;margin-bottom:8px}
+.process-step p{font-size:15px;line-height:1.65;color:var(--muted-2);margin:0}
+.process-flow-connector{position:relative;display:flex;align-items:center;justify-content:center}
+.process-flow-connector::before{content:"";width:100%;height:1px;background:var(--line-strong)}
+.process-flow-connector::after{content:"→";position:absolute;background:var(--paper);padding:4px 6px;color:var(--orange);font-size:18px;line-height:1}
+/* Text-heavy section break. */
+.intro-note{display:flex;align-items:center;gap:14px;margin-top:26px;padding:14px 16px;border-left:2px solid var(--orange);background:rgba(228,93,47,.055);border-radius:0 12px 12px 0;color:var(--ink)}
+.intro-note span{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--orange-deep)}
+.intro-note strong{font-size:14px;line-height:1.45}
+.about-principles{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted-2)}
+.about-principles span:nth-child(odd){font-weight:800;color:var(--orange-deep)}
+/* Timeline/process-like component across About. */
+.timeline{position:relative;padding-left:2px}
+.timeline::before{content:"";position:absolute;left:27px;top:27px;bottom:27px;width:1px;background:var(--line-strong)}
+.timeline-item{position:relative;display:grid;grid-template-columns:56px 1fr;gap:20px;padding:0 0 30px;z-index:1}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item>span{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--orange);color:var(--orange-deep);font-size:12px;font-weight:800;letter-spacing:.08em}
+.timeline-item h3{font-size:20px;line-height:1.2;margin-bottom:8px}
+.timeline-item p{margin:0;color:var(--muted-2);max-width:62ch}
+/* Proof gap: honesty instead of fake credibility. */
+.proof-gap-section{padding-top:0}
+.proof-gap{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start;padding:32px;border:1px dashed var(--line-strong);border-radius:18px;background:var(--paper)}
+.proof-gap p{margin:0;color:var(--muted-2);line-height:1.68}
+/* Article body: rhythm and clear next action. */
+.article-rich>p{max-width:68ch}
+.article-rich>p + h2{margin-top:40px}
+.article-rich ul{margin:22px 0 28px;padding-left:22px}
+.article-rich li{margin:0 0 9px;line-height:1.68;color:var(--muted-2)}
+.article-next-link{margin-top:28px}
+/* Kill all old edit-like glyphs in service UI. */
+.service-feature-icon:empty,.service-home-icon:empty,.service-grid-icon:empty{display:none}
+/* Prevent any old feature-level service UI from looking like an unfinished card if still present elsewhere. */
+.service-feature{overflow:hidden}
+/* Consistent section rhythm. */
+.section{scroll-margin-top:100px}
+.section + .section{padding-top:80px}
+@media (max-width:1100px){
+  .services-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .process-flow{grid-template-columns:1fr 34px 1fr}
+  .process-step:nth-of-type(5),.process-step:nth-of-type(7),.process-flow-connector:nth-of-type(6){grid-column:auto}
+  .process-flow-connector:nth-of-type(4){display:none}
+}
+@media (max-width:760px){
+  .services-grid-six{grid-template-columns:1fr}
+  .service-grid-card{min-height:0;padding:24px}
+  .process-flow{grid-template-columns:1fr;gap:10px}
+  .process-flow-connector{height:30px}
+  .process-flow-connector::before{width:1px;height:30px}
+  .process-flow-connector::after{content:"↓";padding:2px 4px}
+  .timeline::before{left:27px}
+  .proof-gap{grid-template-columns:1fr;padding:24px}
+  .section + .section{padding-top:64px}
+}
