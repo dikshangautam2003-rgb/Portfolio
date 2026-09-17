@@ -72,6 +72,13 @@ content:
         label: Article
         type: rich-text
         required: true
+        options:
+          format: markdown
+          switcher: true
+          media: default
+          path: blog
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
 
     view:
       primary: title
@@ -142,6 +149,13 @@ content:
         label: Guide content
         type: rich-text
         required: true
+        options:
+          format: markdown
+          switcher: true
+          media: default
+          path: education
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
 
     view:
       primary: title
