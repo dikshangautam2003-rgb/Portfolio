@@ -1,125 +1,94 @@
-# Dikshan Gautam — Final Redesign Plan
+# Dikshan Gautam — Final Editorial Redesign Plan
 
-## Direction
+## Design direction
 
-**Editorial Search**: a warm, restrained personal website that feels like a premium publication rather than a SaaS dashboard or agency template.
+The site is built around a single **Editorial Search** system:
+- warm white / cream backgrounds
+- charcoal typography
+- restrained burnt-orange accent
+- DM Serif Display for editorial headings
+- Inter for navigation and body copy
+- thin borders and light elevation instead of hard shadows
+- selective imagery rather than image-heavy sections
 
-### Theme
-- Background: warm white / cream
-- Text: charcoal / near-black
-- Accent: restrained burnt orange
-- Surfaces: white with fine neutral borders
-- Dark charcoal reserved for footer and selected CTA moments
-- No gold, neon, green, glassmorphism, or heavy gradients
+## Hero system
 
-### Typography
-- DM Serif Display for editorial display headings
-- Inter for navigation, body, metadata and UI
-- Large headings with controlled measure
-- Comfortable reading width for articles
-- Smaller, quieter navigation and metadata
+All heroes now use a background photograph with a soft cream overlay so the image blends into the page instead of fighting the headline.
 
-## Page architecture
+H1s are deliberately smaller and calmer than the previous version, with strong editorial line-height and a maximum reading width.
 
-### Home
-1. SEO-first hero
-2. Search visibility explanation
-3. Four core services
-4. SEO workflow
-5. Search-to-page / website quality section
-6. Education desk
-7. Latest writing
-8. Contact CTA
+## Navigation
 
-### Services
-1. SEO services hero
-2. Six service areas
-3. SEO process
-4. Contact CTA
+The navigation was rebuilt visually while preserving the same URLs:
+- Home
+- Services
+- Education
+- Blog
+- About
+- Contact
+- Let's Talk
 
-### Education
-1. Education/search-intent hero
-2. Six education categories
-3. Practical note
-4. Related/latest writing area
-5. Clear internal links
+Education has a proper desktop dropdown and a collapsible mobile submenu. Hover, focus and active states use the orange accent without turning the navigation into a loud component.
 
-### Blog
-1. Editorial hero
-2. Featured article
-3. Article archive
-4. Writing philosophy
-5. Individual article pages with featured media, metadata, readable prose and related CTA
+## Blog
 
-### About
-1. Personal SEO positioning
-2. Search → technical foundation → useful content
-3. Working principles
-4. Education publishing
-5. Contact CTA
+The blog is treated as an editorial archive rather than a generic SaaS grid.
 
-### Contact
-1. Clear project hero
-2. Project facts
-3. Lightweight enquiry form
+Every article uses the same card dimensions and the same visual hierarchy:
+1. featured image
+2. category
+3. article title
+4. concise description
+5. read action
 
-## Interaction
+The four existing article URLs remain intact. CMS-generated articles are also given the same card system.
 
-- Compact sticky header
-- Friendly orange hover/focus states
-- Proper Education dropdown
-- Responsive mobile navigation
-- Small hover lifts, not exaggerated animations
-- Scroll reveal only where it adds hierarchy
-- `prefers-reduced-motion` support
-- Keyboard-visible focus states
+## Education
+
+The education section now follows a decision-led content model.
+
+### Education landing page
+- Hero
+- Featured courses
+- Featured colleges / degree research
+- Featured study-abroad destinations
+- Featured admissions / consultancy checklist
+- Six education categories
+- Practical verification note
+
+### Education sub-pages
+Each sub-page now follows:
+- hero
+- featured resources first
+- deeper guide sections
+- related education paths
+- verification note
+
+Featured content is intentionally useful rather than presented as unsupported rankings or guarantees.
 
 ## SEO preservation
 
-The redesign does not change:
-- Existing public URLs
-- Canonical URLs
-- Existing page titles/descriptions
-- JSON-LD structured data
-- Breadcrumb hierarchy
-- Blog/education content architecture
-- Sitemap/robots
-- CMS source folders
-- GitHub Actions deployment
+Existing SEO architecture remains in place:
+- page URLs
+- canonical URLs
+- meta descriptions
+- Open Graph metadata
+- sitemap
+- robots.txt
+- semantic headings
+- BreadcrumbList structured data
+- BlogPosting / Article structured data on generated content
+- CMS Markdown locations
+- GitHub Actions deployment workflow
 
-CMS-generated articles use the same visual system and can use featured images for article cards and social metadata.
+CMS-generated pages now use `style-premium.css` as well, so new articles do not fall back to the old visual system.
 
-## Content principles
+## Research references
 
-SEO remains the primary business positioning. The homepage centers on:
+Google Search Central recommends using structured data to help Google understand page content, including Article and Breadcrumb markup, and recommends validating structured data and keeping a sitemap submitted in Search Console.
 
-**SEO Specialist in Nepal Helping Businesses Rank Higher on Google**
+Webflow's current education-site examples consistently use clear program/destination directories, dedicated detail pages, CMS-ready content structures, and responsive editorial layouts. These principles informed the education information architecture here.
 
-Core services:
-- Search Engine Optimization
-- Website Development
-- Website Content Writing
-- Video Editing
+## Technical constraint
 
-SEO topics remain technical SEO, on-page SEO, local SEO, keyword research, Search Console and useful content.
-
-Education remains focused on Nepali students:
-- +2 / NEB
-- Bachelor's
-- Courses
-- Study Abroad
-- Admissions
-- Scholarships
-
-The blog remains practical and editorial, not generic marketing content.
-
-## Research-informed principles
-
-The redesign follows Google's current Search guidance: preserve crawlable/indexable content, meaningful titles/descriptions, semantic structure and appropriate structured data; Google notes that structured data helps it understand page content, while Article and Breadcrumb markup are supported search features. The implementation also keeps accessibility and responsive behavior central, including keyboard focus, semantic HTML, color contrast, typography and reduced-motion support.
-
-External references:
-- Google Search Central: Search appearance and structured data
-- Google Search Central: Article structured data
-- Google Search Central: Breadcrumb structured data
-- web.dev: Accessibility
-- Awwwards design guidance: typography, content architecture, navigation, mobile legibility and restrained interaction
+The site remains a static HTML/CSS/JS website suitable for GitHub Pages. The redesign does not require a server, database, or runtime framework.

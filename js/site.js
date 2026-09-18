@@ -14,9 +14,21 @@ document.addEventListener('DOMContentLoaded',()=>{
   const closeMenu=()=>{
     if(!header||!menu)return;
     header.classList.remove('menu-open');
+    mobileEducation?.classList.remove('open');
+    mobileEducationToggle?.setAttribute('aria-expanded','false');
     menu.setAttribute('aria-expanded','false');
     menu.textContent='Menu';
   };
+
+
+  const mobileEducation=header?.querySelector('.mobile-education');
+  const mobileEducationToggle=mobileEducation?.querySelector('.mobile-education-toggle');
+  if(mobileEducation&&mobileEducationToggle){
+    mobileEducationToggle.addEventListener('click',()=>{
+      const open=mobileEducation.classList.toggle('open');
+      mobileEducationToggle.setAttribute('aria-expanded',String(open));
+    });
+  }
 
   /* Mobile navigation */
   if(menu&&header){

@@ -158,12 +158,30 @@ function tagList(type, item) {
   return [item.category, 'Practical guide', item.date].filter(Boolean);
 }
 
+function absoluteUrl(value = '') {
+  if (!value) return '';
+  if (/^https?:\/\//i.test(value)) return value;
+  return `${SITE_URL}${value.startsWith('/') ? value : '/' + value}`;
+}
+
+function siteHeader(type) {
+  const blogActive = type === 'blog' ? ' active' : '';
+  return `<header class="site-header"><div class="container header-inner">
+<a class="brand" href="/"><img alt="Dikshan Gautam logo" src="/dikshan-mark.png"><span class="brand-word">Dikshan <em>Gautam</em></span></a>
+<nav aria-label="Primary navigation" class="nav"><a href="/">Home</a><a href="/services/">Services</a><div class="dropdown"><button aria-expanded="false" aria-haspopup="true" type="button">Education <span>▾</span></button><div class="dropdown-panel"><a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a><a href="/education/">All education guides</a></div></div><a class="${blogActive}" href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a><a class="btn btn-primary header-cta" href="/contact/">Let's talk ↗</a></nav><button aria-expanded="false" aria-label="Open menu" class="menu-btn" type="button">Menu</button></div><div class="mobile-nav container"><a href="/">Home</a><a href="/services/">Services</a><div class="mobile-education"><button class="mobile-education-toggle" type="button" aria-expanded="false">Education <span>▾</span></button><div class="mobile-sub"><a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a><a href="/education/">All education guides</a></div></div><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></header>`;
+}
+
+function siteFooter() {
+  return `<footer class="site-footer"><div class="container footer-top"><div class="footer-brand"><a class="brand" href="/"><img alt="Dikshan Gautam logo" src="/dikshan-mark.png"><span class="brand-word" style="color:#fff">Dikshan <em>Gautam</em></span></a><p>SEO, websites, content and digital work for businesses in Nepal.</p></div><div class="footer-col"><div class="footer-label">Explore</div><a href="/services/">SEO services</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div><div class="footer-col"><div class="footer-label">Education</div><a href="/education/">Education guides</a><a href="/education/study-abroad/">Study abroad</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/scholarships/">Scholarships</a></div><div class="footer-col"><div class="footer-label">Contact</div><a class="footer-mail" href="mailto:hello@dikshangautam.com.np">hello@dikshangautam.com.np</a><a href="/contact/" style="margin-top:14px">Start a project ↗</a></div></div><div class="container footer-bottom"><span>© <span data-year="">2026</span> Dikshan Gautam</span><span>Nepal · SEO · Websites · Content · Video</span></div></footer><script src="/js/site.js"></script>`;
+}
+
 function generatePage(type, item) {
   const slug = item.slug;
   const url = `${SITE_URL}/${type === 'blog' ? 'blog' : 'education'}/${slug}/`;
   const title = item.seo?.title || `${item.title} | Dikshan Gautam`;
   const description = item.seo?.description || item.description || '';
   const hero = heroImageFor(type, item);
+  const imageUrl = absoluteUrl(item.featured_image || hero);
   const tags = tagList(type, item).map(tag => `<span>${esc(tag)}</span>`).join('');
   const bodyHtml = markdownToHtml(item.body || '');
   const breadcrumbName = type === 'blog' ? 'Blog' : 'Education';
@@ -176,7 +194,7 @@ function generatePage(type, item) {
     author: { '@type': 'Person', name: 'Dikshan Gautam', url: `${SITE_URL}/` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     datePublished: item.date || undefined,
-    image: item.featured_image ? `${SITE_URL}${item.featured_image.startsWith('/') ? item.featured_image : '/' + item.featured_image}` : undefined
+    image: imageUrl || undefined
   };
   Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
   const breadcrumbs = {
@@ -188,9 +206,9 @@ function generatePage(type, item) {
       { '@type': 'ListItem', position: 3, name: item.title, item: url }
     ]
   };
-  const imageUrl = item.featured_image ? `${SITE_URL}${item.featured_image.startsWith('/') ? item.featured_image : '/' + item.featured_image}` : '';
-  const socialMeta = imageUrl ? `<meta property="og:image" content="${esc(imageUrl)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${esc(imageUrl)}">` : `<meta name="twitter:card" content="summary">`;
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta property="og:type" content="${type === 'blog' ? 'article' : 'website'}">${socialMeta}<link rel="canonical" href="${url}"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/style-premium.css"><script type="application/ld+json">${JSON.stringify(breadcrumbs)}</script><script type="application/ld+json">${JSON.stringify(schema)}</script></head><body><!-- CMS-GENERATED: ${type}/${slug} --><header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img alt="Dikshan Gautam logo" src="/dikshan-mark.png"><span class="brand-word">Dikshan <em>Gautam</em></span></a><nav aria-label="Primary navigation" class="nav"><a href="/">Home</a><a href="/services/">Services</a><div class="dropdown"><button aria-expanded="false" aria-haspopup="true" type="button">Education <span>▾</span></button><div class="dropdown-panel"><a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a><a href="/education/">All education guides</a></div></div><a class="${type === 'blog' ? 'active' : ''}" href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a><a class="btn btn-primary header-cta" href="/contact/">Let's talk ↗</a></nav><button aria-expanded="false" aria-label="Open menu" class="menu-btn" type="button">Menu</button></div><div class="mobile-nav container"><a href="/">Home</a><a href="/services/">Services</a><a href="/education/">Education</a><div class="mobile-sub"><a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a></div><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></header><main><section class="hero"><div class="hero-media" style="background-image:url('${hero}')"></div><div class="hero-overlay"></div><div class="container hero-content"><h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${tags}</div></div><div class="hero-cue container"><span>Read</span></div></section>${item.featured_image ? `<div class="container"><div class="article-cover"><img src="${esc(item.featured_image)}" alt="${esc(item.title)}" loading="eager"></div></div>` : ''}<section class="section"><div class="container"><div class="prose reveal">${bodyHtml}</div></div></section></main><footer class="site-footer"><div class="container footer-top"><div class="footer-brand"><a class="brand" href="/"><img alt="Dikshan Gautam logo" src="/dikshan-mark.png"><span class="brand-word" style="color:#fff">Dikshan <em>Gautam</em></span></a><p>SEO, websites, content and digital work for businesses in Nepal.</p></div><div class="footer-col"><div class="footer-label">Explore</div><a href="/services/">SEO services</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div><div class="footer-col"><div class="footer-label">Education</div><a href="/education/">Education guides</a><a href="/education/study-abroad/">Study abroad</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/scholarships/">Scholarships</a></div><div class="footer-col"><div class="footer-label">Contact</div><a class="footer-mail" href="mailto:hello@dikshangautam.com.np">hello@dikshangautam.com.np</a><a href="/contact/" style="margin-top:14px">Start a project ↗</a></div></div><div class="container footer-bottom"><span>© <span data-year="">2026</span> Dikshan Gautam</span><span>Nepal · SEO · Websites · Content · Video</span></div></footer><script src="/js/site.js"></script></body></html>`;
+  const ogImage = imageUrl ? `<meta property="og:image" content="${esc(imageUrl)}">` : '';
+  const articleHeading = type === 'blog' ? 'Read the article' : 'Guide';
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta property="og:type" content="${type === 'blog' ? 'article' : 'website'}">${ogImage}<link rel="canonical" href="${url}"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/style-premium.css"><script type="application/ld+json">${JSON.stringify(breadcrumbs)}</script><script type="application/ld+json">${JSON.stringify(schema)}</script></head><body><!-- CMS-GENERATED: ${type}/${slug} -->${siteHeader(type)}<main><section class="hero"><div class="hero-media" style="background-image:url('${esc(hero)}')"></div><div class="hero-overlay"></div><div class="container hero-content"><div class="kicker">${articleHeading}</div><h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${tags}</div></div></section><section class="section"><div class="container"><div class="prose reveal">${bodyHtml}</div></div></section></main>${siteFooter()}</body></html>`;
 }
 
 function ensureGeneratedPage(type, item) {
@@ -227,14 +245,31 @@ const education = readCollection(path.join(ROOT, 'content', 'education'));
 for (const item of blog) ensureGeneratedPage('blog', item);
 for (const item of education) ensureGeneratedPage('education', item);
 
-const blogCards = blog.map((item, i) => `<a class="article reveal${i === 0 ? ' large' : ''}" href="/blog/${esc(item.slug)}/">${item.featured_image ? `<img class="article-image" src="${esc(item.featured_image)}" alt="${esc(item.title)}" loading="lazy">` : ''}<span class="cat">${esc(item.category || 'Article')}</span><${i === 0 ? 'h2' : 'h3'}>${esc(item.title)}</${i === 0 ? 'h2' : 'h3'}><p>${esc(item.description || '')}</p><span class="go">Read article ↗</span></a>`).join('\n');
+function listingImage(type, item, index = 0) {
+  if (item.featured_image) return item.featured_image;
+  const blogFallbacks = [
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=82'
+  ];
+  const eduFallbacks = [
+    'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=82',
+    'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=82'
+  ];
+  return (type === 'blog' ? blogFallbacks : eduFallbacks)[index % 4];
+}
+
+const blogCards = blog.filter(item => item.slug !== 'cms-check-2026').map((item, i) => `<a class="article reveal" href="/blog/${esc(item.slug)}/"><div class="article-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('blog', item, i))}"></div><div class="article-body"><span class="cat">${esc(item.category || 'Article')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="go">Read article ↗</span></div></a>`).join('\n');
 updateListing(path.join(ROOT, 'blog', 'index.html'), '<!-- CMS_ARTICLES_START -->', '<!-- CMS_ARTICLES_END -->', blogCards);
 
-const eduCards = education.map((item, i) => `<a class="edu reveal" href="/education/${esc(item.slug)}/"><span class="edu-num">${String(i + 7).padStart(2, '0')}</span><div><small>${esc(item.section || 'Guide')}</small><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p></div><span class="edu-arrow">↗</span></a>`).join('\n');
+const eduCards = education.map((item, i) => `<a class="feature-card reveal compact" href="/education/${esc(item.slug)}/"><div class="feature-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('education', item, i))}"></div><div class="feature-body"><div class="feature-eyebrow">${esc(item.section || 'Guide')}</div><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="feature-link">Open guide ↗</span></div></a>`).join('\n');
 updateListing(path.join(ROOT, 'education', 'index.html'), '<!-- CMS_EDUCATION_START -->', '<!-- CMS_EDUCATION_END -->', eduCards);
 
 const sitemapEntries = [
-  ...blog.map(item => `  <url><loc>${SITE_URL}/blog/${esc(item.slug)}/</loc></url>`),
+  ...blog.filter(item => item.slug !== 'cms-check-2026').map(item => `  <url><loc>${SITE_URL}/blog/${esc(item.slug)}/</loc></url>`),
   ...education.map(item => `  <url><loc>${SITE_URL}/education/${esc(item.slug)}/</loc></url>`)
 ].join('\n');
 updateListing(path.join(ROOT, 'sitemap.xml'), '<!-- CMS_URLS_START -->', '<!-- CMS_URLS_END -->', sitemapEntries);
