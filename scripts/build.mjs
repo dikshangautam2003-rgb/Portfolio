@@ -266,7 +266,6 @@ const blogCards = blog.filter(item => item.slug !== 'cms-check-2026').map((item,
 updateListing(path.join(ROOT, 'blog', 'index.html'), '<!-- CMS_ARTICLES_START -->', '<!-- CMS_ARTICLES_END -->', blogCards);
 
 const eduCards = education.map((item, i) => `<a class="feature-card reveal compact" href="/education/${esc(item.slug)}/"><div class="feature-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('education', item, i))}"></div><div class="feature-body"><div class="feature-eyebrow">${esc(item.section || 'Guide')}</div><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="feature-link">Open guide ↗</span></div></a>`).join('\n');
-updateListing(path.join(ROOT, 'education', 'index.html'), '<!-- CMS_EDUCATION_START -->', '<!-- CMS_EDUCATION_END -->', eduCards);
 
 const sitemapEntries = [
   ...blog.filter(item => item.slug !== 'cms-check-2026').map(item => `  <url><loc>${SITE_URL}/blog/${esc(item.slug)}/</loc></url>`),
@@ -274,4 +273,44 @@ const sitemapEntries = [
 ].join('\n');
 updateListing(path.join(ROOT, 'sitemap.xml'), '<!-- CMS_URLS_START -->', '<!-- CMS_URLS_END -->', sitemapEntries);
 
-console.log(`[CMS] Build complete. Blog entries: ${blog.length}. Education entries: ${education.length}.`);
+
+
+const educationItems = readCollection(path.join(ROOT, 'content', 'education-items'));
+function itemCard(item) {
+  const link = item.url || '/education/';
+  const external = /^https?:\/\//.test(link);
+  const img = item.featured_image || listingImage('education', item, 0);
+  return `<a class="edu-resource reveal" href="${esc(link)}"${external ? ' target="_blank" rel="noopener"' : ''}><div class="resource-image"><img loading="lazy" alt="${esc(item.title)}" src="${esc(img)}"></div><div class="resource-body"><span class="resource-type">${esc(item.item_type || 'Guide')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="resource-link">Explore ↗</span></div></a>`;
+}
+function educationItemsFor(section, type=null){ return educationItems.filter(item=>String(item.section||'').trim()===section && (!type || String(item.item_type||'').trim()===type)); }
+function replaceMarker(file,startMarker,endMarker,html){
+  if(!fs.existsSync(file)) return;
+  let raw=fs.readFileSync(file,'utf8'); const a=raw.indexOf(startMarker), z=raw.indexOf(endMarker);
+  if(a<0||z<a){ console.warn(`[CMS] Marker missing in ${file}: ${startMarker}`); return; }
+  raw=raw.slice(0,a)+startMarker+'\n'+html+'\n'+endMarker+raw.slice(z+endMarker.length); fs.writeFileSync(file,raw,'utf8');
+}
+const curatedBlog = [
+  {slug:'what-search-console-can-and-cannot-tell-you',title:'What Search Console Can and Cannot Tell You',category:'SEO & Search',description:'How to read search data without letting one metric tell the whole story.',image:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=82'},
+  {slug:'content-that-answers-the-next-question',title:'Content That Answers the Next Question',category:'Content',description:'A practical way to create useful content that keeps a reader moving forward.',image:'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=82'},
+  {slug:'the-page-before-the-page',title:'The Page Before the Page',category:'Strategy',description:"Why information architecture and the user's next step matter before conversion.",image:'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=82'},
+  {slug:'a-small-system-for-student-research',title:'A Small System for Student Research',category:'Education',description:'A repeatable way to make education research less scattered for Nepali students.',image:'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=82'}
+];
+function blogModuleCards(limit=3){
+  const cmsItems=blog.filter(item=>item.slug!=='cms-check-2026').map(item=>({slug:item.slug,title:item.title,category:item.category||'Article',description:item.description||'',image:listingImage('blog',item,0)}));
+  const bySlug=new Map([...curatedBlog,...cmsItems].map(item=>[item.slug,item]));
+  return [...bySlug.values()].slice(0,limit).map(item=>`<a class="article reveal" href="/blog/${esc(item.slug)}/"><div class="article-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(item.image)}"></div><div class="article-body"><span class="cat">${esc(item.category||'Article')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description||'')}</p><span class="go">Read article ↗</span></div></a>`).join('\n');
+}
+const eduHome=path.join(ROOT,'education','index.html');
+replaceMarker(eduHome,'<!-- CMS_EDU_HOME:START -->','<!-- CMS_EDU_HOME:END -->',educationItems.slice(0,6).map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','colleges-universities','index.html'),'<!-- CMS_EDU_ITEMS_COLLEGES:START -->','<!-- CMS_EDU_ITEMS_COLLEGES:END -->',educationItemsFor('Colleges & Universities','Bachelor college / university').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','colleges-universities','index.html'),'<!-- CMS_EDU_ITEMS_PLUS2_COLLEGES:START -->','<!-- CMS_EDU_ITEMS_PLUS2_COLLEGES:END -->',educationItemsFor('Colleges & Universities','+2 college').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','academic-courses','index.html'),'<!-- CMS_EDU_ITEMS:Academic Courses:START -->','<!-- CMS_EDU_ITEMS:Academic Courses:END -->',educationItemsFor('Academic Courses','Bachelor course').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','academic-courses','index.html'),'<!-- CMS_EDU_ITEMS_PLUS2:START -->','<!-- CMS_EDU_ITEMS_PLUS2:END -->',educationItemsFor('Academic Courses','+2 course / stream').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','career-guidance','index.html'),'<!-- CMS_EDU_ITEMS_CAREER:START -->','<!-- CMS_EDU_ITEMS_CAREER:END -->',educationItemsFor('Career Guidance').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','skill-courses','index.html'),'<!-- CMS_EDU_ITEMS_SKILLS:START -->','<!-- CMS_EDU_ITEMS_SKILLS:END -->',educationItemsFor('Skill Courses').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','study-abroad-guide','index.html'),'<!-- CMS_EDU_ITEMS_DEST:START -->','<!-- CMS_EDU_ITEMS_DEST:END -->',educationItemsFor('Study Abroad Guide','Study destination').map(itemCard).join('\n'));
+replaceMarker(path.join(ROOT,'education','study-abroad-guide','index.html'),'<!-- CMS_EDU_ITEMS_CONSULTANCY:START -->','<!-- CMS_EDU_ITEMS_CONSULTANCY:END -->',educationItemsFor('Study Abroad Guide','Consultancy profile').map(itemCard).join('\n'));
+replaceMarker(eduHome,'<!-- CMS_EDU_BLOG:START -->','<!-- CMS_EDU_BLOG:END -->',blogModuleCards(3));
+for(const slug of ['colleges-universities','academic-courses','career-guidance','skill-courses','study-abroad-guide']) replaceMarker(path.join(ROOT,'education',slug,'index.html'),`<!-- CMS_EDU_BLOG:${slug}:START -->`,`<!-- CMS_EDU_BLOG:${slug}:END -->`,blogModuleCards(3));
+
+console.log(`[CMS] Build complete. Blog entries: ${blog.length}. Education entries: ${education.length}. Education items: ${educationItems.length}.`);

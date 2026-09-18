@@ -92,3 +92,7 @@ Webflow's current education-site examples consistently use clear program/destina
 ## Technical constraint
 
 The site remains a static HTML/CSS/JS website suitable for GitHub Pages. The redesign does not require a server, database, or runtime framework.
+
+
+## V3 education/CMS framework
+The education desk now has five public sections: Colleges & Universities, Academic Courses, Career Guidance, Skill Courses, and Study Abroad Guide. Featured education items are editable through the Pages CMS collection at content/education-items/. The build script injects those items and the latest blog articles into each section. Existing legacy education URLs remain intact for SEO continuity and link into the new architecture.

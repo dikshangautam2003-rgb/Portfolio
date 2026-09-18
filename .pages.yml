@@ -153,3 +153,73 @@ content:
 
     operations:
       delete: false
+
+  - name: education_items
+    label: Education Featured Items
+    type: collection
+    path: content/education-items
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: section
+        label: Education section
+        type: select
+        options:
+          values:
+            - Colleges & Universities
+            - Academic Courses
+            - Career Guidance
+            - Skill Courses
+            - Study Abroad Guide
+      - name: item_type
+        label: Item type
+        type: select
+        options:
+          values:
+            - +2 college
+            - Bachelor college / university
+            - Bachelor course
+            - +2 course / stream
+            - Career guide
+            - Skill course
+            - Study destination
+            - Consultancy profile
+            - Education guide
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: url
+        label: Link
+        type: string
+      - name: featured_image
+        label: Featured image
+        type: image
+        options:
+          media: default
+          path: education
+          extensions: [jpg, jpeg, png, webp, svg]
+          rename: safe
+      - name: date
+        label: Publish date
+        type: date
+      - name: body
+        label: Notes
+        type: rich-text
+    view:
+      primary: title
+      fields: [section, item_type, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    operations:
+      delete: false
