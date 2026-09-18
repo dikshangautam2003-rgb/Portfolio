@@ -41,7 +41,7 @@
   --r-pill:999px;
 
   --shadow-hard:6px 6px 0 var(--ink);
-  --shadow-hard-sm:4px 4px 0 var(--ink);
+  
   --shadow-hard-orange:6px 6px 0 var(--orange);
   --border:2px solid var(--ink);
   --ease:cubic-bezier(.22,.78,.24,1);
@@ -92,7 +92,8 @@ p{margin:0 0 1.25rem;color:var(--muted-2)}
   background:transparent;color:var(--ink);cursor:pointer;line-height:1;
   transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s var(--ease),color .18s var(--ease);
 }
-.btn-primary{background:var(--ink);color:#fff;box-shadow:var(--shadow-hard-orange)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:var(--shadow-hard-sm)}
+.btn-primary:hover{background:var(--orange-deep);transform:none;box-shadow:var(--shadow-hard)}
 .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--orange)}
 .btn-ghost:hover{background:var(--ink);color:#fff;transform:translate(-2px,-2px);box-shadow:var(--shadow-hard-sm)}
 .btn-light{background:var(--white);color:var(--ink);box-shadow:var(--shadow-hard-orange)}
@@ -113,7 +114,8 @@ p{margin:0 0 1.25rem;color:var(--muted-2)}
   border-bottom:2px solid transparent;transition:border-color .25s,box-shadow .25s;
 }
 .site-header.scrolled{border-bottom-color:var(--ink);box-shadow:0 14px 34px rgba(44,30,19,.1)}
-.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.header-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand img{width:32px;height:32px;border-radius:12px;border:var(--border);background:var(--white);padding:4px}
 .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
 .brand img{width:38px;height:38px;border-radius:12px;border:var(--border);background:var(--white);padding:4px}
 .brand-word{font-family:var(--display);font-size:1.3rem;font-weight:600;letter-spacing:-.02em;color:var(--ink);line-height:1}
@@ -170,7 +172,8 @@ p{margin:0 0 1.25rem;color:var(--muted-2)}
 .mobile-sub a{text-decoration:none;padding:8px 4px;font-size:var(--fs-sm);font-weight:500;color:var(--muted-2)}
 
 /* ---------- 6. Hero ---------- */
-.hero{position:relative;overflow:hidden;background:var(--dark);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--bg);color:var(--ink)}
+.hero-media{display:none}
 .hero-media{
   position:absolute;inset:0;background-size:cover;background-position:center;
   filter:saturate(.35) brightness(.6) contrast(1.02);
