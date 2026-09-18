@@ -2,7 +2,7 @@
 title: Test Article — CMS Publishing Check
 slug: cms-check-2026
 description: A temporary article used to test the new CMS publishing workflow.
-category: SEO & Search
+category: Website
 date: 2026-09-16
 published: false
 featured_image: /media/frame-visit-gea.jpg
