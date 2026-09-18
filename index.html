@@ -14,27 +14,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 <link href="/assets/style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 600 });
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Dikshan Gautam","url":"https://dikshangautam.com.np/","jobTitle":"SEO Specialist","email":"hello@dikshangautam.com.np","knowsAbout":["Search engine optimization","Technical SEO","Local SEO","Website development","SEO content writing","Digital marketing"]}</script>
 </head>
-<body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="/"><img alt="Dikshan Gautam logo" src="/dikshan-mark.png"/><span class="brand-word">Dikshan <em>Gautam</em></span></a>
-<nav aria-label="Primary navigation" class="nav">
-<a class="active" href="/">Home</a>
-<a href="/services/">Services</a>
-<div class="dropdown"><button aria-expanded="false" aria-haspopup="true" type="button">Education <span>▾</span></button><div class="dropdown-panel">
-<a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a><a href="/education/">All education guides</a>
-</div></div>
-<a href="/blog/">Blog</a>
-<a href="/about/">About</a>
-<a href="/contact/">Contact</a>
-<a class="btn btn-primary header-cta" href="/contact/">Let's talk ↗</a>
-</nav>
-<button aria-expanded="false" aria-label="Open menu" class="menu-btn" type="button">Menu</button>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<header class="site-header bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+<div class="container mx-auto flex items-center justify-between py-4 px-6">
+<a class="brand flex items-center" href="/">
+<img alt="Dikshan Gautam logo" src="/dikshan-mark.png" class="h-8 w-8 mr-2"/>
+<span class="brand-word text-xl font-semibold">Dikshan <em class="font-serif">Gautam</em></span>
+</a>
+<!-- Dark mode toggle -->
+<button id="theme-toggle" class="p-2 rounded-md focus:outline-none" aria-label="Toggle dark mode">
+🌙
+</button>
+<nav aria-label="Primary navigation" class="nav hidden md:flex space-x-4">
+<a class="text-gray-700 dark:text-gray-200 hover:text-primary-600" href="/">Home</a>
+<a class="text-gray-700 dark:text-gray-200 hover:text-primary-600" href="/services/">Services</a>
+<div class="relative group">
+<button aria-expanded="false" aria-haspopup="true" type="button" class="text-gray-700 dark:text-gray-200 hover:text-primary-600 flex items-center">
+Education <span class="ml-1">▾</span>
+</button>
+<div class="dropdown-panel absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/plus-two-neb/">+2 / NEB</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/bachelors/">Bachelor's</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/courses/">Courses</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/study-abroad/">Study Abroad</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/admissions/">Admissions</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/scholarships/">Scholarships</a>
+<a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" href="/education/">All education guides</a>
 </div>
+</div>
+<a class="text-gray-700 dark:text-gray-200 hover:text-primary-600" href="/blog/">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:text-primary-600" href="/about/">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:text-primary-600" href="/contact/">Contact</a>
+<a class="btn btn-primary header-cta bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700" href="/contact/">Let's talk ↗</a>
+</nav>
+<!-- Mobile menu button -->
+<button aria-expanded="false" aria-label="Open menu" class="menu-btn md:hidden p-2" type="button">
+☰
+</button>
+</div>
+</header>
 <div class="mobile-nav container">
 <a href="/">Home</a><a href="/services/">Services</a><a href="/education/">Education</a>
 <div class="mobile-sub"><a href="/education/plus-two-neb/">+2 / NEB</a><a href="/education/bachelors/">Bachelor's</a><a href="/education/courses/">Courses</a><a href="/education/study-abroad/">Study Abroad</a><a href="/education/admissions/">Admissions</a><a href="/education/scholarships/">Scholarships</a></div>
