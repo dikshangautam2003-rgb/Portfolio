@@ -423,3 +423,104 @@ h3{font-size:1.24rem;line-height:1.22}
   .section{padding:70px 0}.education-grid-v3{grid-template-columns:1fr}.blog-grid .article-media,.blog-module .article-media,.article-media{height:210px}.blog-grid .article-body,.blog-module .article-body{min-height:230px}
   .dropdown-panel{width:min(300px,calc(100vw - 32px))}
 }
+
+/* V5 FINAL REFINEMENT — editorial split hero + smaller headings */
+.hero{
+  min-height:410px;
+  display:block;
+  position:relative;
+}
+.hero-media{
+  left:auto;
+  right:0;
+  width:52%;
+  height:100%;
+  inset-block:0;
+  background-size:cover;
+  background-position:center;
+  opacity:.48;
+  filter:saturate(.72) contrast(.98) brightness(1.04);
+  -webkit-mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,.18) 12%, rgba(0,0,0,.72) 42%, #000 70%);
+  mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,.18) 12%, rgba(0,0,0,.72) 42%, #000 70%);
+}
+.hero-overlay{
+  background:linear-gradient(90deg,
+    rgba(250,249,246,1) 0%,
+    rgba(250,249,246,.985) 34%,
+    rgba(250,249,246,.90) 52%,
+    rgba(250,249,246,.34) 78%,
+    rgba(250,249,246,.08) 100%);
+}
+.hero-content{
+  width:min(58%, 650px);
+  max-width:650px;
+  margin-left:max(24px, calc((100vw - var(--max))/2));
+  margin-right:0;
+  padding:62px 0 56px;
+  justify-content:center;
+  text-align:left;
+}
+.hero h1,
+.hero .hero-lede,
+.hero .hero-tags,
+.hero .hero-actions,
+.hero .article-meta{
+  text-align:left;
+}
+.hero h1{
+  font-size:clamp(1.72rem,2.32vw,2.35rem);
+  line-height:1.08;
+  letter-spacing:-.025em;
+  max-width:20ch;
+  font-weight:500;
+}
+.hero h1 em{font-style:normal;color:inherit}
+.hero-lede{max-width:58ch;font-size:.95rem;line-height:1.68;margin-top:16px}
+.hero-tags{margin-top:20px}
+.hero-actions{margin-top:21px}
+.hero-cue{left:max(24px, calc((100vw - var(--max))/2));right:auto;bottom:16px}
+
+/* Keep all hero titles consistently understated, including generated CMS pages. */
+main > .hero h1{font-size:clamp(1.72rem,2.32vw,2.35rem)}
+
+/* CMS-generated content is editorial, not a second design system. */
+.cms-generated-grid{margin-top:36px}
+
+@media (max-width:1020px){
+  .hero{min-height:390px}
+  .hero-media{width:48%;opacity:.40}
+  .hero-content{width:min(64%, 620px);margin-left:32px;padding:56px 0 52px}
+  .hero h1, main > .hero h1{font-size:clamp(1.7rem,3.2vw,2.2rem)}
+  .hero-cue{left:32px}
+}
+
+@media (max-width:700px){
+  .hero{min-height:410px}
+  .hero-media{
+    width:100%;
+    height:56%;
+    right:0;
+    top:auto;
+    bottom:0;
+    opacity:.20;
+    background-position:center 42%;
+    -webkit-mask-image:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.35) 35%, #000 100%);
+    mask-image:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.35) 35%, #000 100%);
+  }
+  .hero-overlay{
+    background:linear-gradient(180deg,
+      rgba(250,249,246,1) 0%,
+      rgba(250,249,246,.97) 48%,
+      rgba(250,249,246,.78) 100%);
+  }
+  .hero-content{
+    width:calc(100% - 32px);
+    max-width:none;
+    margin:0 16px;
+    padding:54px 0 58px;
+  }
+  .hero h1, main > .hero h1{font-size:clamp(1.72rem,7.2vw,2.15rem);max-width:18ch}
+  .hero-lede{font-size:.93rem;max-width:60ch}
+  .hero-cue{left:16px}
+}
+

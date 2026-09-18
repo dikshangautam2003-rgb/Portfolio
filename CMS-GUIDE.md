@@ -45,3 +45,8 @@ The build script uses those fields to place cards into the correct education sec
 
 ## Important
 Do not rename existing public URLs or remove the GitHub Pages workflow unless the deployment architecture is intentionally changed.
+## Publishing behavior
+
+Blog entries are published by default. Use the **Published** toggle in Pages CMS to keep drafts out of the public site. A false value is treated as a draft by the build script.
+
+After Pages CMS commits a new post to `content/blog/`, the GitHub Pages workflow runs `scripts/build.mjs`, generates the article page, refreshes the CMS article area of `/blog/`, and updates the sitemap.

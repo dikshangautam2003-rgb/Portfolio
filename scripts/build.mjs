@@ -147,6 +147,12 @@ function readCollection(folder) {
     .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || String(a.title || '').localeCompare(String(b.title || '')));
 }
 
+function isPublished(item) {
+  const published = String(item.published ?? 'true').trim().toLowerCase();
+  const status = String(item.status ?? '').trim().toLowerCase();
+  return published !== 'false' && status !== 'draft';
+}
+
 function heroImageFor(type, item) {
   if (item.featured_image) return item.featured_image;
   if (type === 'education') return "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2400&q=88";
@@ -242,8 +248,8 @@ function updateListing(filePath, startMarker, endMarker, cards) {
 const blog = readCollection(path.join(ROOT, 'content', 'blog'));
 const education = readCollection(path.join(ROOT, 'content', 'education'));
 
-for (const item of blog) ensureGeneratedPage('blog', item);
-for (const item of education) ensureGeneratedPage('education', item);
+for (const item of blog.filter(isPublished)) ensureGeneratedPage('blog', item);
+for (const item of education.filter(isPublished)) ensureGeneratedPage('education', item);
 
 function listingImage(type, item, index = 0) {
   if (item.featured_image) return item.featured_image;
@@ -262,13 +268,13 @@ function listingImage(type, item, index = 0) {
   return (type === 'blog' ? blogFallbacks : eduFallbacks)[index % 4];
 }
 
-const blogCards = blog.filter(item => item.slug !== 'cms-check-2026').map((item, i) => `<a class="article reveal" href="/blog/${esc(item.slug)}/"><div class="article-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('blog', item, i))}"></div><div class="article-body"><span class="cat">${esc(item.category || 'Article')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="go">Read article ↗</span></div></a>`).join('\n');
+const blogCards = blog.filter(isPublished).map((item, i) => `<a class="article reveal" href="/blog/${esc(item.slug)}/"><div class="article-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('blog', item, i))}"></div><div class="article-body"><span class="cat">${esc(item.category || 'Article')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="go">Read article ↗</span></div></a>`).join('\n');
 updateListing(path.join(ROOT, 'blog', 'index.html'), '<!-- CMS_ARTICLES_START -->', '<!-- CMS_ARTICLES_END -->', blogCards);
 
 const eduCards = education.map((item, i) => `<a class="feature-card reveal compact" href="/education/${esc(item.slug)}/"><div class="feature-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(listingImage('education', item, i))}"></div><div class="feature-body"><div class="feature-eyebrow">${esc(item.section || 'Guide')}</div><h3>${esc(item.title)}</h3><p>${esc(item.description || '')}</p><span class="feature-link">Open guide ↗</span></div></a>`).join('\n');
 
 const sitemapEntries = [
-  ...blog.filter(item => item.slug !== 'cms-check-2026').map(item => `  <url><loc>${SITE_URL}/blog/${esc(item.slug)}/</loc></url>`),
+  ...blog.filter(isPublished).map(item => `  <url><loc>${SITE_URL}/blog/${esc(item.slug)}/</loc></url>`),
   ...education.map(item => `  <url><loc>${SITE_URL}/education/${esc(item.slug)}/</loc></url>`)
 ].join('\n');
 updateListing(path.join(ROOT, 'sitemap.xml'), '<!-- CMS_URLS_START -->', '<!-- CMS_URLS_END -->', sitemapEntries);
@@ -296,7 +302,7 @@ const curatedBlog = [
   {slug:'a-small-system-for-student-research',title:'A Small System for Student Research',category:'Education',description:'A repeatable way to make education research less scattered for Nepali students.',image:'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=82'}
 ];
 function blogModuleCards(limit=3){
-  const cmsItems=blog.filter(item=>item.slug!=='cms-check-2026').map(item=>({slug:item.slug,title:item.title,category:item.category||'Article',description:item.description||'',image:listingImage('blog',item,0)}));
+  const cmsItems=blog.filter(isPublished).map(item=>({slug:item.slug,title:item.title,category:item.category||'Article',description:item.description||'',image:listingImage('blog',item,0)}));
   const bySlug=new Map([...curatedBlog,...cmsItems].map(item=>[item.slug,item]));
   return [...bySlug.values()].slice(0,limit).map(item=>`<a class="article reveal" href="/blog/${esc(item.slug)}/"><div class="article-media"><img loading="lazy" alt="${esc(item.title)}" src="${esc(item.image)}"></div><div class="article-body"><span class="cat">${esc(item.category||'Article')}</span><h3>${esc(item.title)}</h3><p>${esc(item.description||'')}</p><span class="go">Read article ↗</span></div></a>`).join('\n');
 }

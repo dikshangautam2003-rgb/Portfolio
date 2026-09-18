@@ -55,6 +55,11 @@ content:
         type: date
         required: true
 
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+
       - name: featured_image
         label: Featured image
         type: image
