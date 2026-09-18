@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(dropdown&&dropdownWrap){
     let hoverTimer;
     const openDropdown=()=>{clearTimeout(hoverTimer);dropdownWrap.classList.add('open');dropdown.setAttribute('aria-expanded','true');};
-    const delayedClose=()=>{clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!dropdownWrap.matches(':hover')&&!dropdownWrap.matches(':focus-within')) closeDropdown();},260);};
+    const delayedClose=()=>{clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(!dropdownWrap.matches(':hover')&&!dropdownWrap.matches(':focus-within')) closeDropdown();},520);};
     dropdown.addEventListener('click',(event)=>{event.stopPropagation();const open=dropdown.getAttribute('aria-expanded')==='true';if(open) closeDropdown(); else openDropdown();});
     dropdownWrap.addEventListener('mouseenter',openDropdown);
     dropdownWrap.addEventListener('mouseleave',delayedClose);

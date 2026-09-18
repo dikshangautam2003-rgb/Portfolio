@@ -184,7 +184,7 @@ content:
         type: select
         options:
           values:
-            - +2 college
+            - +2 college / institution
             - Bachelor college / university
             - Bachelor course
             - +2 course / stream
