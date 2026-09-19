@@ -19,7 +19,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,6 +33,19 @@ jobs:
 
       - name: Build CMS content
         run: node scripts/build.mjs
+
+      - name: Verify generated CMS pages
+        run: |
+          echo "Checking generated Blog pages..."
+          for file in blog/*/index.html; do
+            [ -f "$file" ] && echo "OK: $file"
+          done
+
+          echo "Checking test article..."
+          test -f "blog/this-is-test-one/index.html"
+
+          echo "TEST ARTICLE EXISTS:"
+          ls -lh "blog/this-is-test-one/index.html"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
