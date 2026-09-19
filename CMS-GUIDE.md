@@ -1,4 +1,4 @@
-# Dikshan Gautam — CMS Guide (V6)
+# Dikshan Gautam — CMS Guide (Final Education + Blog CMS)
 
 The website remains a static HTML/CSS/JS site deployed to GitHub Pages. Pages CMS is the publishing interface; GitHub Actions runs the build after each commit.
 

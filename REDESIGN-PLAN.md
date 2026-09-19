@@ -1,4 +1,4 @@
-# Dikshan Gautam — Education + Blog V6 Redesign Plan
+# Dikshan Gautam — Final Education + Blog Architecture
 
 ## Goal
 
