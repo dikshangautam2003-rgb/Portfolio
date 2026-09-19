@@ -1,16 +1,17 @@
 ---
-title: "A Small System for Student Research"
+title: A Small System for Student Research
 slug: a-small-system-for-student-research
-description: "A repeatable system for Nepali students researching colleges, courses, scholarships and study abroad options without getting overwhelmed."
+description: A repeatable system for Nepali students researching colleges,
+  courses, scholarships and study abroad options without getting overwhelmed.
 category: Education
+date: 2026-09-19
 published: true
-featured_image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2400&q=88"
+featured_image: /media/geminigeneratedimageksbdvjksbdvjksbd-1.png
 seo:
-  title: "A Small System for Student Research | Dikshan Gautam"
-  description: "A repeatable system for Nepali students researching colleges, courses, scholarships and study abroad options without getting overwhelmed."
+  title: A Small System for Student Research | Dikshan Gautam
+  description: "What Nepali students can do to get the best education they want. "
 ---
-
-Researching colleges, courses and scholarships in Nepal is chaotic by default: WhatsApp forwards, consultancy brochures, YouTube opinions, and official websites that contradict each other. The problem is not a lack of information — it is the lack of a system to hold it.
+Researching colleges, courses and scholarships in Nepal is chaotic by default: WhatsApp forwards, consultancy brochures, YouTube opinions, and official websites that contradict each other. The problem is not a lack of information but lack of system. 
 
 ## One folder, every source
 
