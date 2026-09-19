@@ -13,6 +13,5 @@ seo:
 # HAHA
 
 - Test of article
-- 
-  ![](/media/geminigeneratedimageksbdvjksbdvjksbd.png)
+- ![](/media/geminigeneratedimageksbdvjksbdvjksbd.png)
 
