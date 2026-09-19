@@ -516,8 +516,10 @@ function syncSharedChrome() {
     if(!html.includes('<header class="site-header">') || !html.includes('<footer class="site-footer">')) continue;
     html=html.replace(/<header class="site-header">[\s\S]*?<\/header>/, siteHeader(''));
     html=html.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, siteFooter().replace(/<script src="\/js\/site\.js"><\/script>$/,''));
-    // siteFooter includes script, but existing page already has script after footer; avoid duplicate.
-    html=html.replace(/<\/footer><script src="\/js\/site\.js"><\/script>/, '</footer>');
+    // Ensure the shared interaction script is present on every maintained page.
+    html=html.replace(/(?:<script\s+src="\/js\/site\.js"><\/script>\s*)+/g, '');
+    if(html.includes('</body>')) html=html.replace('</body>', '<script src="/js/site.js"></script></body>');
+    else html += '\n<script src="/js/site.js"></script>\n';
     fs.writeFileSync(file,html,'utf8');
   }
 }
