@@ -2,7 +2,7 @@
 title: Test Article
 slug: this-is-test-one
 description: We are just testing bitch
-category: Website
+category: SEO & Search
 date: 2026-09-19
 published: true
 featured_image: /media/hsksazebaaanbf.jpg
