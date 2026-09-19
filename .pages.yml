@@ -11,7 +11,7 @@ components:
         label: SEO title
         type: string
       - name: description
-        label: SEO description
+        label: Meta description
         type: text
 
 content:
@@ -22,9 +22,8 @@ content:
     path: content/blog
     filename: "{slug}.md"
     fields:
-
       - name: title
-        label: Title
+        label: Article title
         type: string
         required: true
 
@@ -53,7 +52,6 @@ content:
       - name: date
         label: Publish date
         type: date
-        required: true
 
       - name: published
         label: Published
@@ -87,18 +85,18 @@ content:
         order: desc
 
     operations:
-      delete: false
+      delete: true
 
 
   - name: education
-    label: Education Guides
+    label: Education
     type: collection
     path: content/education
     filename: "{slug}.md"
     fields:
 
       - name: title
-        label: Title
+        label: Page title
         type: string
         required: true
 
@@ -108,75 +106,10 @@ content:
         required: true
         pattern: "^[a-z0-9-]+$"
 
-      - name: description
-        label: Short description
-        type: text
-        required: true
-
       - name: section
-        label: Education section
+        label: Section
         type: select
-        options:
-          values:
-            - +2 / NEB
-            - Bachelor's
-            - Courses
-            - Study Abroad
-            - Admissions
-            - Scholarships
-
-      - name: date
-        label: Publish date
-        type: date
         required: true
-
-      - name: featured_image
-        label: Featured image
-        type: image
-        options:
-          media: default
-          path: education
-          extensions: [jpg, jpeg, png, webp]
-          rename: safe
-
-      - name: seo
-        component: seo
-        label: Search appearance
-
-      - name: body
-        label: Guide content
-        type: rich-text
-        required: true
-
-    view:
-      primary: title
-      fields: [title, section, date]
-      sort: [date]
-      default:
-        sort: date
-        order: desc
-
-    operations:
-      delete: false
-
-  - name: education_items
-    label: Education Featured Items
-    type: collection
-    path: content/education-items
-    filename: "{slug}.md"
-    fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: slug
-        label: URL slug
-        type: string
-        required: true
-        pattern: "^[a-z0-9-]+$"
-      - name: section
-        label: Education section
-        type: select
         options:
           values:
             - Colleges & Universities
@@ -184,27 +117,37 @@ content:
             - Career Guidance
             - Skill Courses
             - Study Abroad Guide
-      - name: item_type
-        label: Item type
+            - Consultancy
+
+      - name: page_type
+        label: Page type
         type: select
+        required: true
         options:
           values:
-            - +2 college / institution
-            - Bachelor college / university
-            - Bachelor course
-            - +2 course / stream
-            - Career guide
-            - Skill course
-            - Study destination
-            - Consultancy profile
-            - Education guide
+            - Pillar / Section guide
+            - College / University
+            - Academic Course
+            - Career Guide
+            - Skill Course
+            - Study Destination
+            - Consultancy
+            - Education Guide
+
       - name: description
-        label: Description
+        label: Short description
         type: text
         required: true
-      - name: url
-        label: Link
-        type: string
+
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+
+      - name: date
+        label: Publish date
+        type: date
+
       - name: featured_image
         label: Featured image
         type: image
@@ -213,18 +156,39 @@ content:
           path: education
           extensions: [jpg, jpeg, png, webp, svg]
           rename: safe
-      - name: date
-        label: Publish date
-        type: date
+
+      - name: official_url
+        label: Official website / source
+        type: string
+
+      - name: parent_slug
+        label: Parent Education page slug
+        type: string
+
+      - name: related_education
+        label: Related Education slugs
+        type: string
+
+      - name: related_blog
+        label: Related Blog slugs
+        type: string
+
+      - name: seo
+        component: seo
+        label: Search appearance
+
       - name: body
-        label: Notes
+        label: Page content
         type: rich-text
+        required: true
+
     view:
       primary: title
-      fields: [section, item_type, date]
+      fields: [title, section, page_type, date]
       sort: [date]
       default:
         sort: date
         order: desc
+
     operations:
-      delete: false
+      delete: true

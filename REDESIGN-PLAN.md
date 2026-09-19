@@ -1,98 +1,103 @@
-# Dikshan Gautam — Final Editorial Redesign Plan
+# Dikshan Gautam — Education + Blog V6 Redesign Plan
 
-## Design direction
+## Goal
 
-The site is built around a single **Editorial Search** system:
-- warm white / cream backgrounds
-- charcoal typography
-- restrained burnt-orange accent
-- DM Serif Display for editorial headings
-- Inter for navigation and body copy
-- thin borders and light elevation instead of hard shadows
-- selective imagery rather than image-heavy sections
+Keep the finished editorial website design and SEO architecture, while replacing the confusing Education CMS with one SEO-article publishing system.
 
-## Hero system
+## Education architecture
 
-All heroes now use a background photograph with a soft cream overlay so the image blends into the page instead of fighting the headline.
+One CMS collection:
 
-H1s are deliberately smaller and calmer than the previous version, with strong editorial line-height and a maximum reading width.
+`content/education/`
 
-## Navigation
+Six subsections:
 
-The navigation was rebuilt visually while preserving the same URLs:
-- Home
-- Services
-- Education
-- Blog
-- About
-- Contact
-- Let's Talk
+1. Colleges & Universities
+2. Academic Courses
+3. Career Guidance
+4. Skill Courses
+5. Study Abroad Guide
+6. Consultancy
 
-Education has a proper desktop dropdown and a collapsible mobile submenu. Hover, focus and active states use the orange accent without turning the navigation into a loud component.
+Every Education entry is a real page with its own slug, content, metadata and canonical URL.
 
-## Blog
+Examples:
 
-The blog is treated as an editorial archive rather than a generic SaaS grid.
+- `/education/academic-courses/bbm/`
+- `/education/skill-courses/digital-marketing/`
+- `/education/consultancy/kiec-consultancy-profile/`
 
-Every article uses the same card dimensions and the same visual hierarchy:
-1. featured image
-2. category
-3. article title
-4. concise description
-5. read action
+Section pages act as pillar/archive pages.
 
-The four existing article URLs remain intact. CMS-generated articles are also given the same card system.
+## Blog architecture
 
-## Education
+One CMS collection:
 
-The education section now follows a decision-led content model.
+`content/blog/`
 
-### Education landing page
-- Hero
-- Featured courses
-- Featured colleges / degree research
-- Featured study-abroad destinations
-- Featured admissions / consultancy checklist
-- Six education categories
-- Practical verification note
+Every published article gets a generated article page, appears in the archive and is added to the sitemap.
 
-### Education sub-pages
-Each sub-page now follows:
-- hero
-- featured resources first
-- deeper guide sections
-- related education paths
-- verification note
+## Relationships
 
-Featured content is intentionally useful rather than presented as unsupported rankings or guarantees.
+Education pages can point to:
+
+- parent Education pages
+- related Education pages
+- related Blog articles
+- official external sources
+
+This supports pillar → supporting page → article topic clusters without forcing Education content to redirect to Blog.
 
 ## SEO preservation
 
-Existing SEO architecture remains in place:
-- page URLs
+Preserve:
+
 - canonical URLs
-- meta descriptions
+- SEO title and meta description fields
 - Open Graph metadata
 - sitemap
 - robots.txt
-- semantic headings
 - BreadcrumbList structured data
-- BlogPosting / Article structured data on generated content
-- CMS Markdown locations
-- GitHub Actions deployment workflow
+- Article / BlogPosting structured data
+- semantic headings
+- clean slugs
+- GitHub Pages deployment
 
-CMS-generated pages now use `style-premium.css` as well, so new articles do not fall back to the old visual system.
+## Migration
 
-## Research references
+Existing Education Featured Items are migrated into the single Education collection.
 
-Google Search Central recommends using structured data to help Google understand page content, including Article and Breadcrumb markup, and recommends validating structured data and keeping a sitemap submitted in Search Console.
+Old visible Education categories such as:
 
-Webflow's current education-site examples consistently use clear program/destination directories, dedicated detail pages, CMS-ready content structures, and responsive editorial layouts. These principles informed the education information architecture here.
+- +2 / NEB
+- Bachelor's
+- Courses
+- Admissions
+- Scholarships
+- the old Study Abroad path
 
-## Technical constraint
+are removed from the visible information architecture.
 
-The site remains a static HTML/CSS/JS website suitable for GitHub Pages. The redesign does not require a server, database, or runtime framework.
+Their older public URLs remain as lightweight redirects to the new Education structure where appropriate.
 
+The previous `content/education-items/` collection is removed.
 
-## V3 education/CMS framework
-The education desk now has five public sections: Colleges & Universities, Academic Courses, Career Guidance, Skill Courses, and Study Abroad Guide. Featured education items are editable through the Pages CMS collection at content/education-items/. The build script injects those items and the latest blog articles into each section. Existing legacy education URLs remain intact for SEO continuity and link into the new architecture.
+## Publishing workflow
+
+Pages CMS → GitHub `main` → GitHub Actions → `scripts/build.mjs` → generated static HTML → GitHub Pages.
+
+The build also synchronizes the shared Education navigation and homepage modules, so CMS publishing does not require manual HTML editing.
+
+## Next phase
+
+The universal Education detail template is now in place.
+
+The next design phase can create more specialized templates for:
+
+- College / University
+- Academic Course
+- Career Guide
+- Skill Course
+- Study Destination
+- Consultancy
+- Pillar / Section guide
