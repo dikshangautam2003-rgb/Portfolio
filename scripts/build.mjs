@@ -516,7 +516,49 @@ function educationSectionPage(section, items) {
     breadcrumbs([{name:'Home',url:'/'},{name:'Education',url:'/education/'},{name:section.name,url:`/education/${section.slug}/`}]),
     {'@context':'https://schema.org','@type':'CollectionPage','name':section.title,'description':section.description,'url':url}
   ];
-  const cards = items.map(item => card(item, section)).join('\n');
+
+  // Academic Courses is intentionally split into two study-level groups.
+  // Existing content, slugs and CMS entries remain unchanged.
+  const isPlusTwo = item =>
+    section.slug === 'academic-courses' &&
+    (
+      String(item.slug || '').toLowerCase().startsWith('plus-two-') ||
+      /^\+2\b/i.test(String(item.title || ''))
+    );
+
+  const renderCourseGroup = (kicker, title, description, groupItems) => {
+    if (!groupItems.length) return '';
+    const cards = groupItems.map(item => card(item, section)).join('\n');
+    return `<section class="course-group">
+<div class="section-head"><div><div class="kicker">${esc(kicker)}</div><h2>${esc(title)}</h2></div><p>${esc(description)}</p></div>
+<div class="grid-3 cms-generated-grid">${cards}</div>
+</section>`;
+  };
+
+  let content;
+
+  if (section.slug === 'academic-courses') {
+    const plusTwo = items.filter(isPlusTwo);
+    const bachelor = items.filter(item => !isPlusTwo(item));
+
+    content = `
+${renderCourseGroup(
+  '+2 · School level',
+  '+2 Courses',
+  'Explore +2 streams, subject choices and the study paths they can lead toward.',
+  plusTwo
+)}
+${renderCourseGroup(
+  "Bachelor · Undergraduate",
+  "Bachelor's Courses",
+  'Explore undergraduate degrees, what they involve and the questions to research before choosing a course.',
+  bachelor
+)}`;
+  } else {
+    const cards = items.map(item => card(item, section)).join('\n');
+    content = `<div class="grid-3 cms-generated-grid">${cards || '<div class="empty-state"><h3>No published pages yet.</h3><p>Create the first page for this section in Pages CMS.</p></div>'}</div>`;
+  }
+
   return `<!doctype html><html lang="en">${head({title:`${section.title} | Dikshan Gautam`,description:section.description,url,image:section.image,schemas})}<body>
 <!-- SITE-GENERATED: education-section/${section.slug} -->
 ${siteHeader('education')}
@@ -526,8 +568,8 @@ ${siteHeader('education')}
 <div class="hero-actions"><a class="btn btn-primary" href="#education-list">Browse pages ↗</a><a class="btn btn-light" href="/education/">All Education</a></div>
 </div></section>
 <section class="section" id="education-list"><div class="container">
-<div class="section-head"><div><div class="kicker">Education desk</div><h2>Research pages, not just cards.</h2></div><p>Every entry below is a full Education page. Add or update one through Pages CMS and the build will place it here automatically.</p></div>
-<div class="grid-3 cms-generated-grid">${cards || '<div class="empty-state"><h3>No published pages yet.</h3><p>Create the first page for this section in Pages CMS.</p></div>'}</div>
+<div class="section-head"><div><div class="kicker">Education desk</div><h2>Research pages, organized by study level.</h2></div><p>Every entry below is a full Education page. Add or update one through Pages CMS and the build will place it in the appropriate group automatically.</p></div>
+${content}
 </div></section>
 <section class="section section-alt"><div class="container"><div class="cta-panel"><div><div class="kicker">Need another topic?</div><h2>Explore the wider Education desk.</h2></div><div><p>Move between institutions, courses, careers, skills, destinations and consultancy research.</p><a class="btn btn-orange" href="/education/">View Education ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
