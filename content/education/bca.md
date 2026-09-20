@@ -58,60 +58,63 @@ The BCA course in Nepal is an undergraduate degree for students who want to buil
 ## BCA at a glance
 
 ```
-<table style="width: 100%; max-width: 650px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600;">Color Name</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600;">HEX Code</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600;">RGB / Notes</th>
-      <th style="padding: 16px; text-align: center; font-size: 16px; font-weight: 600;">Swatch</th>
+      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 30%;">Particular</th>
+      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 70%;">Overview</th>
     </tr>
   </thead>
   <tbody>
-    <!-- Brand Orange -->
+    <!-- Full form -->
     <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Brand Orange</td>
-      <td style="padding: 14px 16px; color: #64748B; font-family: monospace;">#D4512A</td>
-      <td style="padding: 14px 16px; color: #64748B;">rgb(212, 81, 42)</td>
-      <td style="padding: 14px 16px; text-align: center;">
-        <span style="display: inline-block; width: 28px; height: 28px; background-color: #D4512A; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1);"></span>
-      </td>
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Full form</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Bachelor of Computer Application</td>
     </tr>
-    <!-- Near-black -->
+    <!-- Level -->
     <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Near-black</td>
-      <td style="padding: 14px 16px; color: #64748B; font-family: monospace;">#171513</td>
-      <td style="padding: 14px 16px; color: #64748B;">rgb(23, 21, 19)</td>
-      <td style="padding: 14px 16px; text-align: center;">
-        <span style="display: inline-block; width: 28px; height: 28px; background-color: #171513; border-radius: 50%;"></span>
-      </td>
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Level</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Undergraduate / Bachelor's</td>
     </tr>
-    <!-- Warm off-white -->
+    <!-- Field -->
     <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Warm Off-white</td>
-      <td style="padding: 14px 16px; color: #64748B; font-family: monospace;">#F5F2EC</td>
-      <td style="padding: 14px 16px; color: #64748B;">rgb(245, 242, 236)</td>
-      <td style="padding: 14px 16px; text-align: center;">
-        <span style="display: inline-block; width: 28px; height: 28px; background-color: #F5F2EC; border-radius: 50%; border: 1px solid #D4512A;"></span>
-      </td>
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Field</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Computer applications and information technology</td>
     </tr>
-    <!-- White -->
+    <!-- Typical focus -->
     <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">White</td>
-      <td style="padding: 14px 16px; color: #64748B; font-family: monospace;">#FFFFFF</td>
-      <td style="padding: 14px 16px; color: #64748B;">rgb(255, 255, 255)</td>
-      <td style="padding: 14px 16px; text-align: center;">
-        <span style="display: inline-block; width: 28px; height: 28px; background-color: #FFFFFF; border-radius: 50%; border: 1px solid #64748B;"></span>
-      </td>
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Typical focus</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Programming, software, databases, applications and computing</td>
     </tr>
-    <!-- Muted blue-gray text -->
-    <tr style="background-color: #FFFFFF;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Muted Blue-Gray</td>
-      <td style="padding: 14px 16px; color: #64748B; font-family: monospace;">#64748B</td>
-      <td style="padding: 14px 16px; color: #64748B;">rgb(100, 116, 139)</td>
-      <td style="padding: 14px 16px; text-align: center;">
-        <span style="display: inline-block; width: 28px; height: 28px; background-color: #64748B; border-radius: 50%;"></span>
-      </td>
+    <!-- Duration -->
+    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Duration</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Often 4 years in Nepal, depending on the university</td>
+    </tr>
+    <!-- Study system -->
+    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Study system</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Depends on the university</td>
+    </tr>
+    <!-- Eligibility -->
+    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Eligibility</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Varies by university</td>
+    </tr>
+    <!-- Entrance -->
+    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Entrance</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Depends on the university</td>
+    </tr>
+    <!-- Study options -->
+    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Study options</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Public, community and private institutions</td>
+    </tr>
+    <!-- Further study -->
+    <tr style="background-color: #F5F2EC;">
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Further study</td>
+      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Options can include MCA, MIT, MBA and related postgraduate programs, subject to admission requirements</td>
     </tr>
   </tbody>
 </table>
