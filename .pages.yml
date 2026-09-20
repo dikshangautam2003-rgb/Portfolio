@@ -3,25 +3,124 @@ media:
   output: /media
 
 components:
+
+  # ============================================================
+  # SEO
+  # ============================================================
+
   seo:
     type: object
     label: SEO
     fields:
+
       - name: title
         label: SEO title
         type: string
+
       - name: description
         label: Meta description
         type: text
 
+
+  # ============================================================
+  # SEARCH STRATEGY
+  # ============================================================
+
+  search_strategy:
+    type: object
+    label: Search Strategy
+    fields:
+
+      - name: primary_keyword
+        label: Primary keyword
+        type: string
+
+      - name: secondary_keywords
+        label: Secondary keywords
+        type: text
+
+      - name: search_intent
+        label: Search intent
+        type: select
+        options:
+          values:
+            - Informational
+            - Commercial investigation
+            - Navigational
+            - Transactional
+            - Mixed
+
+      - name: primary_question
+        label: Primary search question
+        type: string
+
+
+  # ============================================================
+  # AI / ANSWER ENGINE CONTENT
+  # ============================================================
+
+  ai_content:
+    type: object
+    label: AI / Answer Engine
+    fields:
+
+      - name: direct_answer
+        label: Direct answer
+        type: text
+
+      - name: key_questions
+        label: Key questions to answer
+        type: text
+
+      - name: key_entities
+        label: Important entities
+        type: text
+
+      - name: key_facts
+        label: Key facts
+        type: text
+
+
+  # ============================================================
+  # SOURCES & VERIFICATION
+  # ============================================================
+
+  sources:
+    type: object
+    label: Sources & Verification
+    fields:
+
+      - name: official_source
+        label: Official source
+        type: string
+
+      - name: additional_sources
+        label: Additional sources
+        type: text
+
+      - name: last_verified
+        label: Last verified
+        type: date
+
+
 content:
+
+  # ============================================================
+  # BLOG
+  # ============================================================
 
   - name: blog
     label: Blog
     type: collection
     path: content/blog
     filename: "{slug}.md"
+
     fields:
+
+      # ----------------------------
+      # Basic content
+      # ----------------------------
+
       - name: title
         label: Article title
         type: string
@@ -52,6 +151,7 @@ content:
       - name: date
         label: Publish date
         type: date
+        required: true
 
       - name: published
         label: Published
@@ -64,22 +164,74 @@ content:
         options:
           media: default
           path: blog
-          extensions: [jpg, jpeg, png, webp]
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
           rename: safe
+
+
+      # ----------------------------
+      # Search strategy
+      # ----------------------------
+
+      - name: search_strategy
+        component: search_strategy
+        label: Search Strategy
+
+
+      # ----------------------------
+      # AI / answer engine
+      # ----------------------------
+
+      - name: ai_content
+        component: ai_content
+        label: AI / Answer Engine
+
+
+      # ----------------------------
+      # Sources
+      # ----------------------------
+
+      - name: sources
+        component: sources
+        label: Sources & Verification
+
+
+      # ----------------------------
+      # SEO
+      # ----------------------------
 
       - name: seo
         component: seo
-        label: Search appearance
+        label: Search Appearance
+
+
+      # ----------------------------
+      # Article
+      # ----------------------------
+
+      - name: answer_summary
+        label: Answer summary
+        type: text
 
       - name: body
         label: Article
         type: rich-text
         required: true
 
+
     view:
       primary: title
-      fields: [title, category, date]
-      sort: [date]
+      fields:
+        - title
+        - category
+        - date
+
+      sort:
+        - date
+
       default:
         sort: date
         order: desc
@@ -88,12 +240,21 @@ content:
       delete: true
 
 
+  # ============================================================
+  # EDUCATION
+  # ============================================================
+
   - name: education
     label: Education
     type: collection
     path: content/education
     filename: "{slug}.md"
+
     fields:
+
+      # ----------------------------
+      # Basic page information
+      # ----------------------------
 
       - name: title
         label: Page title
@@ -106,8 +267,13 @@ content:
         required: true
         pattern: "^[a-z0-9-]+$"
 
+
+      # ----------------------------
+      # Education architecture
+      # ----------------------------
+
       - name: section
-        label: Section
+        label: Education section
         type: select
         required: true
         options:
@@ -118,6 +284,7 @@ content:
             - Skill Courses
             - Study Abroad Guide
             - Consultancy
+
 
       - name: page_type
         label: Page type
@@ -134,6 +301,11 @@ content:
             - Consultancy
             - Education Guide
 
+
+      # ----------------------------
+      # Basic publishing information
+      # ----------------------------
+
       - name: description
         label: Short description
         type: text
@@ -148,44 +320,124 @@ content:
         label: Publish date
         type: date
 
+
+      # ----------------------------
+      # Image
+      # ----------------------------
+
       - name: featured_image
         label: Featured image
         type: image
         options:
           media: default
           path: education
-          extensions: [jpg, jpeg, png, webp, svg]
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
+            - svg
           rename: safe
+
+
+      # ----------------------------
+      # Official source
+      # ----------------------------
 
       - name: official_url
         label: Official website / source
         type: string
 
+
+      # ----------------------------
+      # Education hierarchy
+      # ----------------------------
+
       - name: parent_slug
         label: Parent Education page slug
         type: string
 
+
+      # ----------------------------
+      # Related content
+      # ----------------------------
+
       - name: related_education
         label: Related Education slugs
-        type: string
+        type: text
 
       - name: related_blog
         label: Related Blog slugs
-        type: string
+        type: text
+
+
+      # ----------------------------
+      # Search strategy
+      # ----------------------------
+
+      - name: search_strategy
+        component: search_strategy
+        label: Search Strategy
+
+
+      # ----------------------------
+      # AI / answer engine
+      # ----------------------------
+
+      - name: ai_content
+        component: ai_content
+        label: AI / Answer Engine
+
+
+      # ----------------------------
+      # Sources
+      # ----------------------------
+
+      - name: sources
+        component: sources
+        label: Sources & Verification
+
+
+      # ----------------------------
+      # SEO
+      # ----------------------------
 
       - name: seo
         component: seo
-        label: Search appearance
+        label: Search Appearance
+
+
+      # ----------------------------
+      # Direct answer
+      # ----------------------------
+
+      - name: answer_summary
+        label: Direct answer / summary
+        type: text
+
+
+      # ----------------------------
+      # Main content
+      # ----------------------------
 
       - name: body
         label: Page content
         type: rich-text
         required: true
 
+
     view:
       primary: title
-      fields: [title, section, page_type, date]
-      sort: [date]
+
+      fields:
+        - title
+        - section
+        - page_type
+        - date
+
+      sort:
+        - date
+
       default:
         sort: date
         order: desc
