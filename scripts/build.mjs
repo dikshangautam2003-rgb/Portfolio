@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = path.resolve(new URL('..', import.meta.url).pathname);
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SITE_URL = 'https://dikshangautam.com.np';
-
 const SECTION_CONFIG = [
   {
     slug: 'colleges-universities',
@@ -243,6 +243,103 @@ function slugList(value = '') {
   return String(value).split(',').map(v => v.trim()).filter(Boolean);
 }
 
+function textList(value = '') {
+  if (value === undefined || value === null) return [];
+  return String(value)
+    .split(/[\n\r,;]+/)
+    .map(v => v.trim())
+    .filter(Boolean);
+}
+
+function sourceLink(value) {
+  const clean = String(value || '').trim();
+  if (/^https?:\/\//i.test(clean)) {
+    return `<a href="${esc(clean)}" target="_blank" rel="noopener noreferrer">${esc(clean)}</a>`;
+  }
+  return `<span>${esc(clean)}</span>`;
+}
+
+function sourceItems(item) {
+  const values = [];
+  const add = value => {
+    const clean = String(value || '').trim();
+    if (!clean) return;
+    if (!values.some(v => v.toLowerCase() === clean.toLowerCase())) values.push(clean);
+  };
+
+  add(item.official_url);
+  add(item.sources?.official_source);
+  for (const value of textList(item.sources?.additional_sources)) add(value);
+
+  return values;
+}
+
+function answerSummary(item) {
+  return item.ai_content?.direct_answer || item.answer_summary || '';
+}
+
+function renderAnswerBlock(item) {
+  const answer = answerSummary(item);
+  if (!answer) return '';
+
+  return `<section class="section section-alt answer-section">
+<div class="container">
+<div class="cta-panel reveal">
+<div class="kicker">Quick answer</div>
+<h2>${esc(item.ai_content?.primary_question || 'What you should know')}</h2>
+<div class="answer-copy"><p>${inline(answer)}</p></div>
+</div>
+</div>
+</section>`;
+}
+
+function renderResearchNotes(item) {
+  const questions = textList(item.ai_content?.key_questions);
+  const entities = textList(item.ai_content?.key_entities);
+  const facts = textList(item.ai_content?.key_facts);
+
+  if (!questions.length && !entities.length && !facts.length) return '';
+
+  const questionHtml = questions.length
+    ? `<div><div class="aside-label">Key questions</div><ul>${questions.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
+    : '';
+
+  const entityHtml = entities.length
+    ? `<div><div class="aside-label">Key entities</div><p>${entities.map(x => esc(x)).join(' · ')}</p></div>`
+    : '';
+
+  const factHtml = facts.length
+    ? `<div><div class="aside-label">Key facts</div><ul>${facts.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
+    : '';
+
+  return `<section class="section section-alt research-notes">
+<div class="container">
+<div class="section-head"><div><div class="kicker">Research notes</div><h2>Useful details to keep in view.</h2></div><p>These notes are maintained in the CMS alongside the main article so important context stays easy to review.</p></div>
+<div class="grid-3">${questionHtml}${entityHtml}${factHtml}</div>
+</div>
+</section>`;
+}
+
+function renderSources(item) {
+  const sources = sourceItems(item);
+  if (!sources.length && !item.sources?.last_verified) return '';
+
+  const links = sources.length
+    ? `<ul class="source-list">${sources.map(source => `<li>${sourceLink(source)}</li>`).join('')}</ul>`
+    : '';
+
+  const verified = item.sources?.last_verified
+    ? `<p class="source-verified">Last verified: ${esc(item.sources.last_verified)}</p>`
+    : '';
+
+  return `<section class="section sources-section">
+<div class="container">
+<div class="section-head"><div><div class="kicker">Sources & verification</div><h2>Check the original source.</h2></div><p>Use the official source for current requirements, dates, fees, admissions rules and other details that may change.</p></div>
+<div class="cta-panel">${links}${verified}</div>
+</div>
+</section>`;
+}
+
 function sectionByName(name) {
   return SECTION_CONFIG.find(s => s.name === name) || SECTION_CONFIG[0];
 }
@@ -296,9 +393,10 @@ ${SECTION_CONFIG.map(s => `<a href="/education/${s.slug}/">${esc(s.name)}</a>`).
 </div><div class="container footer-bottom"><span>© <span data-year="">2026</span> Dikshan Gautam</span><span>Nepal · SEO · Websites · Content · Video</span></div></footer><script src="/js/site.js"></script>`;
 }
 
-function head({title, description, url, type='website', image='', schemas=[]}) {
+function head({title, description, url, type='website', image='', schemas=[], publishedTime=''}) {
   const ogImage = image ? `<meta property="og:image" content="${esc(absoluteUrl(image))}">` : '';
-  return `<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:type" content="${type}">${ogImage}<link rel="canonical" href="${esc(url)}"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/style-premium.css">${schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')}</head>`;
+  const articleMeta = publishedTime ? `<meta property="article:published_time" content="${esc(publishedTime)}">` : '';
+  return `<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(description)}"><title>${esc(title)}</title><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:type" content="${type}"><meta property="og:site_name" content="Dikshan Gautam"><meta property="og:locale" content="en_NP"><meta name="twitter:card" content="summary_large_image">${articleMeta}${ogImage}<link rel="canonical" href="${esc(url)}"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/style-premium.css">${schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')}</head>`;
 }
 
 function breadcrumbs(items) {
@@ -314,27 +412,51 @@ function breadcrumbs(items) {
   };
 }
 
+function keywordString(item) {
+  return textList([
+    item.search_strategy?.primary_keyword || '',
+    item.search_strategy?.secondary_keywords || ''
+  ].filter(Boolean).join(', ')).join(', ');
+}
+
 function educationSchema(item, url) {
-  return {
+  const keywords = keywordString(item);
+  const pageType = item.page_type || '';
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: item.title,
     description: item.description || '',
+    articleSection: item.section || '',
     author: { '@type': 'Person', name: 'Dikshan Gautam', url: SITE_URL + '/' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(keywords ? { keywords } : {}),
     ...(item.date ? { datePublished: item.date } : {}),
     ...(item.featured_image ? { image: absoluteUrl(item.featured_image) } : {})
   };
+
+  if (pageType === 'College / University' && item.official_url) {
+    schema.about = {
+      '@type': 'CollegeOrUniversity',
+      name: item.title,
+      url: absoluteUrl(item.official_url)
+    };
+  }
+
+  return schema;
 }
 
 function blogSchema(item, url) {
+  const keywords = keywordString(item);
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: item.title,
     description: item.description || '',
+    articleSection: item.category || '',
     author: { '@type': 'Person', name: 'Dikshan Gautam', url: SITE_URL + '/' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(keywords ? { keywords } : {}),
     ...(item.date ? { datePublished: item.date } : {}),
     ...(item.featured_image ? { image: absoluteUrl(item.featured_image) } : {})
   };
@@ -355,6 +477,9 @@ function educationDetail(item, allEducation, allBlog) {
   const parent = allEducation.find(x => x.slug === item.parent_slug);
   const relatedAuto = relatedEdu.length ? relatedEdu : allEducation.filter(x => x.section === item.section && x.slug !== item.slug).slice(0, 3);
   const blogAuto = relatedBlog.length ? relatedBlog : allBlog.filter(x => x.category === 'Education').slice(0, 3);
+  const answerBlock = renderAnswerBlock(item);
+  const researchNotes = renderResearchNotes(item);
+  const sourcesBlock = renderSources(item);
 
   const schemas = [
     breadcrumbs([
@@ -374,7 +499,7 @@ function educationDetail(item, allEducation, allBlog) {
 
   const blogLinks = blogAuto.length ? `<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">From the blog</div><h2>Related reading.</h2></div><p>Supporting articles that can help with the wider decision.</p></div><div class="grid-3">${blogAuto.map(x => `<a class="article" href="/blog/${x.slug}/"><div class="article-body"><span class="cat">${esc(x.category || 'Article')}</span><h3>${esc(x.title)}</h3><p>${esc(x.description || '')}</p><span class="go">Read article ↗</span></div></a>`).join('')}</div></div></section>` : '';
 
-  return `<!doctype html><html lang="en">${head({title,description,url,image:hero,schemas})}<body>
+  return `<!doctype html><html lang="en">${head({title,description,url,image:hero,schemas,publishedTime:item.date})}<body>
 <!-- CMS-GENERATED: education/${esc(item.slug)} -->
 ${siteHeader('education')}
 <main>
@@ -382,7 +507,10 @@ ${siteHeader('education')}
 <div class="kicker">${esc(section.name)}${item.page_type ? ` · ${esc(item.page_type)}` : ''}</div>
 <h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${articleMeta(item)}</div>
 </div></section>
+${answerBlock}
 <section class="section"><div class="container education-article-layout"><article class="prose reveal">${markdownToHtml(item.body || '')}</article><aside class="education-aside"><div class="aside-label">Research path</div><a href="/education/${section.slug}/">${esc(section.name)} ↗</a>${parent ? `<div class="aside-label">Parent guide</div><a href="${pageUrl(parent)}">${esc(parent.title)} ↗</a>` : ''}${official}</aside></div></section>
+${researchNotes}
+${sourcesBlock}
 ${related}${blogLinks}
 <section class="section section-alt"><div class="container"><div class="cta-panel reveal"><div><div class="kicker">Keep researching</div><h2>Need another education topic?</h2></div><div><p>Browse the wider Education desk or read supporting articles on the blog.</p><a class="btn btn-orange" href="/education/">Explore Education ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
@@ -441,14 +569,20 @@ function blogDetail(item) {
   const description=item.seo?.description || item.description || '';
   const hero=item.featured_image || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2400&q=88';
   const schemas=[breadcrumbs([{name:'Home',url:'/'},{name:'Blog',url:'/blog/'},{name:item.title,url:`/blog/${item.slug}/` }]),blogSchema(item,url)];
-  return `<!doctype html><html lang="en">${head({title,description,url,type:'article',image:hero,schemas})}<body>
+  const answerBlock = renderAnswerBlock(item);
+  const researchNotes = renderResearchNotes(item);
+  const sourcesBlock = renderSources(item);
+  return `<!doctype html><html lang="en">${head({title,description,url,type:'article',image:hero,schemas,publishedTime:item.date})}<body>
 <!-- CMS-GENERATED: blog/${esc(item.slug)} -->
 ${siteHeader('blog')}
 <main>
 <section class="hero"><div class="hero-media" style="background-image:url('${esc(hero)}')"></div><div class="hero-overlay"></div><div class="container hero-content">
 <div class="kicker">Journal · ${esc(item.category || 'Article')}</div><h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${item.category ? `<span>${esc(item.category)}</span>` : ''}${item.date ? `<span>${esc(item.date)}</span>` : ''}</div>
 </div></section>
+${answerBlock}
 <section class="section"><div class="container"><article class="prose reveal">${markdownToHtml(item.body || '')}</article></div></section>
+${researchNotes}
+${sourcesBlock}
 <section class="section section-alt"><div class="container"><div class="cta-panel"><div><div class="kicker">Keep reading</div><h2>Explore more notes.</h2></div><div><p>Read the wider journal or move into the Education desk for longer research pages.</p><a class="btn btn-orange" href="/blog/">Back to blog ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
 }
@@ -550,7 +684,7 @@ function updateHomepageBlogModule(allBlog) {
   if(a<0||b<a) return;
   const cards=allBlog.slice(0,4).map(item=>`<a class="tile reveal" href="/blog/${item.slug}/"><small>${esc(item.category || 'Article')}</small><strong>${esc(item.title)}</strong></a>`).join('\n');
   html=html.slice(0,a)+start+'\n'+cards+'\n'+end+html.slice(b+end.length);
-  fs.writeFileSync(file,'utf8'===typeof '' ? html : html,'utf8');
+  fs.writeFileSync(file,html,'utf8');
 }
 
 function writeSitemap(allEducation,allBlog) {
