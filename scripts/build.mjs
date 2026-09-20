@@ -278,67 +278,6 @@ function answerSummary(item) {
   return item.ai_content?.direct_answer || item.answer_summary || '';
 }
 
-function renderAnswerBlock(item) {
-  const answer = answerSummary(item);
-  if (!answer) return '';
-
-  return `<section class="section section-alt answer-section">
-<div class="container">
-<div class="cta-panel reveal">
-<div class="kicker">Quick answer</div>
-<h2>${esc(item.ai_content?.primary_question || 'What you should know')}</h2>
-<div class="answer-copy"><p>${inline(answer)}</p></div>
-</div>
-</div>
-</section>`;
-}
-
-function renderResearchNotes(item) {
-  const questions = textList(item.ai_content?.key_questions);
-  const entities = textList(item.ai_content?.key_entities);
-  const facts = textList(item.ai_content?.key_facts);
-
-  if (!questions.length && !entities.length && !facts.length) return '';
-
-  const questionHtml = questions.length
-    ? `<div><div class="aside-label">Key questions</div><ul>${questions.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
-    : '';
-
-  const entityHtml = entities.length
-    ? `<div><div class="aside-label">Key entities</div><p>${entities.map(x => esc(x)).join(' · ')}</p></div>`
-    : '';
-
-  const factHtml = facts.length
-    ? `<div><div class="aside-label">Key facts</div><ul>${facts.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
-    : '';
-
-  return `<section class="section section-alt research-notes">
-<div class="container">
-<div class="section-head"><div><div class="kicker">Research notes</div><h2>Useful details to keep in view.</h2></div><p>These notes are maintained in the CMS alongside the main article so important context stays easy to review.</p></div>
-<div class="grid-3">${questionHtml}${entityHtml}${factHtml}</div>
-</div>
-</section>`;
-}
-
-function renderSources(item) {
-  const sources = sourceItems(item);
-  if (!sources.length && !item.sources?.last_verified) return '';
-
-  const links = sources.length
-    ? `<ul class="source-list">${sources.map(source => `<li>${sourceLink(source)}</li>`).join('')}</ul>`
-    : '';
-
-  const verified = item.sources?.last_verified
-    ? `<p class="source-verified">Last verified: ${esc(item.sources.last_verified)}</p>`
-    : '';
-
-  return `<section class="section sources-section">
-<div class="container">
-<div class="section-head"><div><div class="kicker">Sources & verification</div><h2>Check the original source.</h2></div><p>Use the official source for current requirements, dates, fees, admissions rules and other details that may change.</p></div>
-<div class="cta-panel">${links}${verified}</div>
-</div>
-</section>`;
-}
 
 function sectionByName(name) {
   return SECTION_CONFIG.find(s => s.name === name) || SECTION_CONFIG[0];
@@ -466,6 +405,7 @@ function articleMeta(item) {
   return [item.page_type, item.section, item.date].filter(Boolean).map(v => `<span>${esc(v)}</span>`).join('');
 }
 
+// Detail pages intentionally render only reader-facing content. SEO/AI/search/source fields remain backend/build metadata.
 function educationDetail(item, allEducation, allBlog) {
   const section = sectionByName(item.section);
   const url = absoluteUrl(pageUrl(item));
@@ -477,9 +417,6 @@ function educationDetail(item, allEducation, allBlog) {
   const parent = allEducation.find(x => x.slug === item.parent_slug);
   const relatedAuto = relatedEdu.length ? relatedEdu : allEducation.filter(x => x.section === item.section && x.slug !== item.slug).slice(0, 3);
   const blogAuto = relatedBlog.length ? relatedBlog : allBlog.filter(x => x.category === 'Education').slice(0, 3);
-  const answerBlock = renderAnswerBlock(item);
-  const researchNotes = renderResearchNotes(item);
-  const sourcesBlock = renderSources(item);
 
   const schemas = [
     breadcrumbs([
@@ -491,9 +428,6 @@ function educationDetail(item, allEducation, allBlog) {
     educationSchema(item, url)
   ];
 
-  const official = item.official_url
-    ? `<div class="edu-official"><span>Official source</span><a href="${esc(item.official_url)}" target="_blank" rel="noopener">${esc(item.official_url)}</a></div>`
-    : '';
 
   const related = relatedAuto.length ? `<section class="section section-alt"><div class="container"><div class="section-head"><div><div class="kicker">Related education</div><h2>Continue your research.</h2></div><p>More pages in ${esc(section.name.toLowerCase())}.</p></div><div class="grid-3">${relatedAuto.map(x => `<a class="edu-resource" href="${pageUrl(x)}"><div class="resource-body"><span class="resource-type">${esc(x.page_type || 'Education')}</span><h3>${esc(x.title)}</h3><p>${esc(x.description || '')}</p><span class="resource-link">Open guide ↗</span></div></a>`).join('')}</div></div></section>` : '';
 
@@ -505,12 +439,9 @@ ${siteHeader('education')}
 <main>
 <section class="hero"><div class="hero-media" style="background-image:url('${esc(hero)}')"></div><div class="hero-overlay"></div><div class="container hero-content">
 <div class="kicker">${esc(section.name)}${item.page_type ? ` · ${esc(item.page_type)}` : ''}</div>
-<h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${articleMeta(item)}</div>
+<h1>${inline(item.title)}</h1><div class="article-meta">${articleMeta(item)}</div>
 </div></section>
-${answerBlock}
-<section class="section"><div class="container education-article-layout"><article class="prose reveal">${markdownToHtml(item.body || '')}</article><aside class="education-aside"><div class="aside-label">Research path</div><a href="/education/${section.slug}/">${esc(section.name)} ↗</a>${parent ? `<div class="aside-label">Parent guide</div><a href="${pageUrl(parent)}">${esc(parent.title)} ↗</a>` : ''}${official}</aside></div></section>
-${researchNotes}
-${sourcesBlock}
+<section class="section"><div class="container education-article-layout"><article class="prose reveal">${markdownToHtml(item.body || '')}</article><aside class="education-aside"><div class="aside-label">Research path</div><a href="/education/${section.slug}/">${esc(section.name)} ↗</a>${parent ? `<div class="aside-label">Parent guide</div><a href="${pageUrl(parent)}">${esc(parent.title)} ↗</a>` : ''}</aside></div></section>
 ${related}${blogLinks}
 <section class="section section-alt"><div class="container"><div class="cta-panel reveal"><div><div class="kicker">Keep researching</div><h2>Need another education topic?</h2></div><div><p>Browse the wider Education desk or read supporting articles on the blog.</p><a class="btn btn-orange" href="/education/">Explore Education ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
@@ -563,26 +494,21 @@ ${siteHeader('education')}
 </main>${siteFooter()}</body></html>`;
 }
 
+// Blog detail pages intentionally hide CMS strategy/metadata fields from the public UI.
 function blogDetail(item) {
   const url=absoluteUrl(`/blog/${item.slug}/`);
   const title=item.seo?.title || `${item.title} | Dikshan Gautam`;
   const description=item.seo?.description || item.description || '';
   const hero=item.featured_image || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2400&q=88';
   const schemas=[breadcrumbs([{name:'Home',url:'/'},{name:'Blog',url:'/blog/'},{name:item.title,url:`/blog/${item.slug}/` }]),blogSchema(item,url)];
-  const answerBlock = renderAnswerBlock(item);
-  const researchNotes = renderResearchNotes(item);
-  const sourcesBlock = renderSources(item);
   return `<!doctype html><html lang="en">${head({title,description,url,type:'article',image:hero,schemas,publishedTime:item.date})}<body>
 <!-- CMS-GENERATED: blog/${esc(item.slug)} -->
 ${siteHeader('blog')}
 <main>
 <section class="hero"><div class="hero-media" style="background-image:url('${esc(hero)}')"></div><div class="hero-overlay"></div><div class="container hero-content">
-<div class="kicker">Journal · ${esc(item.category || 'Article')}</div><h1>${inline(item.title)}</h1><p class="hero-lede">${inline(item.description || '')}</p><div class="article-meta">${item.category ? `<span>${esc(item.category)}</span>` : ''}${item.date ? `<span>${esc(item.date)}</span>` : ''}</div>
+<div class="kicker">Journal · ${esc(item.category || 'Article')}</div><h1>${inline(item.title)}</h1><div class="article-meta">${item.category ? `<span>${esc(item.category)}</span>` : ''}${item.date ? `<span>${esc(item.date)}</span>` : ''}</div>
 </div></section>
-${answerBlock}
 <section class="section"><div class="container"><article class="prose reveal">${markdownToHtml(item.body || '')}</article></div></section>
-${researchNotes}
-${sourcesBlock}
 <section class="section section-alt"><div class="container"><div class="cta-panel"><div><div class="kicker">Keep reading</div><h2>Explore more notes.</h2></div><div><p>Read the wider journal or move into the Education desk for longer research pages.</p><a class="btn btn-orange" href="/blog/">Back to blog ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
 }
