@@ -757,7 +757,7 @@ TU's BCA is a four-year programme divided into eight semesters. Other BCA progra
 
 Eligibility depends on the university. TU's BCA pathway allows applicants from different academic backgrounds subject to its current eligibility requirements.
 
-4.  **How much does BCA cost in Nepal?**
+4. **How much does BCA cost in Nepal?**
 
 BCA fees vary considerably between universities and colleges. Public/community institutions can have different fee structures from private colleges, and additional examination or institutional charges may apply. Always request the complete fee structure before admission.
 
