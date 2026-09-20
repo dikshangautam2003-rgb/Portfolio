@@ -130,8 +130,12 @@ function markdownToHtml(markdown = '') {
     if (inOl) { html += '</ol>'; inOl = false; }
   };
 
+  const isRawHtmlStart = line =>
+    /^\s*<(table|div|section|figure|details|aside|blockquote|iframe|video|audio|pre)\b/i.test(line);
+
   while (i < lines.length) {
     const line = lines[i];
+
     if (line.startsWith('```')) {
       if (!inCode) {
         closeLists();
@@ -144,24 +148,56 @@ function markdownToHtml(markdown = '') {
       i += 1;
       continue;
     }
-    if (inCode) { code.push(line); i += 1; continue; }
-    if (!line.trim()) { closeLists(); i += 1; continue; }
+
+    if (inCode) {
+      code.push(line);
+      i += 1;
+      continue;
+    }
+
+    // Preserve intentional raw HTML blocks from CMS-authored content.
+    // This is important for tables and other structured content.
+    if (isRawHtmlStart(line)) {
+      closeLists();
+      const raw = [line];
+      i += 1;
+
+      while (i < lines.length && lines[i].trim()) {
+        raw.push(lines[i]);
+        i += 1;
+      }
+
+      html += raw.join('\n');
+      continue;
+    }
+
+    if (!line.trim()) {
+      closeLists();
+      i += 1;
+      continue;
+    }
 
     if (/^###\s+/.test(line)) {
       closeLists();
       html += `<h3>${inline(line.replace(/^###\s+/, ''))}</h3>`;
-      i += 1; continue;
+      i += 1;
+      continue;
     }
+
     if (/^##\s+/.test(line)) {
       closeLists();
       html += `<h2>${inline(line.replace(/^##\s+/, ''))}</h2>`;
-      i += 1; continue;
+      i += 1;
+      continue;
     }
+
     if (/^#\s+/.test(line)) {
       closeLists();
       html += `<h2>${inline(line.replace(/^#\s+/, ''))}</h2>`;
-      i += 1; continue;
+      i += 1;
+      continue;
     }
+
     if (/^>\s?/.test(line)) {
       closeLists();
       const quote = [];
@@ -178,7 +214,8 @@ function markdownToHtml(markdown = '') {
       if (inOl) { html += '</ol>'; inOl = false; }
       if (!inUl) { html += '<ul>'; inUl = true; }
       html += `<li>${inline(ul[1])}</li>`;
-      i += 1; continue;
+      i += 1;
+      continue;
     }
 
     const ol = line.match(/^\s*\d+[.)]\s+(.+)$/);
@@ -186,12 +223,14 @@ function markdownToHtml(markdown = '') {
       if (inUl) { html += '</ul>'; inUl = false; }
       if (!inOl) { html += '<ol>'; inOl = true; }
       html += `<li>${inline(ol[1])}</li>`;
-      i += 1; continue;
+      i += 1;
+      continue;
     }
 
     closeLists();
     const paragraph = [line];
     i += 1;
+
     while (
       i < lines.length &&
       lines[i].trim() &&
@@ -199,11 +238,13 @@ function markdownToHtml(markdown = '') {
       !/^\s*[-*]\s+/.test(lines[i]) &&
       !/^\s*\d+[.)]\s+/.test(lines[i]) &&
       !/^>\s?/.test(lines[i]) &&
-      !lines[i].startsWith('```')
+      !lines[i].startsWith('```') &&
+      !isRawHtmlStart(lines[i])
     ) {
       paragraph.push(lines[i]);
       i += 1;
     }
+
     html += `<p>${inline(paragraph.join(' '))}</p>`;
   }
 
@@ -441,7 +482,7 @@ ${siteHeader('education')}
 <div class="kicker">${esc(section.name)}${item.page_type ? ` · ${esc(item.page_type)}` : ''}</div>
 <h1>${inline(item.title)}</h1><div class="article-meta">${articleMeta(item)}</div>
 </div></section>
-<section class="section"><div class="container education-article-layout"><article class="prose reveal">${markdownToHtml(item.body || '')}</article><aside class="education-aside"><div class="aside-label">Research path</div><a href="/education/${section.slug}/">${esc(section.name)} ↗</a>${parent ? `<div class="aside-label">Parent guide</div><a href="${pageUrl(parent)}">${esc(parent.title)} ↗</a>` : ''}</aside></div></section>
+<section class="section"><div class="container education-article-layout"><article class="prose">${markdownToHtml(item.body || '')}</article><aside class="education-aside"><div class="aside-label">Research path</div><a href="/education/${section.slug}/">${esc(section.name)} ↗</a>${parent ? `<div class="aside-label">Parent guide</div><a href="${pageUrl(parent)}">${esc(parent.title)} ↗</a>` : ''}</aside></div></section>
 ${related}${blogLinks}
 <section class="section section-alt"><div class="container"><div class="cta-panel reveal"><div><div class="kicker">Keep researching</div><h2>Need another education topic?</h2></div><div><p>Browse the wider Education desk or read supporting articles on the blog.</p><a class="btn btn-orange" href="/education/">Explore Education ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
@@ -508,7 +549,7 @@ ${siteHeader('blog')}
 <section class="hero"><div class="hero-media" style="background-image:url('${esc(hero)}')"></div><div class="hero-overlay"></div><div class="container hero-content">
 <div class="kicker">Journal · ${esc(item.category || 'Article')}</div><h1>${inline(item.title)}</h1><div class="article-meta">${item.category ? `<span>${esc(item.category)}</span>` : ''}${item.date ? `<span>${esc(item.date)}</span>` : ''}</div>
 </div></section>
-<section class="section"><div class="container"><article class="prose reveal">${markdownToHtml(item.body || '')}</article></div></section>
+<section class="section"><div class="container"><article class="prose">${markdownToHtml(item.body || '')}</article></div></section>
 <section class="section section-alt"><div class="container"><div class="cta-panel"><div><div class="kicker">Keep reading</div><h2>Explore more notes.</h2></div><div><p>Read the wider journal or move into the Education desk for longer research pages.</p><a class="btn btn-orange" href="/blog/">Back to blog ↗</a></div></div></div></section>
 </main>${siteFooter()}</body></html>`;
 }
