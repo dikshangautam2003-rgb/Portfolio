@@ -13,7 +13,7 @@ parent_slug: https://dikshangautam.com.np/education/academic-courses/
 search_strategy:
   primary_keyword: BCA course in Nepal
   secondary_keywords: BCA in Nepal, BCA eligibility, BCA admission, BCA syllabus,
-    BCA fees, BCA colleges, BCA entrance exam, BCA career scope
+    BCA fees, BCA colleges, BCA entrance exam, BCA career scope, BA fee
   search_intent: Informational
   primary_question: "What should students know before choosing a BCA course in Nepal? "
 ai_content:
