@@ -137,15 +137,32 @@ function markdownToHtml(markdown = '') {
     const line = lines[i];
 
     if (line.startsWith('```')) {
-      if (!inCode) {
-        closeLists();
-        inCode = true;
-        code = [];
-      } else {
-        html += `<pre><code>${esc(code.join('\n'))}</code></pre>`;
-        inCode = false;
-      }
+      closeLists();
+
+      const language = line.slice(3).trim().toLowerCase();
+      const fenced = [];
       i += 1;
+
+      while (i < lines.length && !lines[i].startsWith('```')) {
+        fenced.push(lines[i]);
+        i += 1;
+      }
+
+      if (i < lines.length && lines[i].startsWith('```')) i += 1;
+
+      const fencedText = fenced.join('\n').trim();
+      const looksLikeHtmlBlock =
+        /^<(table|div|section|figure|details|aside|iframe|video|audio)\b/i.test(fencedText);
+
+      // HTML/XML-labelled fences and clearly HTML-looking unlabelled fences
+      // are intentional HTML content. This supports existing CMS articles
+      // that use ``` around tables without requiring content edits.
+      if (language === 'html' || language === 'xml' || (!language && looksLikeHtmlBlock)) {
+        html += fencedText;
+      } else {
+        html += `<pre><code>${esc(fenced.join('\n'))}</code></pre>`;
+      }
+
       continue;
     }
 
