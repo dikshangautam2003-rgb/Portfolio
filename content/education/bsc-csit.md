@@ -4,7 +4,7 @@ slug: bsc-csit
 section: Academic Courses
 page_type: Academic Course
 description: A practical guide to BSc CSIT in Nepal covering eligibility,
-  entrance, syllabus, fees, colleges, careers and admission.
+  entrance, syllabus, fees, colleges, careers and admission
 published: true
 date: 2026-09-22
 featured_image: /media/bsc-csit-course-in-nepal.png
