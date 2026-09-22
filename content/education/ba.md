@@ -1,17 +1,19 @@
 ---
-title: "BA in Nepal"
+title: BA in Nepal
 slug: ba
-section: "Academic Courses"
-page_type: "Academic Course"
-description: "Understand Bachelor of Arts pathways through subjects, combinations, skills and further study options."
+section: Academic Courses
+page_type: Academic Course
+description: Understand Bachelor of Arts pathways through subjects,
+  combinations, skills and further study options.
 published: true
-featured_image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=82"
-parent_slug: ""
-related_education: ""
-related_blog: ""
+date: 2026-09-22
+featured_image: /media/chatgpt-image-sep-22-2026-055253-pm.png
+sources:
+  last_verified: 2026-09-22
 seo:
-  title: "BA in Nepal | Dikshan Gautam"
-  description: "Understand Bachelor of Arts pathways through subjects, combinations, skills and further study options."
+  title: BA in Nepal | Dikshan Gautam
+  description: Understand Bachelor of Arts pathways through subjects,
+    combinations, skills and further study options. Studying BA contains
+    different art subjects.
 ---
-
-Understand Bachelor of Arts pathways through subjects, combinations, skills and further study options.
+Understand Bachelor of Arts pathways through subjects, combinations, skills and further study options. Studying BA contains different art subjects.
