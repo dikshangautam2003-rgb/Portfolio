@@ -41,11 +41,7 @@ jobs:
             [ -f "$file" ] && echo "OK: $file"
           done
 
-          echo "Checking test article..."
-          test -f "blog/this-is-test-one/index.html"
-
-          echo "TEST ARTICLE EXISTS:"
-          ls -lh "blog/this-is-test-one/index.html"
+      
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
