@@ -127,8 +127,7 @@ This guide explains what BSc CSIT is, eligibility, entrance examination, syllabu
 
 The TU curriculum describes BSc CSIT as an eight-semester, four-year program requiring 126 credit hours.
 
-## **What Is BSc CSIT?**  
-
+## **What Is BSc CSIT?**
 
 BSc CSIT stands for Bachelor of Science in Computer Science and Information Technology. It is an undergraduate degree that combines the theoretical foundations of computer science with practical information technology.
 
@@ -552,7 +551,6 @@ Students often compare government/constituent and private colleges. The importan
 </table>
 ```
 
->
 > This is not a universal quality ranking. A student's actual experience depends on the specific institution.
 
 ## **What Skills Can You Build Through BSc CSIT Course in Nepal?**
@@ -817,7 +815,8 @@ Submit the required documents and fees according to the selected institution.
 
 The exact dates and procedures change by intake, so the current IOST notices should always take priority. IOST's 2083 cycle included entrance results, priority-order notices and admission lists in August 2026.
 
-##   
+
+
 **How to Choose a BSc CSIT College**
 
 Don't choose a college simply because someone calls it “the best". Instead, create a comparison checklist.
@@ -976,8 +975,8 @@ Admission dates, fees, seat allocations and procedures can change.
 </table>
 ```
 
-### **BSc CSIT Frequently Asked Questions**  
-  
+### **BSc CSIT Frequently Asked Questions**
+
 **What is BSc CSIT in Nepal?**
 
 BSc CSIT is the Bachelor of Science in Computer Science and Information Technology under Tribhuvan University's Institute of Science and Technology. It is a four-year, eight-semester undergraduate program with 126 credit hours.
