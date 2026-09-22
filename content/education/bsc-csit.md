@@ -1,6 +1,6 @@
 ---
 title: BSc CSIT Course in Nepal — Complete Guide
-slug: bsc-csit-course-in-nepal
+slug: bsc-csit
 section: Academic Courses
 page_type: Academic Course
 description: A practical guide to BSc CSIT in Nepal covering eligibility,
