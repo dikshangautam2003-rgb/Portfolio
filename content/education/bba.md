@@ -96,18 +96,51 @@ The standard BBA program offered by several major universities in Nepal is struc
 
 For example, the BBA programs of Tribhuvan University and Pokhara University require 120 credit hours for graduation. However, students should check the curriculum of their selected university because course structures and program requirements may vary.
 
+```
 
-| Particular | Details |
-| ------------------ | --------------------------------------------------------------- |
-| Full form | Bachelor of Business Administration |
-| Course level | Undergraduate |
-| Normal duration | 4 years |
-| Academic structure | 8 semesters |
-| Credit hours | Commonly 120 in major university programs |
-| Study areas | Management, finance, accounting, marketing and economics |
-| Learning methods | Lectures, presentations, projects, case studies and internships |
-| Career direction | Business, banking, finance, marketing and management |
-
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
+  <thead>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="padding:12px; border:1px solid #ddd; text-align:left;">Particular</th>
+      <th style="padding:12px; border:1px solid #ddd; text-align:left;">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">Full form</td>
+      <td style="padding:12px; border:1px solid #ddd;">Bachelor of Business Administration</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">Course level</td>
+      <td style="padding:12px; border:1px solid #ddd;">Undergraduate</td>
+    </tr>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">Normal duration</td>
+      <td style="padding:12px; border:1px solid #ddd;">4 years</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">Academic structure</td>
+      <td style="padding:12px; border:1px solid #ddd;">8 semesters</td>
+    </tr>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">Credit hours</td>
+      <td style="padding:12px; border:1px solid #ddd;">Commonly 120 in major university programs</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">Study areas</td>
+      <td style="padding:12px; border:1px solid #ddd;">Management, finance, accounting, marketing and economics</td>
+    </tr>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">Learning methods</td>
+      <td style="padding:12px; border:1px solid #ddd;">Lectures, presentations, projects, case studies and internships</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">Career direction</td>
+      <td style="padding:12px; border:1px solid #ddd;">Business, banking, finance, marketing and management</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 The semester system allows students to study different subjects progressively. The initial semesters generally introduce foundational concepts, while later semesters focus more on specialised subjects, business applications, projects and internships.
 
@@ -510,14 +543,40 @@ Students often compare BBA with other undergraduate management and business-rela
 
 Although these programs share some subjects, their academic focus and structure can differ.
 
+```
 
-| Course | Full Form | General Focus |
-| ------ | ----------------------------------- | ----------------------------------------------- |
-| BBA | Bachelor of Business Administration | Broad business and management education |
-| BBS | Bachelor of Business Studies | Business studies and management foundations |
-| BBM | Bachelor of Business Management | Management, leadership and business development |
-| BIM | Bachelor of Information Management | Management combined with information technology |
-
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
+  <thead>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="padding:12px; border:1px solid #ddd; text-align:left;">Course</th>
+      <th style="padding:12px; border:1px solid #ddd; text-align:left;">Full Form</th>
+      <th style="padding:12px; border:1px solid #ddd; text-align:left;">General Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">BBA</td>
+      <td style="padding:12px; border:1px solid #ddd;">Bachelor of Business Administration</td>
+      <td style="padding:12px; border:1px solid #ddd;">Broad business and management education</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">BBS</td>
+      <td style="padding:12px; border:1px solid #ddd;">Bachelor of Business Studies</td>
+      <td style="padding:12px; border:1px solid #ddd;">Business studies and management foundations</td>
+    </tr>
+    <tr style="background-color:#f5f7fb;">
+      <td style="padding:12px; border:1px solid #ddd;">BBM</td>
+      <td style="padding:12px; border:1px solid #ddd;">Bachelor of Business Management</td>
+      <td style="padding:12px; border:1px solid #ddd;">Management, leadership and business development</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid #ddd;">BIM</td>
+      <td style="padding:12px; border:1px solid #ddd;">Bachelor of Information Management</td>
+      <td style="padding:12px; border:1px solid #ddd;">Management combined with information technology</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 ### BBA vs BBS
 
