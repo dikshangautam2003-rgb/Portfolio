@@ -273,12 +273,51 @@ BSc CSIT is a four-year undergraduate program divided into eight semesters. TU's
     </tr>
   </tbody>
 </table>
-
-
-
 ```
 
-### **Does BSc CSIT have mathematics?** 
+
+
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+
+  <thead>
+
+    <tr style="background-color: #D4512A; color: #FFFFFF;">
+
+      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600;">Particular</th>
+
+      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600;">Details</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr style="background-color: #FFFFFF;">
+
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Total Credit Hours</td>
+
+      <td style="padding: 14px 16px; color: #64748B;">126 Credit Hours (Tribhuvan University Standard)</td>
+
+    </tr>
+
+    <tr style="background-color: #F5F2EC;">
+
+      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Core Components</td>
+
+      <td style="padding: 14px 16px; color: #64748B;">Foundation Subjects, Core Computer Science, IT Subjects, Mathematics/Science, Electives, Project Work, and Internship</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+
+&nbsp;
+
+## **Does BSc CSIT have mathematics?**
 
 Yes, mathematics is part of the BSc CSIT curriculum, including Mathematics I and Mathematics II, along with statistics and discrete structures.
 
