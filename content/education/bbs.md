@@ -1,6 +1,6 @@
 ---
 title: BBS in Nepal
-slug: bbs
+slug: bbs-in-nepal
 section: Academic Courses
 page_type: Academic Course
 description: A guide to Bachelor of Business Studies covering subject mix,
