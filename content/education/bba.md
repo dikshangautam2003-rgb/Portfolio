@@ -7,7 +7,7 @@ description: A practical guide to BBA in Nepal, including what to study, how to
   compare colleges, admission routes and career questions.
 published: true
 date: 2026-11-23
-featured_image: /media/bba-in-nepal.jpg
+featured_image: /media/bba-course-in-nepal.jpg
 search_strategy:
   primary_keyword: BBA in Nepal
   secondary_keywords: |-
