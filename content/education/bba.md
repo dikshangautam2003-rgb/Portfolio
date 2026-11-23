@@ -35,6 +35,12 @@ seo:
   description: Explore BBA in Nepal, including course duration, eligibility,
     syllabus, fees, top colleges, admission process and career opportunities
     after graduation.
+answer_summary: BBA (Bachelor of Business Administration) is an undergraduate
+  management degree that generally takes four years and eight semesters to
+  complete. It covers business management, accounting, finance, marketing,
+  economics and organisational behaviour. Several major university programs in
+  Nepal require 120 credit hours, although academic requirements vary by
+  institution.
 ---
 # BBA in Nepal: Complete Guide to Course, Fees, Colleges, Eligibility and Career Scope
 
