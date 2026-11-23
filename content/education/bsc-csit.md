@@ -254,121 +254,26 @@ BSc CSIT is a four-year undergraduate program divided into eight semesters. TU's
 ```
 
 
-<!-- TABLE 1: OVERVIEW & STRUCTURE -->
-<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+
+<table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; background: #FFFFFF;">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 30%;">Particular</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 70%;">BSc CSIT Curriculum Overview</th>
+      <th style="padding: 16px; text-align: left;">Subject</th>
+      <th style="padding: 16px; text-align: left;">Details</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Total Credit Hours</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">126 Credit Hours (Tribhuvan University Standard)</td>
+    <tr style="background-color: #FFFFFF;">
+      <td style="padding: 14px; color: #171513;">Semester 1</td>
+      <td style="padding: 14px; color: #64748B;">C Programming</td>
     </tr>
     <tr style="background-color: #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Core Components</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Foundation Subjects, Core Computer Science, IT Subjects, Mathematics/Science, Electives, Project Work, and Internship</td>
+      <td style="padding: 14px; color: #171513;">Semester 2</td>
+      <td style="padding: 14px; color: #64748B;">Object-Oriented Programming</td>
     </tr>
   </tbody>
 </table>
 
-<!-- TABLE 2: FIRST SEMESTER -->
-<table style="width: 100%; max-width: 750px; margin-top: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
-  <thead>
-    <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 30%;">Category</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 70%;">BSc CSIT First Semester Subjects</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">IT Foundation</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Introduction to Information Technology</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Programming</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">C Programming</td>
-    </tr>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Hardware Core</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Digital Logic</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Mathematics</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Mathematics I</td>
-    </tr>
-    <tr style="background-color: #FFFFFF;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Physical Science</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Physics</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- TABLE 3: SECOND SEMESTER -->
-<table style="width: 100%; max-width: 750px; margin-top: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
-  <thead>
-    <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 30%;">Category</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 70%;">BSc CSIT Second Semester Subjects</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Theoretical CS</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Discrete Structure</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Programming</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Object-Oriented Programming</td>
-    </tr>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Hardware Core</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Microprocessor</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Mathematics</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Mathematics II</td>
-    </tr>
-    <tr style="background-color: #FFFFFF;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Statistics</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Statistics</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- TABLE 4: ADVANCED SUBJECTS & ELECTIVES -->
-<table style="width: 100%; max-width: 750px; margin-top: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
-  <thead>
-    <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 30%;">Focus Area</th>
-      <th style="padding: 16px; text-align: left; font-size: 16px; font-weight: 600; width: 70%;">BSc CSIT Advanced Subjects &amp; Electives</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Core Computer Science</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Data Structures &amp; Algorithms, Computer Architecture, Operating Systems, Artificial Intelligence</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Software &amp; Web Systems</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Database Management, Software Engineering, Web Technology, Advanced Programming</td>
-    </tr>
-    <tr style="background-color: #FFFFFF; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Data &amp; Infrastructure</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Computer Networks, Data Warehousing &amp; Data Mining</td>
-    </tr>
-    <tr style="background-color: #F5F2EC; border-bottom: 1px solid #F5F2EC;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Specialized Electives</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Networking, Security, Cloud Computing, Mobile Application Development, Distributed Systems</td>
-    </tr>
-    <tr style="background-color: #FFFFFF;">
-      <td style="padding: 14px 16px; color: #171513; font-weight: 600;">Practical Exposure</td>
-      <td style="padding: 14px 16px; color: #64748B; line-height: 1.5;">Project Work &amp; Mandatory Industry Internship</td>
-    </tr>
-  </tbody>
-</table>
 
 
 ```
