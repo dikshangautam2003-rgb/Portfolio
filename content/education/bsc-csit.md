@@ -254,11 +254,12 @@ BSc CSIT is a four-year undergraduate program divided into eight semesters. TU's
 with two semesters in each academic year.
 
 ```
-<!-- Table 1: Overview & Structure -->
-<table style="width: 100%; max-width: 750px; margin-bottom: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+
+<!-- TABLE 1: OVERVIEW & STRUCTURE -->
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08); margin-bottom: 32px;">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;" colspan="2">BSc CSIT Syllabus &amp; Curriculum Overview</th>
+      <th colspan="2" style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;">BSc CSIT Syllabus &amp; Curriculum Overview</th>
     </tr>
   </thead>
   <tbody>
@@ -273,11 +274,11 @@ with two semesters in each academic year.
   </tbody>
 </table>
 
-<!-- Table 2: First Semester Subjects -->
-<table style="width: 100%; max-width: 750px; margin-bottom: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+<!-- TABLE 2: FIRST SEMESTER -->
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08); margin-bottom: 32px;">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;" colspan="2">BSc CSIT First Semester Subjects</th>
+      <th colspan="2" style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;">BSc CSIT First Semester Subjects</th>
     </tr>
   </thead>
   <tbody>
@@ -308,11 +309,11 @@ with two semesters in each academic year.
   </tbody>
 </table>
 
-<!-- Table 3: Second Semester Subjects -->
-<table style="width: 100%; max-width: 750px; margin-bottom: 32px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+<!-- TABLE 3: SECOND SEMESTER -->
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08); margin-bottom: 32px;">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;" colspan="2">BSc CSIT Second Semester Subjects</th>
+      <th colspan="2" style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;">BSc CSIT Second Semester Subjects</th>
     </tr>
   </thead>
   <tbody>
@@ -343,11 +344,11 @@ with two semesters in each academic year.
   </tbody>
 </table>
 
-<!-- Table 4: Later Semesters & Electives -->
-<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08);">
+<!-- TABLE 4: ADVANCED SUBJECTS & ELECTIVES -->
+<table style="width: 100%; max-width: 750px; border-collapse: collapse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(23, 21, 19, 0.08); margin-bottom: 32px;">
   <thead>
     <tr style="background-color: #D4512A; color: #FFFFFF;">
-      <th style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;" colspan="2">BSc CSIT Advanced Subjects &amp; Electives</th>
+      <th colspan="2" style="padding: 16px; text-align: left; font-size: 18px; font-weight: 600;">BSc CSIT Advanced Subjects &amp; Electives</th>
     </tr>
   </thead>
   <tbody>
@@ -377,6 +378,7 @@ with two semesters in each academic year.
     </tr>
   </tbody>
 </table>
+
 ```
 
 ### **Does BSc CSIT have mathematics?**
