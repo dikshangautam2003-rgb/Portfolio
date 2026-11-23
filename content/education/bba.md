@@ -8,6 +8,19 @@ description: A practical guide to BBA in Nepal, including what to study, how to
 published: true
 date: 2026-11-23
 featured_image: /media/bba-in-nepal.jpg
+search_strategy:
+  primary_keyword: BBA in Nepal
+  secondary_keywords: |-
+    BBA course in Nepal
+    Bachelor of Business Administration in Nepal
+    BBA fees in Nepal
+    BBA colleges in Nepal
+    BBA syllabus in Nepal
+    What is BBA in Nepal?
+    How many years is BBA in Nepal?
+    What is the fee of BBA in Nepal?
+    BBA fees
+    Is BBA better than BBM in Nepal?
 sources:
   last_verified: 2026-11-23
 seo:
