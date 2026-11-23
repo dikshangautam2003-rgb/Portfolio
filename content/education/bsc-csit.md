@@ -249,9 +249,7 @@ But the exact examination structure should be verified against the current offic
 
 BSc CSIT is a four-year undergraduate program divided into eight semesters. TU's curriculum specifies eight semesters and 126 credit hours. That means students normally progress through:
 
-**Year 1 → Year 2 → Year 3 → Year 4**
-
-with two semesters in each academic year.
+**Year 1 → Year 2 → Year 3 → Year 4 -** with two semesters in each academic year.
 
 ```
 
@@ -381,7 +379,7 @@ with two semesters in each academic year.
 
 ```
 
-### **Does BSc CSIT have mathematics?**
+### **Does BSc CSIT have mathematics?** 
 
 Yes, mathematics is part of the BSc CSIT curriculum, including Mathematics I and Mathematics II, along with statistics and discrete structures.
 
