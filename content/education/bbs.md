@@ -43,7 +43,7 @@ ai_content:
 sources:
   last_verified: 2026-11-23
 seo:
-  title: BBS in Nepal | Dikshan Gautam
+  title: "BBS in Nepal: Course, Fees, Syllabus & Career Scope "
   description: A guide to Bachelor of Business Studies covering subject mix,
     college choice and the skills to build alongside study.
 answer_summary: >-
