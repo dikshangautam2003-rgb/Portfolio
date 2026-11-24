@@ -44,8 +44,9 @@ sources:
   last_verified: 2026-11-23
 seo:
   title: "BBS in Nepal: Course, Fees, Syllabus & Career Scope "
-  description: A guide to Bachelor of Business Studies covering subject mix,
-    college choice and the skills to build alongside study.
+  description: Explore BBS in Nepal, including eligibility, four-year syllabus,
+    subjects, fees, colleges, specialisations and career opportunities after
+    graduation.
 answer_summary: >-
   BBS in Nepal is a four-year undergraduate management degree under Tribhuvan
   University's Faculty of Management. The program follows an annual system and
