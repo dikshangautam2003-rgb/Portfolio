@@ -1,6 +1,6 @@
 ---
 title: BHM in Nepal – Bachelor of Hotel Management
-slug: bhm-in-nepal
+slug: bhm
 section: Academic Courses
 page_type: Academic Course
 description: Research hospitality management programs, practical training and
