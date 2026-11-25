@@ -1,5 +1,5 @@
 ---
-title: BIT in Nepal
+title: "BIT in Nepal: Complete Guide to Fees, Eligibility, Career and Syllabus"
 slug: bit-in-nepal
 section: Academic Courses
 page_type: Academic Course
