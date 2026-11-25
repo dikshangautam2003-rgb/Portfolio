@@ -1035,8 +1035,8 @@ Students often compare BIM with other undergraduate programmes before choosing a
 ### Which Course Should You Choose?
 
 - **Choose BIM** if you want to combine IT knowledge with business processes, management and information systems.
-- **Choose [BCA](https://dikshangautam.com.np/education/academic-courses/bca/)**[](https://dikshangautam.com.np/education/academic-courses/bca/) if your primary interest is computer applications and software development.
-- **Choose [BIT](https://dikshangautam.com.np/education/academic-courses/bit-in-nepal/)**[](https://dikshangautam.com.np/education/academic-courses/bit-in-nepal/) if you want a degree focused on information technology and its practical applications.
+- **Choose [BCA](https://dikshangautam.com.np/education/academic-courses/bca/)** if your primary interest is computer applications and software development.
+- **Choose [BIT](https://dikshangautam.com.np/education/academic-courses/bit-in-nepal/)** if you want a degree focused on information technology and its practical applications.
 - **Choose [BSc CSIT](https://dikshangautam.com.np/education/academic-courses/bsc-csit/)** if you are interested in computer science foundations, computing concepts and technical specialisation.
 - **Choose [BBA](https://dikshangautam.com.np/education/academic-courses/bba-in-nepal/)** if your main interest is business administration, management, marketing or finance.
 
