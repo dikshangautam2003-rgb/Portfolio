@@ -4,7 +4,7 @@ slug: bhm-in-nepal
 section: Academic Courses
 page_type: Academic Course
 description: Research hospitality management programs, practical training and
-  career pathways before choosing a college.
+  career pathways before choosing a college
 published: true
 date: 2026-11-25
 featured_image: /media/bhm-in-nepalwebp.jpg
