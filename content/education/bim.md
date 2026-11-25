@@ -27,6 +27,111 @@ search_strategy:
 
     BIM vs BCA, BIM vs BIT, BIM vs BSc CSIT, BIM vs BBA
   search_intent: Informational
+  primary_question: What is BIM in Nepal, and what are its course structure,
+    eligibility, fees, colleges, and career opportunities?
+ai_content:
+  direct_answer: BIM (Bachelor of Information Management) is a four-year
+    undergraduate programme that combines information technology, computing, and
+    business management. At Tribhuvan University (TU), the programme is divided
+    into eight semesters with a total of 126 credit hours. It covers areas such
+    as programming, databases, networking, information systems, and management.
+    Students can pursue careers in IT, software development, database
+    management, business analysis, and information systems after graduation.
+  key_questions: |-
+    What is BIM (Bachelor of Information Management) in Nepal?
+    How many years does the BIM course take in Nepal?
+    What is the semester-wise BIM syllabus and course structure?
+    What are the eligibility requirements for BIM admission?
+    Is CMAT required for BIM admission at Tribhuvan University?
+    What is the BIM entrance examination pattern and passing criteria?
+    How much does it cost to study BIM in Nepal?
+    Which colleges offer the BIM programme in Nepal?
+    What are the career opportunities and scope of BIM in Nepal?
+    What is the expected salary after completing BIM?
+    What is the difference between BIM, BCA, BIT, BSc CSIT, and BBA?
+    What can students study after completing a BIM degree?
+  key_entities: |-
+    Bachelor of Information Management (BIM)
+    Tribhuvan University (TU)
+    Faculty of Management, Tribhuvan University
+    TU BIM Curriculum
+    Central Management Admission Test (CMAT)
+    Shanker Dev Campus
+    Nepal Commerce Campus
+    Bhaktapur Multiple Campus
+    Mechi Multiple Campus
+    Bhairahawa Multiple Campus
+    Information Technology
+    Business Management
+    Computer Programming
+    Database Management Systems
+    Networking and System Administration
+    Information Systems
+    Software Development
+    Cloud Computing
+    Data Warehousing and Data Mining
+    Big Data and Analytics
+    Mobile Application Development
+    Internship
+    BCA
+    BIT
+    BSc CSIT
+    BBA
+  key_facts: >-
+    Course: Bachelor of Information Management (BIM)
+
+    Course level: Undergraduate
+
+    Course duration: 4 years
+
+    Academic structure: 8 semesters
+
+    Total credit hours: 126
+
+    University: Tribhuvan University (TU)
+
+    Faculty: Faculty of Management
+
+    Main focus: Information technology, computing, information systems, and
+    management
+
+    Management courses: 30 credit hours
+
+    Analytical and support courses: 21 credit hours
+
+    IT and computing courses: 63 credit hours
+
+    Electives: 6 credit hours
+
+    Project work: 3 credit hours
+
+    Internship: 3 credit hours
+
+    Internship duration: 8 weeks
+
+    Admission qualification: 10+2 or equivalent, subject to TU eligibility
+    criteria
+
+    Minimum academic requirement: D+ in each subject in Grades 11 and 12 with a
+    CGPA of at least 1.80, or second division in 10+2/PCL/equivalent
+
+    Entrance examination: CMAT
+
+    CMAT total marks: 100
+
+    CMAT questions: 100 objective questions
+
+    CMAT sections: Verbal Ability, Quantitative Ability, Logical Reasoning, and
+    General Awareness
+
+    CMAT qualifying score: 40% to qualify for the interview
+
+    Career areas: IT, software development, database administration, business
+    analysis, information systems, and technology management
+
+    Important note: Fees, admission requirements, programme availability, and
+    elective offerings may vary by campus and intake. Students should confirm
+    current details directly with their preferred college.
 sources:
   last_verified: 2026-11-25
 seo:
