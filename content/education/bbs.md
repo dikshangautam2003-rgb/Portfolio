@@ -1,5 +1,5 @@
 ---
-title: BBS in Nepal
+title: "BBS in Nepal: Course, Fees, Syllabus & Career Scope "
 slug: bbs-in-nepal
 section: Academic Courses
 page_type: Academic Course
