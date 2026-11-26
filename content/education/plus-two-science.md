@@ -6,7 +6,7 @@ page_type: Academic Course
 description: A guide to researching the Science stream, likely degree pathways
   and the subject work involved.
 published: true
-date: 2026-11-26
+date: 2026-11-25
 featured_image: /media/plus-two-science-in-nepalwebp.jpg
 search_strategy:
   primary_keyword: +2 Science in Nepal
