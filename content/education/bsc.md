@@ -151,61 +151,61 @@ The programme is suitable for students who want to pursue higher studies or buil
 ## BSc Course Overview
 
 ```
-<table>
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
   <thead>
-    <tr>
-      <th>Particular</th>
-      <th>Details</th>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Particular</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Details</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Full Form</td>
-      <td>Bachelor of Science</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Full Form</td>
+      <td style="border:1px solid #ddd; padding:12px;">Bachelor of Science</td>
     </tr>
-    <tr>
-      <td>Course Level</td>
-      <td>Undergraduate</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Course Level</td>
+      <td style="border:1px solid #ddd; padding:12px;">Undergraduate</td>
     </tr>
-    <tr>
-      <td>Course Duration</td>
-      <td>4 Years</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Course Duration</td>
+      <td style="border:1px solid #ddd; padding:12px;">4 Years</td>
     </tr>
-    <tr>
-      <td>University</td>
-      <td>Tribhuvan University (TU)</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">University</td>
+      <td style="border:1px solid #ddd; padding:12px;">Tribhuvan University (TU)</td>
     </tr>
-    <tr>
-      <td>Academic Body</td>
-      <td>Institute of Science and Technology (IoST)</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Academic Body</td>
+      <td style="border:1px solid #ddd; padding:12px;">Institute of Science and Technology (IoST)</td>
     </tr>
-    <tr>
-      <td>Academic Structure</td>
-      <td>Annual System</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Academic Structure</td>
+      <td style="border:1px solid #ddd; padding:12px;">Annual System</td>
     </tr>
-    <tr>
-      <td>Main Study Groups</td>
-      <td>Physical and Biological Sciences</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Main Study Groups</td>
+      <td style="border:1px solid #ddd; padding:12px;">Physical and Biological Sciences</td>
     </tr>
-    <tr>
-      <td>Total Marks</td>
-      <td>2,000 (TU curriculum)</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Total Marks</td>
+      <td style="border:1px solid #ddd; padding:12px;">2,000 (TU curriculum)</td>
     </tr>
-    <tr>
-      <td>Practical Learning</td>
-      <td>Laboratory work, practical examinations and research</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Practical Learning</td>
+      <td style="border:1px solid #ddd; padding:12px;">Laboratory work, practical examinations and research</td>
     </tr>
-    <tr>
-      <td>Admission Qualification</td>
-      <td>+2 Science or equivalent, subject to university criteria</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Admission Qualification</td>
+      <td style="border:1px solid #ddd; padding:12px;">+2 Science or equivalent, subject to university criteria</td>
     </tr>
-    <tr>
-      <td>Entrance Examination</td>
-      <td>TU IoST Entrance Examination</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Entrance Examination</td>
+      <td style="border:1px solid #ddd; padding:12px;">TU IoST Entrance Examination</td>
     </tr>
-    <tr>
-      <td>Career Direction</td>
-      <td>Research, education, laboratories and scientific industries</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Career Direction</td>
+      <td style="border:1px solid #ddd; padding:12px;">Research, education, laboratories and scientific industries</td>
     </tr>
   </tbody>
 </table>
@@ -265,34 +265,34 @@ Not every college offers all subjects or combinations. Students should check the
 ## BSc Syllabus in Nepal
 
 ```
-<table>
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
   <thead>
-    <tr>
-      <th>Academic Year</th>
-      <th>Course Structure</th>
-      <th>Main Focus</th>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Academic Year</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Course Structure</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Main Focus</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>First Year</td>
-      <td>Three core subjects and Scientific Communication</td>
-      <td>Foundational scientific knowledge and communication</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">First Year</td>
+      <td style="border:1px solid #ddd; padding:12px;">Three core subjects and Scientific Communication</td>
+      <td style="border:1px solid #ddd; padding:12px;">Foundational scientific knowledge and communication</td>
     </tr>
-    <tr>
-      <td>Second Year</td>
-      <td>Continuation of core subjects and Applied Statistics</td>
-      <td>Subject development and statistical understanding</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Second Year</td>
+      <td style="border:1px solid #ddd; padding:12px;">Continuation of core subjects and Applied Statistics</td>
+      <td style="border:1px solid #ddd; padding:12px;">Subject development and statistical understanding</td>
     </tr>
-    <tr>
-      <td>Third Year</td>
-      <td>Two core subjects, Research Methodology and electives</td>
-      <td>Research skills and specialised subject learning</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Third Year</td>
+      <td style="border:1px solid #ddd; padding:12px;">Two core subjects, Research Methodology and electives</td>
+      <td style="border:1px solid #ddd; padding:12px;">Research skills and specialised subject learning</td>
     </tr>
-    <tr>
-      <td>Fourth Year</td>
-      <td>Major subjects, project or fieldwork, computational and interdisciplinary courses</td>
-      <td>Advanced subject knowledge and research application</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Fourth Year</td>
+      <td style="border:1px solid #ddd; padding:12px;">Major subjects, project or fieldwork, computational and interdisciplinary courses</td>
+      <td style="border:1px solid #ddd; padding:12px;">Advanced subject knowledge and research application</td>
     </tr>
   </tbody>
 </table>
@@ -388,53 +388,53 @@ A BSc degree provides a foundation for further education and different science-r
 Some possible career directions include:
 
 ```
-<table>
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
   <thead>
-    <tr>
-      <th>Career Option</th>
-      <th>General Responsibilities</th>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Career Option</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">General Responsibilities</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Research Assistant</td>
-      <td>Supporting scientific research, experiments and data collection</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Research Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Supporting scientific research, experiments and data collection</td>
     </tr>
-    <tr>
-      <td>Laboratory Assistant</td>
-      <td>Assisting with laboratory procedures and sample preparation</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Laboratory Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Assisting with laboratory procedures and sample preparation</td>
     </tr>
-    <tr>
-      <td>Science Teacher</td>
-      <td>Teaching science subjects, subject to teaching qualifications</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Science Teacher</td>
+      <td style="border:1px solid #ddd; padding:12px;">Teaching science subjects, subject to teaching qualifications</td>
     </tr>
-    <tr>
-      <td>Research Associate</td>
-      <td>Supporting research projects and scientific investigations</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Research Associate</td>
+      <td style="border:1px solid #ddd; padding:12px;">Supporting research projects and scientific investigations</td>
     </tr>
-    <tr>
-      <td>Environmental Assistant</td>
-      <td>Supporting environmental monitoring and assessment</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Environmental Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Supporting environmental monitoring and assessment</td>
     </tr>
-    <tr>
-      <td>Quality Control Assistant</td>
-      <td>Assisting with product testing and quality assessment</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Quality Control Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Assisting with product testing and quality assessment</td>
     </tr>
-    <tr>
-      <td>Scientific Data Assistant</td>
-      <td>Organising and analysing scientific information</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Scientific Data Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Organising and analysing scientific information</td>
     </tr>
-    <tr>
-      <td>Field Research Assistant</td>
-      <td>Supporting surveys, field observations and sample collection</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Field Research Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Supporting surveys, field observations and sample collection</td>
     </tr>
-    <tr>
-      <td>Science Content Writer</td>
-      <td>Preparing educational and scientific content</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Science Content Writer</td>
+      <td style="border:1px solid #ddd; padding:12px;">Preparing educational and scientific content</td>
     </tr>
-    <tr>
-      <td>Technical Assistant</td>
-      <td>Supporting technical and laboratory operations</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Technical Assistant</td>
+      <td style="border:1px solid #ddd; padding:12px;">Supporting technical and laboratory operations</td>
     </tr>
   </tbody>
 </table>
@@ -475,52 +475,52 @@ Admission requirements depend on the subject combination, university and postgra
 
 ## BSc vs BSc CSIT
 
-BSc and BSc CSIT are different undergraduate programmes with different academic objectives.
+BSc and [BSc CSIT](https://dikshangautam.com.np/education/academic-courses/bsc-csit/) are different undergraduate programmes with different academic objectives.
 
 ```
-<table>
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:15px;">
   <thead>
-    <tr>
-      <th>Comparison</th>
-      <th>BSc General</th>
-      <th>BSc CSIT</th>
+    <tr style="background-color:#25479D; color:#ffffff;">
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">Comparison</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">BSc General</th>
+      <th style="border:1px solid #ddd; padding:12px; text-align:left;">BSc CSIT</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Full Form</td>
-      <td>Bachelor of Science</td>
-      <td>Bachelor of Science in Computer Science and Information Technology</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Full Form</td>
+      <td style="border:1px solid #ddd; padding:12px;">Bachelor of Science</td>
+      <td style="border:1px solid #ddd; padding:12px;">Bachelor of Science in Computer Science and Information Technology</td>
     </tr>
-    <tr>
-      <td>Main Focus</td>
-      <td>General scientific disciplines</td>
-      <td>Computer science and information technology</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Main Focus</td>
+      <td style="border:1px solid #ddd; padding:12px;">General scientific disciplines</td>
+      <td style="border:1px solid #ddd; padding:12px;">Computer science and information technology</td>
     </tr>
-    <tr>
-      <td>Academic Structure</td>
-      <td>Annual System (TU General BSc)</td>
-      <td>Semester System</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Academic Structure</td>
+      <td style="border:1px solid #ddd; padding:12px;">Annual System (TU General BSc)</td>
+      <td style="border:1px solid #ddd; padding:12px;">Semester System</td>
     </tr>
-    <tr>
-      <td>Course Duration</td>
-      <td>4 Years</td>
-      <td>4 Years</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Course Duration</td>
+      <td style="border:1px solid #ddd; padding:12px;">4 Years</td>
+      <td style="border:1px solid #ddd; padding:12px;">4 Years</td>
     </tr>
-    <tr>
-      <td>Main Subjects</td>
-      <td>Physics, Chemistry, Mathematics, Biology and other science disciplines</td>
-      <td>Programming, algorithms, databases, networking and computer systems</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Main Subjects</td>
+      <td style="border:1px solid #ddd; padding:12px;">Physics, Chemistry, Mathematics, Biology and other science disciplines</td>
+      <td style="border:1px solid #ddd; padding:12px;">Programming, algorithms, databases, networking and computer systems</td>
     </tr>
-    <tr>
-      <td>Practical Learning</td>
-      <td>Laboratory experiments, research and fieldwork</td>
-      <td>Programming labs, software projects and IT practicals</td>
+    <tr style="background-color:#ffffff;">
+      <td style="border:1px solid #ddd; padding:12px;">Practical Learning</td>
+      <td style="border:1px solid #ddd; padding:12px;">Laboratory experiments, research and fieldwork</td>
+      <td style="border:1px solid #ddd; padding:12px;">Programming labs, software projects and IT practicals</td>
     </tr>
-    <tr>
-      <td>Career Areas</td>
-      <td>Research, education, laboratories and scientific industries</td>
-      <td>Software development, IT, systems and technology</td>
+    <tr style="background-color:#f5f7fb;">
+      <td style="border:1px solid #ddd; padding:12px;">Career Areas</td>
+      <td style="border:1px solid #ddd; padding:12px;">Research, education, laboratories and scientific industries</td>
+      <td style="border:1px solid #ddd; padding:12px;">Software development, IT, systems and technology</td>
     </tr>
   </tbody>
 </table>
