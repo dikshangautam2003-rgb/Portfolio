@@ -508,7 +508,7 @@ Students should consider their interests and future academic goals before choosi
 
 ## +2 Management vs +2 Science
 
-Management and Science are two commonly advertised Grade 11 and 12 programme options in Nepal. They introduce students to different areas of learning and support different higher education pathways.
+Management and [Science](https://dikshangautam.com.np/education/academic-courses/plus-two-science-in-nepal/) are two commonly advertised Grade 11 and 12 programme options in Nepal. They introduce students to different areas of learning and support different higher education pathways.
 
 ```
 <div style="width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0;">
@@ -569,15 +569,15 @@ Mathematics is not necessarily compulsory for every Management combination. Unde
 
 ### 4. Can I study BBA after +2 Management?
 
-Yes. Students who complete Grade 12 can apply for BBA programmes if they meet the university's academic and entrance requirements.
+Yes. Students who complete Grade 12 can apply for [BBA](https://dikshangautam.com.np/education/academic-courses/bba-in-nepal/) programmes if they meet the university's academic and entrance requirements.
 
 ### 5. Can I study BCA after +2 Management?
 
-Students from Management backgrounds may be eligible for some BCA programmes, depending on the university's current admission requirements and subject prerequisites. Students should verify the requirements before applying.
+Students from Management backgrounds may be eligible for some [BCA](https://dikshangautam.com.np/education/academic-courses/bca/) programmes, depending on the university's current admission requirements and subject prerequisites. Students should verify the requirements before applying.
 
 ### 6. Can I study BIM after +2 Management?
 
-Yes, students may apply for BIM programmes if they meet the relevant university's eligibility and admission requirements.
+Yes, students may apply for [BIM](https://dikshangautam.com.np/education/academic-courses/bim-in-nepal/) programmes if they meet the relevant university's eligibility and admission requirements.
 
 ### 7. What are the career opportunities after +2 Management?
 
@@ -589,7 +589,7 @@ Yes. The programme introduces students to accounting, business operations, econo
 
 ### 9. Which is better, +2 Management or +2 Science?
 
-Neither programme is universally better. Management is more closely related to business, finance and organisational studies, while Science focuses on scientific and technical subjects. Students should choose based on their interests and future academic goals.
+Neither programme is universally better. Management is more closely related to business, finance and organisational studies, while [Science](https://dikshangautam.com.np/education/academic-courses/plus-two-science-in-nepal/) focuses on scientific and technical subjects. Students should choose based on their interests and future academic goals.
 
 ### 10. What can I study abroad after +2 Management?
 
@@ -597,8 +597,9 @@ Students can explore undergraduate programmes in business administration, accoun
 
 ## Conclusion
 
-+2 Management in Nepal provides a foundation for students interested in business, finance, accounting, economics and organisational management. Across Grade 11 and Grade 12, students develop an understanding of commercial activities and build knowledge that can support further academic and professional development.
+> +2 Management in Nepal provides a foundation for students interested in business, finance, accounting, economics and organisational management. Across Grade 11 and Grade 12, students develop an understanding of commercial activities and build knowledge that can support further academic and professional development.
+>
+> After completing the programme, students can explore bachelor's degrees such as BBA, BBS, BBM, BIM and BHM, depending on their interests and admission eligibility.
+>
+> The best way to choose the right subject combination and college is to consider your academic strengths, future plans and the requirements of the programmes you may
 
-After completing the programme, students can explore bachelor's degrees such as BBA, BBS, BBM, BIM and BHM, depending on their interests and admission eligibility.
-
-The best way to choose the right subject combination and college is to consider your academic strengths, future plans and the requirements of the programmes you may
