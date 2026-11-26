@@ -1,5 +1,5 @@
 ---
-title: BSc in Nepal
+title: BSc in Nepal Complete Guide to Course and Scope
 slug: bsc-in-nepal
 section: Academic Courses
 page_type: Academic Course
@@ -7,6 +7,7 @@ description: Explore science degree options, subject combinations, laboratory
   learning and possible next steps
 published: true
 date: 2026-11-25
+featured_image: /media/bsc-in-nepal.jpg
 search_strategy:
   primary_keyword: BSc in Nepal
   secondary_keywords: |-
