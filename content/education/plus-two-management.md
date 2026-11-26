@@ -593,7 +593,7 @@ Neither programme is universally better. Management is more closely related to b
 
 ### 10. What can I study abroad after +2 Management?
 
-Students can explore undergraduate programmes in business administration, accounting, finance, economics, marketing, hospitality and related fields abroad. Admission requirements, English-language requirements and subject prerequisites vary by country and institution.
+Students can explore undergraduate programmes in business administration, accounting, finance, economics, marketing, hospitality and related fields [abroad](https://dikshangautam.com.np/education/study-abroad-guide/). Admission requirements, English-language requirements and subject prerequisites vary by country and institution.
 
 ## Conclusion
 
