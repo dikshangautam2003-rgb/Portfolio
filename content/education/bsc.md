@@ -4,7 +4,7 @@ slug: bsc-in-nepal
 section: Academic Courses
 page_type: Academic Course
 description: Explore science degree options, subject combinations, laboratory
-  learning and possible next steps.
+  learning and possible next steps
 published: true
 date: 2026-11-25
 search_strategy:
@@ -133,7 +133,6 @@ seo:
   title: BSc in Nepal | Dikshan Gautam
   description: Explore science degree options, subject combinations, laboratory
     learning and possible next steps.
-answer_summary: |+
 ---
 Explore science degree optioBSc in Nepal: Course, Eligibility, Subjects, Fees & Career Scope
 
