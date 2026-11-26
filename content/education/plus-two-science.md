@@ -478,7 +478,7 @@ Students with the required Biology and other subject qualifications can explore:
 - Bachelor of Medical Laboratory Technology (BMLT)
 - Bachelor of Physiotherapy
 - Bachelor of Optometry
-- Other health-science programmes
+- Other health-science programms
 
 Admission to regulated medical and health programmes may require specific entrance examinations and eligibility criteria. Students should check the latest requirements of the relevant medical education authority and universities.
 
