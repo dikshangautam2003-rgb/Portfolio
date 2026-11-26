@@ -131,9 +131,10 @@ ai_content:
 sources:
   last_verified: 2026-11-25
 seo:
-  title: BSc in Nepal | Dikshan Gautam
-  description: Explore science degree options, subject combinations, laboratory
-    learning and possible next steps.
+  title: "BSc in Nepal: Course, Eligibility, Subjects & Colleges"
+  description: Explore BSc in Nepal, including course duration, eligibility,
+    subjects, entrance examination, colleges, fees and career opportunities
+    after graduation.
 ---
 Explore science degree optioBSc in Nepal: Course, Eligibility, Subjects, Fees & Career Scope
 
