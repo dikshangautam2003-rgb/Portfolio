@@ -168,6 +168,11 @@ ai_content:
     1 Hectare = 10,000 square metres.
 sources:
   last_verified: 2026-11-27
+seo:
+  title: "Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft"
+  description: Convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into
+    square feet, square metres, acres and hectares using our free Nepal land
+    converter.
 ---
 # Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft
 
