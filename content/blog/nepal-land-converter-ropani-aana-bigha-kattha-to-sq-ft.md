@@ -171,7 +171,10 @@ sources:
 ---
 # Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft
 
-```
+## Nepal Land Measurement Converter
+
+Type a value in any box. All other boxes update instantly.
+
 ```
 <div id="nepal-land-converter">
   <style>
@@ -405,8 +408,16 @@ sources:
     })();
   </script>
 </div>
+```
+
+
+
+&nbsp;
+
+&nbsp;
 
 ```
+
 ```
 
 Land measurement in Nepal uses traditional units such as Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur. These units are commonly encountered when buying, selling, comparing or checking land areas.
