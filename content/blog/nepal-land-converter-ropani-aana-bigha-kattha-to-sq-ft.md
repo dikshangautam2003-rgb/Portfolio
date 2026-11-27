@@ -171,12 +171,7 @@ sources:
 ---
 # Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft
 
-Land measurement in Nepal uses traditional units such as Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur. These units are commonly encountered when buying, selling, comparing or checking land areas.
-
-However, converting between the Hill and Terai measurement systems can be confusing, particularly when a land record uses one unit and a property listing uses another.
-
-Our **Nepal Land Converter** helps you calculate land area across both traditional systems. You can convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into square feet, square metres, acres and hectares.
-
+```
 ```
 <div id="nepal-land-converter">
   <style>
@@ -412,6 +407,13 @@ Our **Nepal Land Converter** helps you calculate land area across both tradition
 </div>
 
 ```
+```
+
+Land measurement in Nepal uses traditional units such as Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur. These units are commonly encountered when buying, selling, comparing or checking land areas.
+
+However, converting between the Hill and Terai measurement systems can be confusing, particularly when a land record uses one unit and a property listing uses another.
+
+Our **Nepal Land Converter** helps you calculate land area across both traditional systems. You can convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into square feet, square metres, acres and hectares.
 
 ## Nepal Land Measurement Systems
 
