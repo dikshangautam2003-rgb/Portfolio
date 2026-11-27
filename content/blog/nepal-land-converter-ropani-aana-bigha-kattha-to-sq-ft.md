@@ -178,499 +178,235 @@ However, converting between the Hill and Terai measurement systems can be confus
 Our **Nepal Land Converter** helps you calculate land area across both traditional systems. You can convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into square feet, square metres, acres and hectares.
 
 ```
-
 <div id="nepal-land-converter">
   <style>
     #nepal-land-converter {
-      --nlc-blue: #25479D;
-      --nlc-red: #ED2D2A;
-      --nlc-border: #dce3ef;
-      --nlc-bg: #f5f7fb;
+      --blue: #25479D;
+      --red: #ED2D2A;
+      --line: #dce3ef;
+      --soft: #f5f7fb;
       font-family: Arial, Helvetica, sans-serif;
       color: #202938;
-      width: 100%;
-      max-width: 100%;
+      max-width: 760px;
       margin: 20px auto;
       box-sizing: border-box;
     }
-
-    #nepal-land-converter * {
-      box-sizing: border-box;
-    }
-
+    #nepal-land-converter * { box-sizing: border-box; }
     #nepal-land-converter .nlc-card {
       background: #fff;
-      border: 1px solid var(--nlc-border);
+      border: 1px solid var(--line);
       border-radius: 14px;
       padding: 24px;
-      box-shadow: 0 4px 18px rgba(25, 50, 90, 0.06);
     }
-
-    #nepal-land-converter .nlc-heading {
+    #nepal-land-converter h2 {
+      color: var(--blue);
+      font-size: 24px;
+      margin: 0 0 6px;
       text-align: center;
-      margin-bottom: 22px;
     }
-
-    #nepal-land-converter .nlc-heading h2 {
-      color: var(--nlc-blue);
-      font-size: 27px;
-      margin: 0 0 9px;
-      line-height: 1.3;
-    }
-
-    #nepal-land-converter .nlc-heading p {
+    #nepal-land-converter .nlc-sub {
       color: #657187;
       font-size: 14px;
-      line-height: 1.6;
-      margin: 0;
+      text-align: center;
+      margin: 0 0 20px;
     }
-
-    #nepal-land-converter .nlc-section-title {
-      font-size: 17px;
-      color: var(--nlc-blue);
-      margin: 0 0 15px;
-      font-weight: 700;
+    #nepal-land-converter h3 {
+      font-size: 15px;
+      color: var(--blue);
+      margin: 18px 0 10px;
     }
-
-    #nepal-land-converter .nlc-group {
-      background: var(--nlc-bg);
-      border: 1px solid var(--nlc-border);
-      border-radius: 11px;
-      padding: 17px;
-      margin-bottom: 17px;
-    }
-
-    #nepal-land-converter .nlc-fields {
+    #nepal-land-converter .nlc-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px;
     }
-
-    #nepal-land-converter .nlc-field label {
+    #nepal-land-converter label {
       display: block;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       color: #39465a;
     }
-
     #nepal-land-converter input {
       width: 100%;
-      min-width: 0;
-      height: 43px;
-      padding: 9px 10px;
+      height: 44px;
+      padding: 8px 10px;
       border: 1px solid #cbd4e2;
-      border-radius: 7px;
-      background: #fff;
+      border-radius: 8px;
+      font-size: 16px;
       color: #202938;
-      font-size: 15px;
-      outline: none;
+      background: #fff;
     }
-
     #nepal-land-converter input:focus {
-      border-color: var(--nlc-blue);
-      box-shadow: 0 0 0 3px rgba(37, 71, 157, 0.10);
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37, 71, 157, .15);
     }
-
-    #nepal-land-converter input[aria-invalid="true"] {
-      border-color: var(--nlc-red);
+    #nepal-land-converter input.nlc-active {
+      border-color: var(--blue);
+      background: #f0f4ff;
     }
-
-    #nepal-land-converter .nlc-actions {
+    #nepal-land-converter input[aria-invalid="true"] { border-color: var(--red); }
+    #nepal-land-converter .nlc-breakdown {
+      background: var(--soft);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    #nepal-land-converter .nlc-breakdown strong { color: var(--blue); }
+    #nepal-land-converter .nlc-footer {
       display: flex;
-      justify-content: center;
-      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
       flex-wrap: wrap;
-      margin: 21px 0;
     }
-
+    #nepal-land-converter .nlc-note {
+      color: #748096;
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 0;
+      flex: 1 1 260px;
+    }
     #nepal-land-converter button {
       border: 0;
-      border-radius: 7px;
-      padding: 12px 23px;
-      min-height: 43px;
+      border-radius: 8px;
+      padding: 11px 22px;
+      background: var(--blue);
+      color: #fff;
       font-size: 14px;
       font-weight: 700;
       cursor: pointer;
     }
-
-    #nepal-land-converter .nlc-clear {
-      background: #e9edf5;
-      color: #344158;
-    }
-
-    #nepal-land-converter .nlc-clear:hover {
-      background: #dce3ef;
-    }
-
-    #nepal-land-converter .nlc-results {
-      border: 1px solid #d6e0f3;
-      border-radius: 11px;
-      overflow: hidden;
-      margin-top: 22px;
-    }
-
-    #nepal-land-converter .nlc-results-heading {
-      background: var(--nlc-blue);
-      color: #fff;
-      padding: 15px 18px;
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    #nepal-land-converter .nlc-results-body {
-      padding: 17px;
-      background: #fff;
-    }
-
-    #nepal-land-converter .nlc-result-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      padding: 12px 4px;
-      border-bottom: 1px solid #edf0f5;
-      font-size: 14px;
-    }
-
-    #nepal-land-converter .nlc-result-row:last-child {
-      border-bottom: 0;
-    }
-
-    #nepal-land-converter .nlc-result-label {
-      color: #58657a;
-      font-weight: 600;
-    }
-
-    #nepal-land-converter .nlc-result-value {
-      color: var(--nlc-blue);
-      font-weight: 700;
-      text-align: right;
-      overflow-wrap: anywhere;
-    }
-
-    #nepal-land-converter .nlc-breakdown {
-      background: #f5f7fb;
-      border-radius: 8px;
-      padding: 13px;
-      margin-top: 14px;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    #nepal-land-converter .nlc-breakdown strong {
-      color: var(--nlc-blue);
-    }
-
-    #nepal-land-converter .nlc-status {
-      min-height: 20px;
-      color: var(--nlc-red);
-      font-size: 13px;
-      text-align: center;
-      margin: 8px 0;
-    }
-
-    #nepal-land-converter .nlc-note {
-      margin-top: 17px;
-      padding: 13px;
-      border-left: 3px solid var(--nlc-red);
-      background: #fff7f6;
-      color: #5e6572;
-      font-size: 12px;
-      line-height: 1.7;
-      border-radius: 4px;
-    }
-
-    #nepal-land-converter .nlc-small {
-      color: #748096;
-      font-size: 12px;
-      line-height: 1.6;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 650px) {
-      #nepal-land-converter .nlc-card {
-        padding: 16px;
-      }
-
-      #nepal-land-converter .nlc-heading h2 {
-        font-size: 22px;
-      }
-
-      #nepal-land-converter .nlc-fields {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      #nepal-land-converter .nlc-result-row {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      #nepal-land-converter .nlc-result-value {
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 360px) {
-      #nepal-land-converter .nlc-fields {
-        grid-template-columns: 1fr;
-      }
-    }
+    #nepal-land-converter button:hover { background: #1c3880; }
   </style>
 
   <div class="nlc-card">
-    <div class="nlc-heading">
-      <h2>Nepal Land Measurement Converter</h2>
-      <p>Convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into square feet, square metres, acres and hectares.</p>
+    <h2>Nepal Land Measurement Converter</h2>
+    <p class="nlc-sub">Type a value in any box. All other boxes update instantly.</p>
+
+    <h3>Hill system</h3>
+    <div class="nlc-grid">
+      <div><label for="nlc-ropani">Ropani</label><input id="nlc-ropani" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-aana">Aana</label><input id="nlc-aana" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-paisa">Paisa</label><input id="nlc-paisa" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-daam">Daam</label><input id="nlc-daam" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
     </div>
 
-    <div class="nlc-group">
-      <h3 class="nlc-section-title">Hill Land Measurement System</h3>
-      <div class="nlc-fields">
-        <div class="nlc-field">
-          <label for="nlc-ropani">Ropani</label>
-          <input id="nlc-ropani" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-aana">Aana</label>
-          <input id="nlc-aana" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-paisa">Paisa</label>
-          <input id="nlc-paisa" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-daam">Daam</label>
-          <input id="nlc-daam" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-      </div>
+    <h3>Terai system</h3>
+    <div class="nlc-grid">
+      <div><label for="nlc-bigha">Bigha</label><input id="nlc-bigha" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-kattha">Kattha</label><input id="nlc-kattha" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-dhur">Dhur</label><input id="nlc-dhur" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
     </div>
 
-    <div class="nlc-group">
-      <h3 class="nlc-section-title">Terai Land Measurement System</h3>
-      <div class="nlc-fields">
-        <div class="nlc-field">
-          <label for="nlc-bigha">Bigha</label>
-          <input id="nlc-bigha" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-kattha">Kattha</label>
-          <input id="nlc-kattha" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-dhur">Dhur</label>
-          <input id="nlc-dhur" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-      </div>
+    <h3>Standard units</h3>
+    <div class="nlc-grid">
+      <div><label for="nlc-sqft">Square feet</label><input id="nlc-sqft" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-sqm">Square metres</label><input id="nlc-sqm" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-acre">Acre</label><input id="nlc-acre" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
+      <div><label for="nlc-hectare">Hectare</label><input id="nlc-hectare" type="number" min="0" step="any" inputmode="decimal" placeholder="0"></div>
     </div>
 
-    <div class="nlc-group">
-      <h3 class="nlc-section-title">Other Measurement Units</h3>
-      <div class="nlc-fields">
-        <div class="nlc-field">
-          <label for="nlc-sqft">Square Feet (sq ft)</label>
-          <input id="nlc-sqft" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-sqm">Square Metres (m²)</label>
-          <input id="nlc-sqm" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-acre">Acre</label>
-          <input id="nlc-acre" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-        <div class="nlc-field">
-          <label for="nlc-hectare">Hectare</label>
-          <input id="nlc-hectare" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
-        </div>
-      </div>
+    <div class="nlc-breakdown">
+      <div><strong>Hill:</strong> <span id="nlc-out-hill">0 Ropani, 0 Aana, 0 Paisa, 0 Daam</span></div>
+      <div><strong>Terai:</strong> <span id="nlc-out-terai">0 Bigha, 0 Kattha, 0 Dhur</span></div>
     </div>
 
-    <div class="nlc-actions">
-      <button type="button" class="nlc-clear" id="nlc-clear">Clear All</button>
+    <div class="nlc-footer">
+      <p class="nlc-note">Uses standard customary conversion factors. For legal transactions or land records, verify with the Land Revenue or Survey Office.</p>
+      <button type="button" id="nlc-clear">Clear all</button>
     </div>
-
-    <div class="nlc-status" id="nlc-status" role="status" aria-live="polite"></div>
-
-    <div class="nlc-results" aria-live="polite">
-      <div class="nlc-results-heading">Converted Land Area</div>
-      <div class="nlc-results-body">
-        <div class="nlc-result-row">
-          <span class="nlc-result-label">Total Square Feet</span>
-          <span class="nlc-result-value" id="nlc-out-sqft">0 sq ft</span>
-        </div>
-        <div class="nlc-result-row">
-          <span class="nlc-result-label">Total Square Metres</span>
-          <span class="nlc-result-value" id="nlc-out-sqm">0 m²</span>
-        </div>
-        <div class="nlc-result-row">
-          <span class="nlc-result-label">Total Acres</span>
-          <span class="nlc-result-value" id="nlc-out-acre">0 acres</span>
-        </div>
-        <div class="nlc-result-row">
-          <span class="nlc-result-label">Total Hectares</span>
-          <span class="nlc-result-value" id="nlc-out-hectare">0 hectares</span>
-        </div>
-
-        <div class="nlc-breakdown">
-          <div><strong>Hill System:</strong> <span id="nlc-out-hill">0 Ropani, 0 Aana, 0 Paisa, 0 Daam</span></div>
-          <div><strong>Terai System:</strong> <span id="nlc-out-terai">0 Bigha, 0 Kattha, 0 Dhur</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="nlc-note">
-      <strong>Important:</strong> This converter uses standard customary conversion factors and is intended for general information. For legal transactions, property registration, boundaries and official land records, always verify the measurements with the relevant Land Revenue or Survey Office and a qualified surveyor.
-    </div>
-
-    <p class="nlc-small">Enter values in any one measurement system or combine values from different fields. Results update automatically. Displayed results are rounded to a maximum of 8 decimal places.</p>
   </div>
 
   <script>
     (function () {
-      const root = document.getElementById("nepal-land-converter");
-      if (!root || root.dataset.initialized === "true") return;
-      root.dataset.initialized = "true";
+      var root = document.getElementById("nepal-land-converter");
+      if (!root || root.dataset.ready === "1") return;
+      root.dataset.ready = "1";
 
-      const SQFT_TO_SQM = 0.09290304;
-
-      const FACTORS = {
-        ropani: 5476,
-        aana: 342.25,
-        paisa: 85.5625,
-        daam: 21.390625,
-        bigha: 72900,
-        kattha: 3645,
-        dhur: 182.25,
-        sqft: 1,
-        sqm: 1 / SQFT_TO_SQM,
-        acre: 43560,
-        hectare: 10000 / SQFT_TO_SQM
+      var SQM = 0.09290304; // 1 sq ft in m2
+      // Each factor = square feet in one unit
+      var F = {
+        ropani: 5476, aana: 342.25, paisa: 85.5625, daam: 21.390625,
+        bigha: 72900, kattha: 3645, dhur: 182.25,
+        sqft: 1, sqm: 1 / SQM, acre: 43560, hectare: 10000 / SQM
       };
+      var ids = Object.keys(F);
+      function el(id) { return root.querySelector("#nlc-" + id); }
 
-      const ids = Object.keys(FACTORS);
-
-      const $ = (id) => root.querySelector("#" + id);
-
-      function format(value) {
-        if (!Number.isFinite(value)) return "Invalid";
-        const rounded = Number(value.toFixed(8));
-        return rounded.toLocaleString("en-US", {
-          useGrouping: false,
-          maximumFractionDigits: 8
-        });
+      function fmt(n) {
+        return String(Number(n.toFixed(6)));
       }
 
-      function readInput(id) {
-        const field = $("nlc-" + id);
-        const raw = field.value.trim();
+      function split(total, units) {
+        var rest = total, out = [];
+        units.forEach(function (u, i) {
+          if (i === units.length - 1) {
+            out.push(rest / F[u]);
+          } else {
+            var c = Math.floor((rest + 1e-9) / F[u]);
+            out.push(c);
+            rest -= c * F[u];
+          }
+        });
+        return out;
+      }
 
+      function breakdown(total) {
+        var h = split(total, ["ropani", "aana", "paisa", "daam"]);
+        var t = split(total, ["bigha", "kattha", "dhur"]);
+        el("out-hill").textContent =
+          fmt(h[0]) + " Ropani, " + fmt(h[1]) + " Aana, " + fmt(h[2]) + " Paisa, " + fmt(h[3]) + " Daam";
+        el("out-terai").textContent =
+          fmt(t[0]) + " Bigha, " + fmt(t[1]) + " Kattha, " + fmt(t[2]) + " Dhur";
+      }
+
+      function onInput(source) {
+        var field = el(source);
+        var raw = field.value.trim();
         field.setAttribute("aria-invalid", "false");
 
-        if (raw === "") return 0;
+        if (raw === "") { clearOthers(source); return; }
 
-        const value = Number(raw);
-
-        if (!Number.isFinite(value) || value < 0) {
+        var v = Number(raw);
+        if (!isFinite(v) || v < 0) {
           field.setAttribute("aria-invalid", "true");
-          return null;
-        }
-
-        return value;
-      }
-
-      function splitArea(totalSqft, units) {
-        let remaining = totalSqft;
-        const parts = [];
-
-        units.forEach((unit, index) => {
-          const factor = FACTORS[unit];
-
-          if (index === units.length - 1) {
-            parts.push(remaining / factor);
-          } else {
-            const count = Math.floor((remaining + 1e-9) / factor);
-            parts.push(count);
-            remaining -= count * factor;
-          }
-        });
-
-        return parts;
-      }
-
-      function update() {
-        let totalSqft = 0;
-
-        for (const id of ids) {
-          const value = readInput(id);
-
-          if (value === null) {
-            $("nlc-status").textContent =
-              "Please enter valid non-negative numbers in all fields.";
-            return;
-          }
-
-          totalSqft += value * FACTORS[id];
-        }
-
-        if (!Number.isFinite(totalSqft)) {
-          $("nlc-status").textContent =
-            "The entered values are too large to calculate.";
           return;
         }
 
-        $("nlc-status").textContent = "";
-
-        $("nlc-out-sqft").textContent =
-          format(totalSqft) + " sq ft";
-
-        $("nlc-out-sqm").textContent =
-          format(totalSqft * SQFT_TO_SQM) + " m²";
-
-        $("nlc-out-acre").textContent =
-          format(totalSqft / FACTORS.acre) + " acres";
-
-        $("nlc-out-hectare").textContent =
-          format(totalSqft / FACTORS.hectare) + " hectares";
-
-        const hill = splitArea(
-          totalSqft,
-          ["ropani", "aana", "paisa", "daam"]
-        );
-
-        const terai = splitArea(
-          totalSqft,
-          ["bigha", "kattha", "dhur"]
-        );
-
-        $("nlc-out-hill").textContent =
-          format(hill[0]) + " Ropani, " +
-          format(hill[1]) + " Aana, " +
-          format(hill[2]) + " Paisa, " +
-          format(hill[3]) + " Daam";
-
-        $("nlc-out-terai").textContent =
-          format(terai[0]) + " Bigha, " +
-          format(terai[1]) + " Kattha, " +
-          format(terai[2]) + " Dhur";
+        var sqft = v * F[source];
+        ids.forEach(function (id) {
+          var f = el(id);
+          f.classList.toggle("nlc-active", id === source);
+          if (id !== source) f.value = fmt(sqft / F[id]);
+        });
+        breakdown(sqft);
       }
 
-      ids.forEach((id) => {
-        $("nlc-" + id).addEventListener("input", update);
-      });
-
-      $("nlc-clear").addEventListener("click", function () {
-        ids.forEach((id) => {
-          $("nlc-" + id).value = "";
-          $("nlc-" + id).setAttribute("aria-invalid", "false");
+      function clearOthers(source) {
+        ids.forEach(function (id) {
+          if (id !== source) el(id).value = "";
+          el(id).classList.remove("nlc-active");
         });
+        breakdown(0);
+      }
 
-        $("nlc-status").textContent = "";
-        update();
+      ids.forEach(function (id) {
+        el(id).addEventListener("input", function () { onInput(id); });
       });
 
-      update();
+      el("clear").addEventListener("click", function () {
+        ids.forEach(function (id) {
+          el(id).value = "";
+          el(id).setAttribute("aria-invalid", "false");
+          el(id).classList.remove("nlc-active");
+        });
+        breakdown(0);
+      });
     })();
   </script>
 </div>
