@@ -1,5 +1,5 @@
 ---
-title: "Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft"
+title: Nepal Land Converter
 slug: land-converter-nepal
 description: Convert Ropani, Aana, Paisa, Daam, Bigha, Kattha and Dhur into
   square feet, square metres, acres and hectares using our free Nepal land
