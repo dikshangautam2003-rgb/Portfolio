@@ -176,8 +176,6 @@ seo:
 ---
 # Nepal Land Converter: Ropani, Aana, Bigha, Kattha to Sq Ft
 
-## Nepal Land Measurement Converter
-
 Type a value in any box. All other boxes update instantly.
 
 ```
